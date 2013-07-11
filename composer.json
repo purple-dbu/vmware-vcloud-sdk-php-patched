@@ -1,0 +1,36 @@
+{
+  "name": "vmware/vcloud-sdk-patched",
+  "description": "VMware vCloud SDK for PHP - patched edition",
+  "type": "library",
+  "keywords": [
+    "vmware",
+    "vcloud",
+    "director",
+    "api",
+    "sdk",
+    "patched"
+  ],
+  "homepage": "https://github.com/amercier/vmware-vcloud-sdk-php-patched",
+  "license": "vCloudSDKforPHP-License.docx",
+  "require": {
+    "php": ">=5.3.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "VMware_": "library/"
+    }
+  },
+  "include-path": [
+    "library/"
+  ],
+  "repositories": [
+    {
+      "type": "pear",
+      "url": "http://pear.php.net"
+    }
+  ],
+  "require": {
+    "vmware/vcloud-sdk": "5.1.2",
+    "pear-pear/HTTP_Request2": "*"
+  }
+}
