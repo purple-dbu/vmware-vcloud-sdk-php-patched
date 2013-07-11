@@ -1,6 +1,6 @@
 {
   "name": "vmware/vcloud-sdk-patched",
-  "description": "VMware vCloud SDK for PHP - patched edition",
+  "description": "VMware vCloud SDK for PHP - patched version",
   "type": "library",
   "keywords": [
     "vmware",
@@ -11,7 +11,7 @@
     "patched"
   ],
   "homepage": "https://github.com/amercier/vmware-vcloud-sdk-php-patched",
-  "license": "vCloudSDKforPHP-License.docx",
+  "license": "CC-BY-3.0",
   "require": {
     "php": ">=5.3.2"
   },
