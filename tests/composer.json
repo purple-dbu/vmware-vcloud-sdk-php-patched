@@ -1,0 +1,17 @@
+{
+  "name": "vmware/vcloud-sdk-patched-tests",
+  "description": "Tests for vmware/vcloud-sdk-patched",
+  "require": {
+    "php": ">=5.3.2"
+  },
+  "repositories": [
+    {
+      "type": "pear",
+      "url": "http://pear.php.net"
+    }
+  ],
+  "require": {
+    "vmware/vcloud-sdk-patched": "dev-master",
+    "pear-pear/HTTP_Request2": "*"
+  }
+}
