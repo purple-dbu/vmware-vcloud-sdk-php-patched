@@ -6,8 +6,9 @@ VMware vCloud SDK for PHP (patched version) - Repository for importing with Comp
 This project is a fork from the [original VMWare SDK for PHP](https://github.com/amercier/vmware-vcloud-sdk-php),
 with the exception of the following additions and changes:
 
-✔ Splited `VMware/VCloud/API.php` (5 MB), and a fex other files into individual class files  
-✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`) in order to be compatible with [Composer](http://getcomposer.org/)'s autoloading  
+✔ Splited `VMware/VCloud/API.php` (5 MB), and a few other files into individual class files  
+✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`)  
+✔ Compatible with [Composer](http://getcomposer.org/)'s autoloading  
 
 ✘ **Not implemented (yet)**: see issues  
 
