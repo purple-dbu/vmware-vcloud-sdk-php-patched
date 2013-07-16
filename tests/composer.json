@@ -10,6 +10,7 @@
       "url": "http://pear.php.net"
     }
   ],
+  "licence": "CC-BY-3.0",
   "require": {
     "vmware/vcloud-sdk-patched": "dev-master",
     "pear-pear/HTTP_Request2": "*"

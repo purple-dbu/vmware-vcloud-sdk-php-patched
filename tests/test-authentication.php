@@ -19,13 +19,7 @@ $httpConfig = array(
   'ssl_cafile'  => null,
 );
 
-ob_start();
 $service = VMware_VCloud_SDK_Service::getService();
-$output = ob_get_clean();
-if( $output !== "\n\n" ) {
-  throw new Exception('Oh no! Exception while loading VMware SDK for PHP: ' . $output);
-}
-
 $result = $service->login($options['h'], $auth, $httpConfig);
 
 if ( ! $service instanceof VMware_VCloud_SDK_Service )
