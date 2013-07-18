@@ -1,0 +1,34 @@
+ library/VMware/VCloud/SDK/Http/Client.php | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+diff --git a/library/VMware/VCloud/SDK/Http/Client.php b/library/VMware/VCloud/SDK/Http/Client.php
+index 523c246..362a8ba 100644
+--- a/library/VMware/VCloud/SDK/Http/Client.php
++++ b/library/VMware/VCloud/SDK/Http/Client.php
+@@ -264,4 +264,25 @@ class VMware_VCloud_SDK_Http_Client implements
+         }
+         fclose($fh);
+     }
++
++    /**
++     * @amercier #2
++     *
++     * Set the username of a HTTP vCloud authentication token
++     * @param string $username The username
++     * @return void
++     */
++    public function setUsername($username) {
++        return $this->username = $username;
++    }
++
++    /**      
++     * @amercier #2
++     * 
++     * Set the vCloud authentication token
++     * @param string $token The token
++     */
++    public function setToken($token) {
++        $this->authToken = $token;
++    }
+ }
+\ No newline at end of file

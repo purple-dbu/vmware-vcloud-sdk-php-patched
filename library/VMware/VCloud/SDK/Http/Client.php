@@ -264,4 +264,25 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         fclose($fh);
     }
+
+    /**
+     * @amercier #2
+     *
+     * Set the username of a HTTP vCloud authentication token
+     * @param string $username The username
+     * @return void
+     */
+    public function setUsername($username) {
+        return $this->username = $username;
+    }
+
+    /**      
+     * @amercier #2
+     * 
+     * Set the vCloud authentication token
+     * @param string $token The token
+     */
+    public function setToken($token) {
+        $this->authToken = $token;
+    }
 }
