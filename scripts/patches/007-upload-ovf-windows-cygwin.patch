@@ -1,0 +1,17 @@
+ library/VMWare/VCloud/SDK/Vdc.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/library/VMWare/VCloud/SDK/Vdc.php b/library/VMWare/VCloud/SDK/Vdc.php
+index ea34b75..70180f6 100644
+--- a/library/VMWare/VCloud/SDK/Vdc.php
++++ b/library/VMWare/VCloud/SDK/Vdc.php
+@@ -199,7 +199,8 @@ $vdcStorageProfileRef, $catalogRef)
+             $diskUrl = $refs[0]->get_href();
+             $name = $file->get_name();
+             $diskPath = null;
+-            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
++            // $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
++            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1); // @amercier #7
+             $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
+             $this->svc->upload($diskUrl, $diskPath);
+         }

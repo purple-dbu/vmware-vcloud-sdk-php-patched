@@ -199,7 +199,8 @@ $vdcStorageProfileRef, $catalogRef)
             $diskUrl = $refs[0]->get_href();
             $name = $file->get_name();
             $diskPath = null;
-            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
+            // $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
+            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1); // @amercier #7
             $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
             $this->svc->upload($diskUrl, $diskPath);
         }
