@@ -10,6 +10,7 @@ with the exception of the following additions and changes:
 ✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`)  
 ✔ Compatible with [Composer](http://getcomposer.org/)'s autoloading  
 ✔ Fixed #7: Uploading OVF files doesn't work on Windows/Cygwin  
+✔ Fixed #3: Remove unnecessary require_once
 
 
 Todo
@@ -17,7 +18,6 @@ Todo
 
 Patches:
   - Fix #2: Allow retrieving the currently logged user's username and token
-  - Fix #3: Remove unnecessary require_once
   - Fix #4: Add the possibility to use an existing authentication token
   - Fix #5: Edge gateway modification doesn't work
   - Fix #6: Uploading big OVF files doesn't work

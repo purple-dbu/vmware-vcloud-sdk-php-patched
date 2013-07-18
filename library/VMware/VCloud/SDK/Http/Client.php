@@ -56,7 +56,6 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         else
         {
-            require_once 'VMware/VCloud/Http/Exception.php';
             throw new VMware_VCloud_SDK_Http_Exception(
                  "'username' and 'password' are valid keys of array \$auth\n");
         }
@@ -160,7 +159,6 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         catch (HTTP_Request2_Exception $e)
         {
-            require_once 'VMware/VCloud/Http/Exception.php';
             throw new VMware_VCloud_SDK_Http_Exception($e->getMessage(),
                                                        $e->getCode());
         }
