@@ -16,13 +16,6 @@ with the exception of the following additions and changes:
 ✔ Fixed #7: Uploading OVF files doesn't work on Windows/Cygwin  
 
 
-Todo
-----
-
-Patches:
-  - Fix #4: Add the possibility to use an existing authentication token
-
-
 Versioning
 ----------
 
