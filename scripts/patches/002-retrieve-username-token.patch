@@ -1,11 +1,11 @@
- library/VMware/VCloud/SDK/Http/Client.php | 21 +++++++++++++++++++++
- 1 file changed, 21 insertions(+)
+ library/VMware/VCloud/SDK/Http/Client.php | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
 
 diff --git a/library/VMware/VCloud/SDK/Http/Client.php b/library/VMware/VCloud/SDK/Http/Client.php
-index 523c246..362a8ba 100644
+index 523c246..0648806 100644
 --- a/library/VMware/VCloud/SDK/Http/Client.php
 +++ b/library/VMware/VCloud/SDK/Http/Client.php
-@@ -264,4 +264,25 @@ class VMware_VCloud_SDK_Http_Client implements
+@@ -264,4 +264,24 @@ class VMware_VCloud_SDK_Http_Client implements
          }
          fclose($fh);
      }

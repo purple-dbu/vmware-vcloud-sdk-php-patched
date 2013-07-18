@@ -56,7 +56,7 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         else
         {
-            require_once 'VMware/VCloud/Http/Exception.php';
+            // require_once 'VMware/VCloud/Http/Exception.php'; // @amercier #3
             throw new VMware_VCloud_SDK_Http_Exception(
                  "'username' and 'password' are valid keys of array \$auth\n");
         }
@@ -160,7 +160,7 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         catch (HTTP_Request2_Exception $e)
         {
-            require_once 'VMware/VCloud/Http/Exception.php';
+            // require_once 'VMware/VCloud/Http/Exception.php'; // @amercier #3
             throw new VMware_VCloud_SDK_Http_Exception($e->getMessage(),
                                                        $e->getCode());
         }
@@ -268,20 +268,21 @@ class VMware_VCloud_SDK_Http_Client implements
     /**
      * @amercier #2
      *
-     * Get the username of a HTTP vCloud authentication token
-     * @return string Returns the vCloud username@organization
+     * Set the username of a HTTP vCloud authentication token
+     * @param string $username The username
+     * @return void
      */
-    public function getUsername() {
-        return $this->username;
+    public function setUsername($username) {
+        return $this->username = $username;
     }
 
-    /**
+    /**      
      * @amercier #2
-     *
-     * Get the vCloud authentication token
-     * @return Returns the vCloud authentication token
+     * 
+     * Set the vCloud authentication token
+     * @param string $token The token
      */
-    public function getToken() {
-        return $this->authToken;
+    public function setToken($token) {
+        $this->authToken = $token;
     }
 }
