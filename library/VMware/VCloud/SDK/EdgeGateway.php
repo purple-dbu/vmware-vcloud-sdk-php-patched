@@ -53,7 +53,8 @@ class VMware_VCloud_SDK_EdgeGateway extends VMware_VCloud_SDK_Abstract
     public function modify($params)
     {
         $type = VMware_VCloud_SDK_Constants::EDGE_GATEWAYS_CONTENT_TYPE;
-        return $this->svc->put($this->url, 200, $type, $params);
+        // return $this->svc->put($this->url, 200, $type, $params);
+        return $this->svc->put($this->url, 202, $type, $params); // @amercier #5
     }
 
     /**
