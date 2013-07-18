@@ -13,22 +13,21 @@ index 523c246..362a8ba 100644
 +    /**
 +     * @amercier #2
 +     *
-+     * Set the username of a HTTP vCloud authentication token
-+     * @param string $username The username
-+     * @return void
++     * Get the username of a HTTP vCloud authentication token
++     * @return string Returns the vCloud username@organization
 +     */
-+    public function setUsername($username) {
-+        return $this->username = $username;
++    public function getUsername() {
++        return $this->username;
 +    }
 +
-+    /**      
++    /**
 +     * @amercier #2
-+     * 
-+     * Set the vCloud authentication token
-+     * @param string $token The token
++     *
++     * Get the vCloud authentication token
++     * @return Returns the vCloud authentication token
 +     */
-+    public function setToken($token) {
-+        $this->authToken = $token;
++    public function getToken() {
++        return $this->authToken;
 +    }
  }
 \ No newline at end of file
