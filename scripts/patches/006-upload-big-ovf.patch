@@ -2,10 +2,10 @@
  1 file changed, 51 insertions(+), 10 deletions(-)
 
 diff --git a/library/VMware/VCloud/SDK/Http/Client.php b/library/VMware/VCloud/SDK/Http/Client.php
-index fc4e95c..9a6dafb 100644
+index bba29b1..916f4bb 100644
 --- a/library/VMware/VCloud/SDK/Http/Client.php
 +++ b/library/VMware/VCloud/SDK/Http/Client.php
-@@ -245,21 +245,62 @@ class VMware_VCloud_SDK_Http_Client implements
+@@ -247,22 +247,63 @@ class VMware_VCloud_SDK_Http_Client implements
      /**
       * Upload a file.
       *
@@ -77,5 +77,5 @@ index fc4e95c..9a6dafb 100644
          }
 -        fclose($fh);
      }
- }
-\ No newline at end of file
+ 
+     /**
