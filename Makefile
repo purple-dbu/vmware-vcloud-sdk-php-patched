@@ -4,11 +4,15 @@ SRC = vendor/vmware/vcloud-sdk/library/
 OUT = library/
 PATCH = scripts/patches/*.patch
 
-all: composer.lock
+all:
+	make split
+	make patch
+
+split: composer.lock
 	find "$(SRC)" -name *.php -type f | while read filename; do \
 		scripts/split.php "$$filename" "$(OUT)" || exit 1; \
 	done
-	make patch
+
 
 composer.lock: composer.phar
 	php composer.phar install
