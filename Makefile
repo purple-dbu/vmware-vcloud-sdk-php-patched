@@ -25,5 +25,5 @@ update: composer.phar
 patch:
 	ls scripts/patches/*.patch | while read patch; do \
 		echo ==================== $$patch ====================; \
-		patch -p1 < "$$patch"; \
-	done
+		patch --forward --reject-file=- --strip=1 < "$$patch"; \
+	done || echo -n ""
