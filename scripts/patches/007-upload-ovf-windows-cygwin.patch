@@ -15,4 +15,3 @@ index ea34b75..70180f6 100644
              $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
              $this->svc->upload($diskUrl, $diskPath);
          }
-
