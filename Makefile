@@ -10,7 +10,7 @@ all:
 
 split: composer.lock
 	find "$(SRC)" -name *.php -type f | while read filename; do \
-		scripts/split.php "$$filename" "$(OUT)" || exit 1; \
+		php scripts/split.php "$$filename" "$(OUT)" || exit 1; \
 	done
 
 
