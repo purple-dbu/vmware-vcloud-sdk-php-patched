@@ -245,21 +245,62 @@ class VMware_VCloud_SDK_Http_Client implements
     /**
      * Upload a file.
      *
-     * @param string $url      Target where to upload the file
-     * @param array $headers   HTTP request headers
-     * @param string $file     Full path of the file to be uploaded
+     * @param string $url        Target where to upload the file
+     * @param array  $headers    HTTP request headers
+     * @param string $file       Full path of the file to be uploaded
+     * @param int    $windowSize Chunk size in bytes, defaults to 10M
      * @return null
      * @since Version 1.0.0
      */
-    public function upload($url, $headers, $file)
+    public function upload($url, $headers, $file, $windowSize = 10485760)
     {
-        session_write_close();
-        if ($fh = fopen($file, 'rb'))
+        if( filesize($file) <= $windowSize )
         {
-            $data = fread($fh, filesize($file));
-            $this->put($url, $headers, $data);
-            flush();
+            session_write_close();
+            if ($fh = fopen($file, 'rb'))
+            {
+                $data = fread($fh, filesize($file));
+                $this->put($url, $headers, $data);
+                flush();
+            }
+            fclose($fh);
         }
-        fclose($fh);
+        else
+        {
+            $i = 0;
+
+            # 'Accept' header is used to identify VMware vCloud Director version
+            $headers['Accept'] = VMware_VCloud_SDK_Constants::VCLOUD_ACCEPT_HEADER .
+                                 ';' .
+                                 'version=' . $this->apiVersion;
+
+            $transferred = 0;
+            $remaining = filesize($file);
+            $total = filesize($file);
+
+            session_write_close();
+            if ($fh = fopen($file, 'rb'))
+            {
+                while( $data = fread($fh, $windowSize) )
+                {
+
+                    $contentLength = min($remaining, $windowSize);
+
+                    $headers['Content-Range'] = 'bytes ' . $transferred . '-' . ($transferred + $contentLength) . '/' . $total;
+                    $headers['Content-Length'] = $contentLength;
+                    $response = $this->put($url, $headers, $data);
+
+                    if( $response->getStatus() !== 200 )
+                    {
+                        throw new Exception('Can\'t upload ' . $file . ' (HTTP ' . $response->getStatus() . '): ' . $response->getBody());
+                    }
+
+                    $transferred += $contentLength;
+                    $remaining   .= $contentLength;
+                }
+                flush();
+            }
+            fclose($fh);
+        }
     }
 }
