@@ -10,8 +10,8 @@ with the exception of the following additions and changes:
 ✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`)  
 ✔ Compatible with [Composer](http://getcomposer.org/)'s autoloading  
 ✔ Fixed #3: Remove unnecessary require_once
-✔ Fixed #5: Edge gateway modification doesn't work
-✔ Fixed #6: Uploading big OVF files doesn't work
+✔ Fixed #5: Edge gateway modification doesn't work  
+✔ Fixed #6: Uploading big OVF files doesn't work  
 ✔ Fixed #7: Uploading OVF files doesn't work on Windows/Cygwin  
 
 
