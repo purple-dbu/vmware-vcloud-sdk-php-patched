@@ -7,6 +7,7 @@ PATCH = scripts/patches/*.patch
 all:
 	make split
 	make patch
+	make docs
 
 split: composer.lock
 	find "$(SRC)" -name *.php -type f | while read filename; do \
@@ -31,3 +32,10 @@ patch:
 		echo ==================== $$patch ====================; \
 		patch --forward --reject-file=- --strip=1 < "$$patch"; \
 	done || echo -n ""
+
+clean:
+	[ -d docs ] && rm -Rf docs || echo Nothing to do
+
+docs:
+	[ -d docs ] && rm -Rf docs || echo Nothing to do
+	phpdoc --directory library/ --target docs --title "VMware vCloud PHP Patched SDK 5.1.2 Documentation" --template responsive
