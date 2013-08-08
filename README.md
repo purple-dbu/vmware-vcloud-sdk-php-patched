@@ -6,7 +6,7 @@ VMware vCloud SDK for PHP (patched version) - Repository for importing with Comp
 This project is a fork from the [original VMWare SDK for PHP](https://github.com/amercier/vmware-vcloud-sdk-php),
 with the exception of the following additions and changes:
 
-✔ Splited `VMware/VCloud/API.php` (5 MB), and a few other files into individual class files  
+✔ Split `VMware/VCloud/API.php` (5 MB), and a few other files into individual class files  
 ✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`)  
 ✔ Compatible with [Composer](http://getcomposer.org/)'s autoloading  
 ✔ Fixed #2: Allow retrieving the currently logged user's username and token  
