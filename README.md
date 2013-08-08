@@ -9,11 +9,11 @@ with the exception of the following additions and changes:
 ✔ Split `VMware/VCloud/API.php` (5 MB), and a few other files into individual class files  
 ✔ Normalized class paths (`VMware/VCloud/SDK/**/*.php` and `VMware/VCloud/API/**/*.php`)  
 ✔ Compatible with [Composer](http://getcomposer.org/)'s autoloading  
-✔ Fixed #2: Allow retrieving the currently logged user's username and token  
-✔ Fixed #3: Remove unnecessary require_once  
-✔ Fixed #5: Edge gateway modification doesn't work  
-✔ Fixed #6: Uploading big OVF files doesn't work  
-✔ Fixed #7: Uploading OVF files doesn't work on Windows/Cygwin  
+✔ Fixed [#2](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/2): Allow retrieving the currently logged user's username and token  
+✔ Fixed [#3](#3): Remove unnecessary require_once  
+✔ Fixed [#5](): Edge gateway modification doesn't work  
+✔ Fixed [#6]: Uploading big OVF files doesn't work  
+✔ Fixed [#7]: Uploading OVF files doesn't work on Windows/Cygwin  
 
 
 Versioning
