@@ -1,0 +1,15 @@
+ library/VMware/VCloud/SDK/Vdc.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/library/VMware/VCloud/SDK/Vdc.php b/library/VMware/VCloud/SDK/Vdc.php
+index 70180f6..1ae58e6 100644
+--- a/library/VMware/VCloud/SDK/Vdc.php
++++ b/library/VMware/VCloud/SDK/Vdc.php
+@@ -398,6 +398,7 @@ $vdcStorageProfileRef, $catalogRef)
+      */
+     private function uploadMedia($filename, $imageType, $mediaType)
+     {
++        $mediaType->set_imageType($imageType);
+         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
+         $url = $this->getMediaUploadInfo($mediaUpInfo);
+         $durl =  $mediaUpInfo->get_href();
