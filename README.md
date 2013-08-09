@@ -14,7 +14,7 @@ with the exception of the following additions and changes:
 ✔ Fixed [#5](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/5): Edge gateway modification doesn't work  
 ✔ Fixed [#6](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/6): Uploading big OVF files doesn't work  
 ✔ Fixed [#7](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/7): Uploading OVF files doesn't work on Windows/Cygwin  
-✔ Fixed [#8](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/8): Set image type in VMWare_VCloud_SDK_Vdc::uploadMedia  
+✔ Fixed [#8](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/8): Set image type in VMWare_VCloud_SDK_Vdc::uploadMedia (credits to @brianium)  
 
 
 Versioning
