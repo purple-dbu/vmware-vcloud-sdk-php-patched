@@ -15,6 +15,7 @@ class VMware_VCloud_API_QueryResultVAppTemplateRecordType extends VMware_VCloud_
     protected $isExpired = null;
     protected $creationDate = null;
     protected $catalogName = null;
+    protected $storageKB = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -40,9 +41,10 @@ class VMware_VCloud_API_QueryResultVAppTemplateRecordType extends VMware_VCloud_
     * @param string $org - [optional] an attribute, 
     * @param boolean $isExpired - [optional] an attribute, 
     * @param dateTime $creationDate - [optional] an attribute, 
-    * @param string $catalogName - [optional] an attribute, 
+    * @param string $catalogName - [optional] an attribute,
+    * @param string $storageKB - [optional] an attribute
     */
-    public function __construct($href=null, $type=null, $id=null, $Link=null, $Metadata=null, $isGoldMaster=null, $status=null, $isDeployed=null, $name=null, $storageProfileName=null, $isEnabled=null, $isPublished=null, $vdcName=null, $vdc=null, $ownerName=null, $isBusy=null, $org=null, $isExpired=null, $creationDate=null, $catalogName=null) {
+    public function __construct($href=null, $type=null, $id=null, $Link=null, $Metadata=null, $isGoldMaster=null, $status=null, $isDeployed=null, $name=null, $storageProfileName=null, $isEnabled=null, $isPublished=null, $vdcName=null, $vdc=null, $ownerName=null, $isBusy=null, $org=null, $isExpired=null, $creationDate=null, $catalogName=null, $storageKB=null) {
         parent::__construct($href, $type, $id, $Link, $Metadata);
         $this->isGoldMaster = $isGoldMaster;
         $this->status = $status;
@@ -59,6 +61,7 @@ class VMware_VCloud_API_QueryResultVAppTemplateRecordType extends VMware_VCloud_
         $this->isExpired = $isExpired;
         $this->creationDate = $creationDate;
         $this->catalogName = $catalogName;
+        $this->storageKB = $storageKB;
         $this->tagName = 'VAppTemplateRecord';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -151,6 +154,12 @@ class VMware_VCloud_API_QueryResultVAppTemplateRecordType extends VMware_VCloud_
     }
     public function set_catalogName($catalogName) {
         $this->catalogName = $catalogName;
+    }
+    public function get_storageKB() {
+        return $this->storageKB;
+    }
+    public function set_storageKB($storageKB) {
+        $this->storageKB = $storageKB;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -454,6 +463,17 @@ class VMware_VCloud_API_QueryResultVAppTemplateRecordType extends VMware_VCloud_
             $node->removeAttributeNS($nsUri, 'catalogName');
         } else {
             $this->catalogName = null;
+        }
+        $ndstorageKB = $attrs->getNamedItem('storageKB');
+        if (!is_null($ndstorageKB)) {
+            $this->storageKB = $ndstorageKB->value;
+            if (isset($ndstorageKB->prefix)) {
+                $this->namespace['storageKB'] = $ndstorageKB->prefix;
+                $nsUri = $ndstorageKB->lookupNamespaceURI($ndstorageKB->prefix);
+            }
+            $node->removeAttributeNS($nsUri, 'storageKB');
+        } else {
+            $this->storageKB = null;
         }
         parent::buildAttributes($node, $namespaces);
     }
