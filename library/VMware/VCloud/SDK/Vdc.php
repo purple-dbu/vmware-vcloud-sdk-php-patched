@@ -298,11 +298,12 @@ $vdcStorageProfileRef, $catalogRef)
      *                                    to be created
      * @param boolean $manifestRequired   A flag indicates the manifest
      *                                    file is required or not
+     * @param VMware_VCloud_API_ReferenceType $vdcStorageProfileRef A reference to the storage profile being used
      * @return VMware_VCloud_API_VAppTemplateType
      * @since Version 1.0.0
      */
     public function sendUploadVAppTemplateRequest($name, $format,
-                           $description=null, $manifestRequired=false)
+                           $description=null, $manifestRequired=false, $vdcStorageProfileRef=null)
     {
         $url = $this->url . '/action/uploadVAppTemplate';
         $type =
@@ -312,6 +313,7 @@ $vdcStorageProfileRef, $catalogRef)
         $params->set_transferFormat('application/' . $format . '+xml');
         $params->setDescription($description);
         $params->set_manifestRequired($manifestRequired);
+        $params->setVdcStorageProfile($vdcStorageProfileRef);
         return $this->svc->post($url, 201, $type, $params);
     }
 
