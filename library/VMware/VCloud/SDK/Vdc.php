@@ -625,4 +625,7 @@ $vdcStorageProfileRef, $catalogRef)
      */
     public function getVdcStorageProfiles($name=null)
     {
-         $
+         $refs = $this->getVdcStorageProfileRefs($name);
+         return $this->getObjsByContainedRefs($refs);
+    }
+}
