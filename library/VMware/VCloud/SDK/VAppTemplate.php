@@ -414,8 +414,9 @@ class VMware_VCloud_SDK_VAppTemplate extends VMware_VCloud_SDK_Abstract
         {
             $this->svc->createSDKObj($this->getCatalogItemLink())->delete();
         }
-        $this->svc->delete($this->url, 202);
+        $task = $this->svc->delete($this->url, 202);
         $this->destroy();
+        return $task;
     }
 
     /**
