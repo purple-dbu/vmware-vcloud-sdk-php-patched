@@ -30,8 +30,9 @@ update: composer.phar
 patch:
 	ls scripts/patches/*.patch | while read patch; do \
 		echo ==================== $$patch ====================; \
-		patch --forward --reject-file=- --strip=1 < "$$patch" || exit 1; \
+		(git apply --stat "$$patch" && git apply < "$$patch") || exit 1; \
 		echo ; \
+		sleep 1; \
 	done || echo -n ""
 
 clean:
