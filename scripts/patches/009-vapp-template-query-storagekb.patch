@@ -1,3 +1,10 @@
+From d41fa644a91df38f1d9de1c151d4571e91d3b612 Mon Sep 17 00:00:00 2001
+From: Brian Scaturro <scaturrob@gmail.com>
+Date: Fri, 9 Aug 2013 11:26:53 -0400
+Subject: [PATCH] add support for storageKB field on
+ VMware_VCloud_API_QueryResultVAppTemplateRecordType
+
+---
  .../API/QueryResultVAppTemplateRecordType.php      | 24 ++++++++++++++++++++--
  1 file changed, 22 insertions(+), 2 deletions(-)
 
@@ -65,3 +72,6 @@ index 00d7e97..b1793b0 100644
          parent::buildAttributes($node, $namespaces);
      }
      protected function buildChildren($child, $nodeName, $namespace='') {
+-- 
+1.8.3.msysgit.0
+

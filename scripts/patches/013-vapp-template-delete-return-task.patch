@@ -1,0 +1,27 @@
+From 3a792cc6dd2be1f3bd6383f159a055e6d7027db3 Mon Sep 17 00:00:00 2001
+From: Brian Scaturro <scaturrob@gmail.com>
+Date: Mon, 12 Aug 2013 13:34:09 -0400
+Subject: [PATCH] VMware_VCloud_SDK_VAppTemplate::delete now returns task
+
+---
+ library/VMware/VCloud/SDK/VAppTemplate.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/library/VMware/VCloud/SDK/VAppTemplate.php b/library/VMware/VCloud/SDK/VAppTemplate.php
+index 811a973..8076c3d 100644
+--- a/library/VMware/VCloud/SDK/VAppTemplate.php
++++ b/library/VMware/VCloud/SDK/VAppTemplate.php
+@@ -361,8 +361,9 @@ class VMware_VCloud_SDK_VAppTemplate extends VMware_VCloud_SDK_Abstract
+      */
+     public function delete()
+     {
+-        $this->svc->delete($this->url, 202);
++        $task = $this->svc->delete($this->url, 202);
+         $this->destroy();
++        return $task;
+     }
+ 
+     /**
+-- 
+1.8.3.msysgit.0
+

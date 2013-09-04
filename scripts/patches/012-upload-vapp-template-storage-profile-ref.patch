@@ -1,0 +1,38 @@
+From c4e79373009ad46908587a5256f85d1415e5f445 Mon Sep 17 00:00:00 2001
+From: Brian Scaturro <scaturrob@gmail.com>
+Date: Fri, 9 Aug 2013 13:21:48 -0400
+Subject: [PATCH] VMware_VCloud_SDK_Vdc::sendUploadVAppTemplateRequest now uses
+
+---
+ library/VMware/VCloud/SDK/Vdc.php | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/library/VMware/VCloud/SDK/Vdc.php b/library/VMware/VCloud/SDK/Vdc.php
+index 1ae58e6..65c47ff 100644
+--- a/library/VMware/VCloud/SDK/Vdc.php
++++ b/library/VMware/VCloud/SDK/Vdc.php
+@@ -298,11 +298,12 @@ $vdcStorageProfileRef, $catalogRef)
+      *                                    to be created
+      * @param boolean $manifestRequired   A flag indicates the manifest
+      *                                    file is required or not
++     * @param VMware_VCloud_API_ReferenceType $vdcStorageProfileRef A reference to the storage profile being used
+      * @return VMware_VCloud_API_VAppTemplateType
+      * @since Version 1.0.0
+      */
+     public function sendUploadVAppTemplateRequest($name, $format,
+-                           $description=null, $manifestRequired=false)
++                           $description=null, $manifestRequired=false, $vdcStorageProfileRef=null)
+     {
+         $url = $this->url . '/action/uploadVAppTemplate';
+         $type =
+@@ -312,6 +313,7 @@ $vdcStorageProfileRef, $catalogRef)
+         $params->set_transferFormat('application/' . $format . '+xml');
+         $params->setDescription($description);
+         $params->set_manifestRequired($manifestRequired);
++        $params->setVdcStorageProfile($vdcStorageProfileRef);
+         return $this->svc->post($url, 201, $type, $params);
+     }
+ 
+-- 
+1.8.3.msysgit.0
+
