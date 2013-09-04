@@ -16,6 +16,9 @@ with the exception of the following additions and changes:
 ✔ Fixed [#7](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/7): Uploading OVF files doesn't work on Windows/Cygwin  
 ✔ Fixed [#8](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/8): Set image type in VMWare_VCloud_SDK_Vdc::uploadMedia (credits to @brianium)  
 ✔ Fixed [#9](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/9): Add support for storageKB field on VMware_VCloud_API_QueryResultVAppTemp (credits to @brianium)  
+✔ Fixed [#12](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/12): VMware_VCloud_SDK_Vdc::sendUploadVAppTemplateRequest should uses $vdcStorageProfileRef (credits to @brianium)  
+✔ Fixed [#13](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/13): VMware_VCloud_SDK_VAppTemplate::delete should return a task (credits to @brianium)  
+✔ Fixed [#14](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/14): VMware_VCloud_SDK_VAppTemplate::deleteVAppTemplate should return a task (credits to @brianium)  
 
 
 Versioning
