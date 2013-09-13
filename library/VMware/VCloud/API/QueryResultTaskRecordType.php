@@ -374,12 +374,12 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
         }
         $nddetails = $attrs->getNamedItem('details');
         if (!is_null($nddetails)) {
-            $this->objectType = $nddetails->value;
+            $this->details = $nddetails->value;
             if (isset($nddetails->prefix)) {
                 $this->namespace['details'] = $nddetails->prefix;
                 $nsUri = $nddetails->lookupNamespaceURI($nddetails->prefix);
             }
-            $node->removeAttributeNS($nsUri, 'objectType');
+            $node->removeAttributeNS($nsUri, 'details');
         } else {
             $this->details = null;
         }
