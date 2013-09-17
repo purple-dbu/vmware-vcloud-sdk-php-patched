@@ -5,7 +5,7 @@ class VMware_VCloud_API_OVF_VirtualHardwareSection_Type extends VMware_VCloud_AP
     protected $System = null;
     protected $Item = array();
     protected $Any = array();
-    protected $namespace = array();
+    protected $namespace = array('VirtualHardwareSection' => 'ovf');
     protected $namespacedef = null;
     protected $tagName = null;
     public static $defaultNS = 'http://schemas.dmtf.org/ovf/envelope/1';

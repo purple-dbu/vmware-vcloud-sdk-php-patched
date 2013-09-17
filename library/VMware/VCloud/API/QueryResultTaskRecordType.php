@@ -11,6 +11,7 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
     protected $org = null;
     protected $serviceNamespace = null;
     protected $objectType = null;
+    protected $details = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -32,9 +33,10 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
     * @param string $ownerName - [optional] an attribute, 
     * @param string $org - [optional] an attribute, 
     * @param string $serviceNamespace - [optional] an attribute, 
-    * @param string $objectType - [optional] an attribute, 
+    * @param string $objectType - [optional] an attribute,
+    * @param string $details - [optional] an attribute
     */
-    public function __construct($href=null, $type=null, $id=null, $Link=null, $Metadata=null, $status=null, $startDate=null, $endDate=null, $name=null, $objectName=null, $orgName=null, $object=null, $ownerName=null, $org=null, $serviceNamespace=null, $objectType=null) {
+    public function __construct($href=null, $type=null, $id=null, $Link=null, $Metadata=null, $status=null, $startDate=null, $endDate=null, $name=null, $objectName=null, $orgName=null, $object=null, $ownerName=null, $org=null, $serviceNamespace=null, $objectType=null, $details=null) {
         parent::__construct($href, $type, $id, $Link, $Metadata);
         $this->status = $status;
         $this->startDate = $startDate;
@@ -47,6 +49,7 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
         $this->org = $org;
         $this->serviceNamespace = $serviceNamespace;
         $this->objectType = $objectType;
+        $this->details = $details;
         $this->tagName = 'TaskRecord';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -115,6 +118,12 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
     }
     public function set_objectType($objectType) {
         $this->objectType = $objectType;
+    }
+    public function get_details() {
+        return $this->details;
+    }
+    public function set_details($details) {
+        $this->details = $details;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -194,6 +203,10 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
         if (!is_null($this->objectType)) {
             $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'objectType', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'objectType=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->objectType, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='objectType')));
+        }
+        if (!is_null($this->details)) {
+            $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'details', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'details=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->details, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='details')));
         }
         return $out;
     }
@@ -358,6 +371,17 @@ class VMware_VCloud_API_QueryResultTaskRecordType extends VMware_VCloud_API_Quer
             $node->removeAttributeNS($nsUri, 'objectType');
         } else {
             $this->objectType = null;
+        }
+        $nddetails = $attrs->getNamedItem('details');
+        if (!is_null($nddetails)) {
+            $this->details = $nddetails->value;
+            if (isset($nddetails->prefix)) {
+                $this->namespace['details'] = $nddetails->prefix;
+                $nsUri = $nddetails->lookupNamespaceURI($nddetails->prefix);
+            }
+            $node->removeAttributeNS($nsUri, 'details');
+        } else {
+            $this->details = null;
         }
         parent::buildAttributes($node, $namespaces);
     }
