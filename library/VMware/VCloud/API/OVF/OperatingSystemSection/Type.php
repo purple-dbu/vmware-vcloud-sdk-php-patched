@@ -4,7 +4,7 @@ class VMware_VCloud_API_OVF_OperatingSystemSection_Type extends VMware_VCloud_AP
     protected $id = null;
     protected $Description = null;
     protected $Any = array();
-    protected $namespace = array();
+    protected $namespace = array('OperatingSystemSection' => 'ovf');
     protected $namespacedef = null;
     protected $tagName = null;
     public static $defaultNS = 'http://schemas.dmtf.org/ovf/envelope/1';

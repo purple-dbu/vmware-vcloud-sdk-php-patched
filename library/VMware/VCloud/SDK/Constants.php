@@ -61,6 +61,7 @@ final class VMware_VCloud_SDK_Constants
     const VM_CAPABILITIES_SECTION_CONTENT_TYPE = 'application/vnd.vmware.vcloud.vmCapabilitiesSection+xml';
     const VM_CONTENT_TYPE = 'application/vnd.vmware.vcloud.vm+xml';
     const VM_PENDING_ANSWER_CONTENT_TYPE = 'application/vnd.vmware.vcloud.vmPendingAnswer+xml';
+    const VM_PENDING_QUESTION_CONTENT_TYPE = 'application/vnd.vmware.vcloud.vmPendingQuestion+xml';
 
     const ADMIN_CATALOG_CONTENT_TYPE = 'application/vnd.vmware.admin.catalog+xml';
     const ADMIN_NETWORK_CONTENT_TYPE = 'application/vnd.vmware.admin.network+xml';
