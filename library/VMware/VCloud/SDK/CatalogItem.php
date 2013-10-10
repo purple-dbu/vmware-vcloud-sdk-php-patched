@@ -72,6 +72,19 @@ class VMware_VCloud_SDK_CatalogItem extends VMware_VCloud_SDK_Abstract
     }
 
     /**
+     * Force sync the library item to the remote subscribed library.
+     *
+     * @return VMware_VCloud_API_TaskType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function sync()
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_SYNC_URL;
+        return $this->svc->post($url, 202);
+    }
+
+    /**
      * Delete a VMware vCloud catalog item entity.
      *
      * @return null

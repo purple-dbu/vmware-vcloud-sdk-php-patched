@@ -295,6 +295,12 @@ class VMware_VCloud_SDK_AdminOrg extends VMware_VCloud_SDK_Abstract
     /**
      * Get references for all vDCs or named vDC in this organization.
      *
+     * For System/Cloud Administrators, this method returns Admin Vdc references
+     * which can be used in
+     * {@link AdminVdc#getAdminVdcRef()}
+     * For Organization/Tenant Administrators/Users this method returns Vdc
+     * references which can be used in
+     * {@link Vdc#getVdcRef()}
      * @param string $name   Name of the vDC. If null, returns all
      * @return array VMware_VCloud_API_ReferenceType object array
      * @since Version 1.0.0
@@ -308,6 +314,12 @@ class VMware_VCloud_SDK_AdminOrg extends VMware_VCloud_SDK_Abstract
     /**
      * Get vDCs.
      *
+     * For System/Cloud Administrators, this method returns Admin Vdc references
+     * which can be used in
+     * {@link AdminVdc#getAdminVdcRef()}
+     * For Organization/Tenant Administrators/Users this method returns Vdc
+     * references which can be used in
+     * {@link Vdc#getVdcRef()}
      * @param string $name   Name of the vDC to get. If null, returns all
      * @return array VMware_VCloud_API_AdminVdcType object array
      * @since Version 1.0.0

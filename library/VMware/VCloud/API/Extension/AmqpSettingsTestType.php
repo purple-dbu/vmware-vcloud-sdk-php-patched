@@ -1,6 +1,7 @@
 <?php
 class VMware_VCloud_API_Extension_AmqpSettingsTestType extends VMware_VCloud_API_ResourceType {
     protected $Valid = null;
+    protected $error = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -12,10 +13,12 @@ class VMware_VCloud_API_Extension_AmqpSettingsTestType extends VMware_VCloud_API
     * @param string $type - [optional] an attribute, 
     * @param array $Link - [optional] an array of VMware_VCloud_API_LinkType objects
     * @param boolean $Valid - [required] 
+    * @param VMware_VCloud_API_ErrorType $error - [optional]
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $Valid=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $Valid=null, $error=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->Valid = $Valid;
+        $this->error = $error;
         $this->tagName = 'AmqpSettingsTest';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -24,6 +27,12 @@ class VMware_VCloud_API_Extension_AmqpSettingsTestType extends VMware_VCloud_API
     }
     public function setValid($Valid) { 
         $this->Valid = $Valid;
+    }
+    public function get_error() {
+        return $this->error;
+    }
+    public function set_error($error) { 
+        $this->error = $error;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -70,11 +79,15 @@ class VMware_VCloud_API_Extension_AmqpSettingsTestType extends VMware_VCloud_API
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'Valid', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "Valid>" . VMware_VCloud_API_Helper::format_boolean($this->Valid, $input_name='Valid') . "</" . $ns . "Valid>\n");
      }
+        if (!is_null($this->error)) {
+            $out = $this->error->export('error', $out, $level, '', $namespace, $rootNS);
+        }
         return $out;
     }
     protected function hasContent() {
         if (
             !is_null($this->Valid) ||
+            !is_null($this->error) ||
             parent::hasContent()
             ) {
             return true;
@@ -117,6 +130,15 @@ class VMware_VCloud_API_Extension_AmqpSettingsTestType extends VMware_VCloud_API
             $this->Valid = $sval;
             if (!empty($namespace)) {
                 $this->namespace['Valid'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'error') {
+            $obj = new VMware_VCloud_API_ErrorType();
+            $obj->build($child);
+            $obj->set_tagName('error');
+            $this->set_error($obj);
+            if (!empty($namespace)) {
+                $this->namespace['error'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

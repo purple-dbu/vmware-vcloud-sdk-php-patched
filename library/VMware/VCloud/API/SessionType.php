@@ -1,6 +1,7 @@
 <?php
 class VMware_VCloud_API_SessionType extends VMware_VCloud_API_ResourceType {
     protected $org = null;
+    protected $userId = null;
     protected $user = null;
     protected $namespace = array();
     protected $namespacedef = null;
@@ -13,11 +14,13 @@ class VMware_VCloud_API_SessionType extends VMware_VCloud_API_ResourceType {
     * @param string $type - [optional] an attribute, 
     * @param array $Link - [optional] an array of VMware_VCloud_API_LinkType objects
     * @param string $org - [optional] an attribute, 
+    * @param string $userId - [optional] an attribute, 
     * @param string $user - [optional] an attribute, 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $org=null, $user=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $org=null, $userId=null, $user=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->org = $org;
+        $this->userId = $userId;
         $this->user = $user;
         $this->tagName = 'Session';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
@@ -27,6 +30,12 @@ class VMware_VCloud_API_SessionType extends VMware_VCloud_API_ResourceType {
     }
     public function set_org($org) {
         $this->org = $org;
+    }
+    public function get_userId(){
+        return $this->userId;
+    }
+    public function set_userId($userId) {
+        $this->userId = $userId;
     }
     public function get_user(){
         return $this->user;
@@ -72,6 +81,10 @@ class VMware_VCloud_API_SessionType extends VMware_VCloud_API_ResourceType {
         if (!is_null($this->org)) {
             $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'org', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'org=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->org, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='org')));
+        }
+        if (!is_null($this->userId)) {
+            $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'userId', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'userId=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->userId, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='userId')));
         }
         if (!is_null($this->user)) {
             $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'user', self::$defaultNS, $namespace, $rootNS);
@@ -130,6 +143,17 @@ class VMware_VCloud_API_SessionType extends VMware_VCloud_API_ResourceType {
             $node->removeAttributeNS($nsUri, 'org');
         } else {
             $this->org = null;
+        }
+        $nduserId = $attrs->getNamedItem('userId');
+        if (!is_null($nduserId)) {
+            $this->userId = $nduserId->value;
+            if (isset($nduserId->prefix)) {
+                $this->namespace['userId'] = $nduserId->prefix;
+                $nsUri = $nduserId->lookupNamespaceURI($nduserId->prefix);
+            }
+            $node->removeAttributeNS($nsUri, 'userId');
+        } else {
+            $this->userId = null;
         }
         $nduser = $attrs->getNamedItem('user');
         if (!is_null($nduser)) {

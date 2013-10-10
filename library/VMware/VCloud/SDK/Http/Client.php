@@ -56,7 +56,7 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         else
         {
-            // require_once 'VMware/VCloud/Http/Exception.php'; // @amercier #3
+            require_once 'VMware/VCloud/Http/Exception.php';
             throw new VMware_VCloud_SDK_Http_Exception(
                  "'username' and 'password' are valid keys of array \$auth\n");
         }
@@ -160,7 +160,7 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         catch (HTTP_Request2_Exception $e)
         {
-            // require_once 'VMware/VCloud/Http/Exception.php'; // @amercier #3
+            require_once 'VMware/VCloud/Http/Exception.php';
             throw new VMware_VCloud_SDK_Http_Exception($e->getMessage(),
                                                        $e->getCode());
         }
@@ -247,82 +247,21 @@ class VMware_VCloud_SDK_Http_Client implements
     /**
      * Upload a file.
      *
-     * @param string $url        Target where to upload the file
-     * @param array  $headers    HTTP request headers
-     * @param string $file       Full path of the file to be uploaded
-     * @param int    $windowSize Chunk size in bytes, defaults to 10M
+     * @param string $url      Target where to upload the file
+     * @param array $headers   HTTP request headers
+     * @param string $file     Full path of the file to be uploaded
      * @return null
      * @since Version 1.0.0
      */
-    public function upload($url, $headers, $file, $windowSize = 10485760)
+    public function upload($url, $headers, $file)
     {
-        if( filesize($file) <= $windowSize )
+        session_write_close();
+        if ($fh = fopen($file, 'rb'))
         {
-            session_write_close();
-            if ($fh = fopen($file, 'rb'))
-            {
-                $data = fread($fh, filesize($file));
-                $this->put($url, $headers, $data);
-                flush();
-            }
-            fclose($fh);
+            $data = fread($fh, filesize($file));
+            $this->put($url, $headers, $data);
+            flush();
         }
-        else
-        {
-            $i = 0;
-
-            # 'Accept' header is used to identify VMware vCloud Director version
-            $headers['Accept'] = VMware_VCloud_SDK_Constants::VCLOUD_ACCEPT_HEADER .
-                                 ';' .
-                                 'version=' . $this->apiVersion;
-
-            $transferred = 0;
-            $remaining = filesize($file);
-            $total = filesize($file);
-
-            session_write_close();
-            if ($fh = fopen($file, 'rb'))
-            {
-                while( $data = fread($fh, $windowSize) )
-                {
-
-                    $contentLength = min($remaining, $windowSize);
-
-                    $headers['Content-Range'] = 'bytes ' . $transferred . '-' . ($transferred + $contentLength) . '/' . $total;
-                    $headers['Content-Length'] = $contentLength;
-                    $response = $this->put($url, $headers, $data);
-
-                    if( $response->getStatus() !== 200 )
-                    {
-                        throw new Exception('Can\'t upload ' . $file . ' (HTTP ' . $response->getStatus() . '): ' . $response->getBody());
-                    }
-
-                    $transferred += $contentLength;
-                    $remaining   .= $contentLength;
-                }
-                flush();
-            }
-            fclose($fh);
-        }
-    }
-
-    /**
-     * @amercier #2
-     *
-     * Get the username of a HTTP vCloud authentication token
-     * @return string Returns the vCloud username@organization
-     */
-    public function getUsername() {
-        return $this->username;
-    }
-
-    /**
-     * @amercier #2
-     *
-     * Get the vCloud authentication token
-     * @return Returns the vCloud authentication token
-     */
-    public function getToken() {
-        return $this->authToken;
+        fclose($fh);
     }
 }

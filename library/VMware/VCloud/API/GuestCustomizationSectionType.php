@@ -14,6 +14,8 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
     protected $AdminPasswordEnabled = null;
     protected $AdminPasswordAuto = null;
     protected $AdminPassword = null;
+    protected $AdminAutoLogonEnabled = null;
+    protected $AdminAutoLogonCount = null;
     protected $ResetPasswordRequired = null;
     protected $CustomizationScript = null;
     protected $ComputerName = null;
@@ -41,13 +43,15 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
     * @param boolean $AdminPasswordEnabled - [optional] 
     * @param boolean $AdminPasswordAuto - [optional] 
     * @param string $AdminPassword - [optional] 
+    * @param boolean $AdminAutoLogonEnabled - [optional] 
+    * @param int $AdminAutoLogonCount - [optional] 
     * @param boolean $ResetPasswordRequired - [optional] 
     * @param string $CustomizationScript - [optional] 
     * @param string $ComputerName - [optional] 
     * @param array $Link - [optional] an array of VMware_VCloud_API_LinkType objects
     * @param array $Any - [optional] an array of any type of objects
     */
-    public function __construct($required=null, $Info=null, $href=null, $type=null, $Enabled=null, $ChangeSid=null, $VirtualMachineId=null, $JoinDomainEnabled=null, $UseOrgSettings=null, $DomainName=null, $DomainUserName=null, $DomainUserPassword=null, $MachineObjectOU=null, $AdminPasswordEnabled=null, $AdminPasswordAuto=null, $AdminPassword=null, $ResetPasswordRequired=null, $CustomizationScript=null, $ComputerName=null, $Link=null, $Any=null) {
+    public function __construct($required=null, $Info=null, $href=null, $type=null, $Enabled=null, $ChangeSid=null, $VirtualMachineId=null, $JoinDomainEnabled=null, $UseOrgSettings=null, $DomainName=null, $DomainUserName=null, $DomainUserPassword=null, $MachineObjectOU=null, $AdminPasswordEnabled=null, $AdminPasswordAuto=null, $AdminPassword=null, $AdminAutoLogonEnabled=null, $AdminAutoLogonCount=null, $ResetPasswordRequired=null, $CustomizationScript=null, $ComputerName=null, $Link=null, $Any=null) {
         parent::__construct($required, $Info);
         $this->href = $href;
         $this->type = $type;
@@ -63,6 +67,8 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
         $this->AdminPasswordEnabled = $AdminPasswordEnabled;
         $this->AdminPasswordAuto = $AdminPasswordAuto;
         $this->AdminPassword = $AdminPassword;
+        $this->AdminAutoLogonEnabled = $AdminAutoLogonEnabled;
+        $this->AdminAutoLogonCount = $AdminAutoLogonCount;
         $this->ResetPasswordRequired = $ResetPasswordRequired;
         $this->CustomizationScript = $CustomizationScript;
         $this->ComputerName = $ComputerName;
@@ -146,6 +152,18 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
     }
     public function setAdminPassword($AdminPassword) { 
         $this->AdminPassword = $AdminPassword;
+    }
+    public function getAdminAutoLogonEnabled() {
+        return $this->AdminAutoLogonEnabled;
+    }
+    public function setAdminAutoLogonEnabled($AdminAutoLogonEnabled) { 
+        $this->AdminAutoLogonEnabled = $AdminAutoLogonEnabled;
+    }
+    public function getAdminAutoLogonCount() {
+        return $this->AdminAutoLogonCount;
+    }
+    public function setAdminAutoLogonCount($AdminAutoLogonCount) { 
+        $this->AdminAutoLogonCount = $AdminAutoLogonCount;
     }
     public function getResetPasswordRequired() {
         return $this->ResetPasswordRequired;
@@ -299,6 +317,16 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AdminPassword', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AdminPassword>" . VMware_VCloud_API_Helper::quote_xml(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->AdminPassword, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='AdminPassword')) . "</" . $ns . "AdminPassword>\n");
         }
+        if (!is_null($this->AdminAutoLogonEnabled)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AdminAutoLogonEnabled', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AdminAutoLogonEnabled>" . VMware_VCloud_API_Helper::format_boolean($this->AdminAutoLogonEnabled, $input_name='AdminAutoLogonEnabled') . "</" . $ns . "AdminAutoLogonEnabled>\n");
+        }
+        if (!is_null($this->AdminAutoLogonCount)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AdminAutoLogonCount', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AdminAutoLogonCount>" . VMware_VCloud_API_Helper::format_integer($this->AdminAutoLogonCount, $input_name='AdminAutoLogonCount') . "</" . $ns . "AdminAutoLogonCount>\n");
+        }
         if (!is_null($this->ResetPasswordRequired)) {
             $out = VMware_VCloud_API_Helper::showIndent($out, $level);
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'ResetPasswordRequired', self::$defaultNS, $namespace, $rootNS);
@@ -350,6 +378,8 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
             !is_null($this->AdminPasswordEnabled) ||
             !is_null($this->AdminPasswordAuto) ||
             !is_null($this->AdminPassword) ||
+            !is_null($this->AdminAutoLogonEnabled) ||
+            !is_null($this->AdminAutoLogonCount) ||
             !is_null($this->ResetPasswordRequired) ||
             !is_null($this->CustomizationScript) ||
             !is_null($this->ComputerName) ||
@@ -496,6 +526,20 @@ class VMware_VCloud_API_GuestCustomizationSectionType extends VMware_VCloud_API_
             $this->AdminPassword = $sval;
             if (!empty($namespace)) {
                 $this->namespace['AdminPassword'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'AdminAutoLogonEnabled') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->AdminAutoLogonEnabled = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['AdminAutoLogonEnabled'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'AdminAutoLogonCount') {
+            $sval = $child->nodeValue;
+            $this->AdminAutoLogonCount = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['AdminAutoLogonCount'] = $namespace;
             }
         }
         elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ResetPasswordRequired') {

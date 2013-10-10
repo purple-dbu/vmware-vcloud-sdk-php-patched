@@ -71,6 +71,29 @@ class VMware_VCloud_SDK_Vdc extends VMware_VCloud_SDK_Abstract
     }
 
     /**
+     * Get references to all edgegateways for this Org vDC with the given name.
+     *
+     * @param string $name Name of the edgegateway to get. If null, returns all
+     * @return array VMware_VCloud_API_ReferenceType object array
+     * @since API Version 5.1.0
+     * @since SDK Version 5.5.0
+     */
+    public function getEdgeGatewayRefs($name = null)
+    {
+        $links = $this->getVdc()->getLink();
+        foreach ($links as $link)
+        {
+            if ($link->get_rel() == 'edgeGateways')
+            {
+                $url = $link->get_href();
+                $edgeGatewayReferences = $this->svc->get($url . '?&format=references');
+                return $this->getContainedRefs(null, $name, 'getReference', $edgeGatewayReferences);
+            }
+        }
+        throw new VMware_VCloud_SDK_Exception ("Link not found.\n");
+    }
+
+    /**
      * Get VMware vCloud available organization networks/organization vdc networks.
      *
      * @param string $name  Name of the available networks. If null, returns all
@@ -82,6 +105,35 @@ class VMware_VCloud_SDK_Vdc extends VMware_VCloud_SDK_Abstract
     {
         $refs = $this->getAvailableNetworkRefs($name);
         return $this->getObjsByContainedRefs($refs);
+    }
+
+    /**
+     * Create an isolated/routed Org vDC network
+     * which can be created by an org administrator.
+     *
+     * @param VMware_VCloud_API_OrgVdcNetworkType $vdcNetwork
+     * @return VMware_VCloud_API_OrgVdcNetworkType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function addOrgVdcNetwork($vdcNetwork)
+    {
+        $url = null;
+        $links = $this->getVdc()->getLink();
+        foreach ($links as $link)
+        {
+            if ($link->get_rel() == 'orgVdcNetworks')
+            {
+                $url = $link->get_href();
+                break;
+            }
+        }
+        if (is_null($url))
+        {
+            throw new VMware_VCloud_SDK_Exception ("Link not found.\n");
+        }
+        $type = VMware_VCloud_SDK_Constants::ORG_VDC_NETWORK_CONTENT_TYPE;
+        return $this->svc->post($url, 201, $type, $vdcNetwork);
     }
 
     /**
@@ -199,8 +251,7 @@ $vdcStorageProfileRef, $catalogRef)
             $diskUrl = $refs[0]->get_href();
             $name = $file->get_name();
             $diskPath = null;
-            // $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
-            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1); // @amercier #7
+            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
             $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
             $this->svc->upload($diskUrl, $diskPath);
         }
@@ -298,12 +349,11 @@ $vdcStorageProfileRef, $catalogRef)
      *                                    to be created
      * @param boolean $manifestRequired   A flag indicates the manifest
      *                                    file is required or not
-     * @param VMware_VCloud_API_ReferenceType $vdcStorageProfileRef A reference to the storage profile being used
      * @return VMware_VCloud_API_VAppTemplateType
      * @since Version 1.0.0
      */
     public function sendUploadVAppTemplateRequest($name, $format,
-                           $description=null, $manifestRequired=false, $vdcStorageProfileRef=null)
+                           $description=null, $manifestRequired=false)
     {
         $url = $this->url . '/action/uploadVAppTemplate';
         $type =
@@ -313,7 +363,6 @@ $vdcStorageProfileRef, $catalogRef)
         $params->set_transferFormat('application/' . $format . '+xml');
         $params->setDescription($description);
         $params->set_manifestRequired($manifestRequired);
-        $params->setVdcStorageProfile($vdcStorageProfileRef);
         return $this->svc->post($url, 201, $type, $params);
     }
 
@@ -400,7 +449,6 @@ $vdcStorageProfileRef, $catalogRef)
      */
     private function uploadMedia($filename, $imageType, $mediaType)
     {
-        $mediaType->set_imageType($imageType);
         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
         $url = $this->getMediaUploadInfo($mediaUpInfo);
         $durl =  $mediaUpInfo->get_href();
@@ -629,5 +677,68 @@ $vdcStorageProfileRef, $catalogRef)
     {
          $refs = $this->getVdcStorageProfileRefs($name);
          return $this->getObjsByContainedRefs($refs);
+    }
+
+    /**
+     * Creating vApp by uploading an ovf package.
+     *
+     * @param VMware_VCloud_API_InstantiateOvfParamsType  $params
+     * @param string $ovfDescriptorPath   Path to the OVF descriptor
+     * @return VMware_VCloud_API_VAppType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function uploadOVFAsVApp($params, $ovfDescriptorPath)
+    {
+        //step 1: initial the upload by sending a upload vApp request
+        $vApp = $this->instantiateOvf($params);
+        if (!isset($vApp) ||
+            !($vApp instanceof VMware_VCloud_API_VAppType))
+        {
+            throw new VMware_VCloud_SDK_Exception (
+                        "Send upload vApp request failed.\n");
+        }
+
+        $status = $vApp->get_status();
+        if ($status != 0)
+        {
+             throw new VMware_VCloud_SDK_Exception (
+                       "vApp status is not 0, status = $status.\n");
+        }
+        $vAppob=$this->svc->createSDKObj($vApp->get_href());
+
+        //step 2: get OVF descriptor upload file names from response vApp
+        $files = $vAppob->getUploadFileNames($vApp);
+        //get OVF descriptor upload URL
+        $ovfUrl = $vAppob->getUploadOVFDescriptorUrl($files);
+
+        //step 3: upload an OVF descriptor file
+        $vAppob->uploadOVFDescriptor($ovfUrl, $ovfDescriptorPath);
+        //wait until OVF descriptor get uploaded
+        $vApp1 = $this->svc->wait($vApp, 'get_ovfDescriptorUploaded',
+                                      array(true));
+
+        //step 4: get OVF descriptor upload file names from response vApp
+        $files = $vAppob->getUploadFileNames($vApp1);
+        //get upload URL for each virtual disk and upload the disk file
+        $vAppob->uploadFile($files, $ovfDescriptorPath);
+        $vApp1 = $this->svc->wait($vApp1, 'get_status',
+                                      array(true));
+        return $vApp1;
+    }
+
+    /**
+     * Instantiate a vApp or VM from an OVF.
+     *
+     * @param VMware_VCloud_API_InstantiateOvfParamsType  $params
+     * @return VMware_VCloud_API_VAppType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function instantiateOvf($params)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_INSTANTIATE_OVF_URL;
+        $type = VMware_VCloud_SDK_Constants::INSTANTIATE_OVF_PARAMS_CONTENT_TYPE;
+        return $this->svc->post($url, 201, $type, $params);
     }
 }

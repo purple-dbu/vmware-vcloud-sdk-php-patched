@@ -7,6 +7,7 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
     protected $AmqpExchange = null;
     protected $AmqpVHost = null;
     protected $AmqpUseSSL = null;
+    protected $AmqpSslAcceptAll = null;
     protected $AmqpPrefix = null;
     protected $namespace = array();
     protected $namespacedef = null;
@@ -25,9 +26,10 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
     * @param string $AmqpExchange - [required] 
     * @param string $AmqpVHost - [required] 
     * @param boolean $AmqpUseSSL - [required] 
+    * @param boolean $AmqpSslAcceptAll - [optional] 
     * @param string $AmqpPrefix - [optional] 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $AmqpHost=null, $AmqpPort=null, $AmqpUsername=null, $AmqpPassword=null, $AmqpExchange=null, $AmqpVHost=null, $AmqpUseSSL=null, $AmqpPrefix=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $AmqpHost=null, $AmqpPort=null, $AmqpUsername=null, $AmqpPassword=null, $AmqpExchange=null, $AmqpVHost=null, $AmqpUseSSL=null, $AmqpSslAcceptAll=null, $AmqpPrefix=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->AmqpHost = $AmqpHost;
         $this->AmqpPort = $AmqpPort;
@@ -36,6 +38,7 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
         $this->AmqpExchange = $AmqpExchange;
         $this->AmqpVHost = $AmqpVHost;
         $this->AmqpUseSSL = $AmqpUseSSL;
+        $this->AmqpSslAcceptAll = $AmqpSslAcceptAll;
         $this->AmqpPrefix = $AmqpPrefix;
         $this->tagName = 'AmqpSettings';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
@@ -81,6 +84,12 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
     }
     public function setAmqpUseSSL($AmqpUseSSL) { 
         $this->AmqpUseSSL = $AmqpUseSSL;
+    }
+    public function getAmqpSslAcceptAll() {
+        return $this->AmqpSslAcceptAll;
+    }
+    public function setAmqpSslAcceptAll($AmqpSslAcceptAll) { 
+        $this->AmqpSslAcceptAll = $AmqpSslAcceptAll;
     }
     public function getAmqpPrefix() {
         return $this->AmqpPrefix;
@@ -163,6 +172,11 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AmqpUseSSL', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AmqpUseSSL>" . VMware_VCloud_API_Helper::format_boolean($this->AmqpUseSSL, $input_name='AmqpUseSSL') . "</" . $ns . "AmqpUseSSL>\n");
      }
+        if (!is_null($this->AmqpSslAcceptAll)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AmqpSslAcceptAll', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AmqpSslAcceptAll>" . VMware_VCloud_API_Helper::format_boolean($this->AmqpSslAcceptAll, $input_name='AmqpSslAcceptAll') . "</" . $ns . "AmqpSslAcceptAll>\n");
+        }
         if (!is_null($this->AmqpPrefix)) {
             $out = VMware_VCloud_API_Helper::showIndent($out, $level);
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AmqpPrefix', self::$defaultNS, $namespace, $rootNS);
@@ -179,6 +193,7 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
             !is_null($this->AmqpExchange) ||
             !is_null($this->AmqpVHost) ||
             !is_null($this->AmqpUseSSL) ||
+            !is_null($this->AmqpSslAcceptAll) ||
             !is_null($this->AmqpPrefix) ||
             parent::hasContent()
             ) {
@@ -264,6 +279,13 @@ class VMware_VCloud_API_Extension_AmqpSettingsType extends VMware_VCloud_API_Res
             $this->AmqpUseSSL = $sval;
             if (!empty($namespace)) {
                 $this->namespace['AmqpUseSSL'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'AmqpSslAcceptAll') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->AmqpSslAcceptAll = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['AmqpSslAcceptAll'] = $namespace;
             }
         }
         elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'AmqpPrefix') {

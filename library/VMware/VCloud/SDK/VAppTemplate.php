@@ -136,6 +136,32 @@ class VMware_VCloud_SDK_VAppTemplate extends VMware_VCloud_SDK_Abstract
     }
 
     /**
+     * Retrieve the OVF descriptor of a vApp Template directly.
+     *
+     * @return VMware_VCloud_API_OVF_EnvelopeType
+     * @since API Version 1.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getOVFDescriptor()
+    {
+        $url = $this->url . '/ovf';
+        return $this->svc->get($url);
+    }
+
+    /**
+     * Retrieve the OVF descriptor of a vApp Template directly as string.
+     *
+     * @return String
+     * @since API Version 1.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getOVFDescriptorAsString()
+    {
+        $url = $this->url . '/ovf';
+        return $this->svc->get($url, '', false);
+    }
+
+    /**
      * Download an OVF descriptor.
      *
      * @param string $ovfDescUrl   URL of the OVF descriptor file
@@ -357,7 +383,8 @@ class VMware_VCloud_SDK_VAppTemplate extends VMware_VCloud_SDK_Abstract
      * Delete this vApp template.
      *
      * @return VMware_VCloud_API_TaskType
-     * @since Version 1.0.0
+     * @since API Version 1.0.0
+     * @since SDK Version 5.5.0
      */
     public function delete()
     {
@@ -405,8 +432,8 @@ class VMware_VCloud_SDK_VAppTemplate extends VMware_VCloud_SDK_Abstract
      * Deletes vApp template alone. If the vApp template is not attached to any catalog item.
      *
      * @return VMware_VCloud_API_TaskType
-     * @since Version 1.5.0
-     * @since SDK 5.1.0
+     * @since API Version 1.5.0
+     * @since SDK Version 5.5.0
      */
     public function deleteVAppTemplate()
     {

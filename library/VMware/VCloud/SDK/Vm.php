@@ -392,6 +392,19 @@ class VMware_VCloud_SDK_Vm extends VMware_VCloud_SDK_VApp_Abstract
     }
 
     /**
+     * Retrieve a mks ticket that you can use to gain access to the console of a running VM.
+     *
+     * @return VMware_VCloud_API_MksTicketType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function acquireMksTicket()
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_ACQUIRE_MKSTICKET_URL;
+        return $this->svc->post($url, 200);
+    }
+
+    /**
      * Get a VM pending question.
      *
      * @return VMware_VCloud_API_VmPendingQuestionType

@@ -11,6 +11,7 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
     protected $PasswordPolicySettings = null;
     protected $KerberosSettings = null;
     protected $LookupServiceSettings = null;
+    protected $CatalogSettings = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -32,8 +33,9 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
     * @param VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType $PasswordPolicySettings - [optional]
     * @param VMware_VCloud_API_Extension_KerberosSettingsType $KerberosSettings - [optional]
     * @param VMware_VCloud_API_Extension_LookupServiceSettingsType $LookupServiceSettings - [optional]
+    * @param VMware_VCloud_API_Extension_CatalogSettingsType $CatalogSettings - [optional]
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $GeneralSettings=null, $NotificationsSettings=null, $LdapSettings=null, $AmqpSettings=null, $EmailSettings=null, $License=null, $BrandingSettings=null, $BlockingTaskSettings=null, $PasswordPolicySettings=null, $KerberosSettings=null, $LookupServiceSettings=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $GeneralSettings=null, $NotificationsSettings=null, $LdapSettings=null, $AmqpSettings=null, $EmailSettings=null, $License=null, $BrandingSettings=null, $BlockingTaskSettings=null, $PasswordPolicySettings=null, $KerberosSettings=null, $LookupServiceSettings=null, $CatalogSettings=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->GeneralSettings = $GeneralSettings;
         $this->NotificationsSettings = $NotificationsSettings;
@@ -46,6 +48,7 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
         $this->PasswordPolicySettings = $PasswordPolicySettings;
         $this->KerberosSettings = $KerberosSettings;
         $this->LookupServiceSettings = $LookupServiceSettings;
+        $this->CatalogSettings = $CatalogSettings;
         $this->tagName = 'SystemSettings';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -114,6 +117,12 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
     }
     public function setLookupServiceSettings($LookupServiceSettings) { 
         $this->LookupServiceSettings = $LookupServiceSettings;
+    }
+    public function getCatalogSettings() {
+        return $this->CatalogSettings;
+    }
+    public function setCatalogSettings($CatalogSettings) { 
+        $this->CatalogSettings = $CatalogSettings;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -188,6 +197,9 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
         if (!is_null($this->LookupServiceSettings)) {
             $out = $this->LookupServiceSettings->export('LookupServiceSettings', $out, $level, '', $namespace, $rootNS);
         }
+        if (!is_null($this->CatalogSettings)) {
+            $out = $this->CatalogSettings->export('CatalogSettings', $out, $level, '', $namespace, $rootNS);
+        }
         return $out;
     }
     protected function hasContent() {
@@ -203,6 +215,7 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
             !is_null($this->PasswordPolicySettings) ||
             !is_null($this->KerberosSettings) ||
             !is_null($this->LookupServiceSettings) ||
+            !is_null($this->CatalogSettings) ||
             parent::hasContent()
             ) {
             return true;
@@ -337,6 +350,15 @@ class VMware_VCloud_API_Extension_SystemSettingsType extends VMware_VCloud_API_R
             $this->setLookupServiceSettings($obj);
             if (!empty($namespace)) {
                 $this->namespace['LookupServiceSettings'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'CatalogSettings') {
+            $obj = new VMware_VCloud_API_Extension_CatalogSettingsType();
+            $obj->build($child);
+            $obj->set_tagName('CatalogSettings');
+            $this->setCatalogSettings($obj);
+            if (!empty($namespace)) {
+                $this->namespace['CatalogSettings'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

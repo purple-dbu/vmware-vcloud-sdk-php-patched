@@ -1,8 +1,10 @@
 <?php
 class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
+    protected $size = null;
     protected $Entity = null;
     protected $Property = array();
     protected $DateCreated = null;
+    protected $VersionNumber = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -18,17 +20,21 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
     * @param string $name - [required] an attribute, 
     * @param string $Description - [optional] 
     * @param VMware_VCloud_API_TasksInProgressType $Tasks - [optional]
+    * @param long $size - [optional] an attribute, 
     * @param VMware_VCloud_API_ReferenceType $Entity - [required]
     * @param array $Property - [optional] an array of VMware_VCloud_API_PropertyType objects
     * @param string $DateCreated - [optional] 
+    * @param int $VersionNumber - [optional] 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $operationKey=null, $id=null, $name=null, $Description=null, $Tasks=null, $Entity=null, $Property=null, $DateCreated=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $operationKey=null, $id=null, $name=null, $Description=null, $Tasks=null, $size=null, $Entity=null, $Property=null, $DateCreated=null, $VersionNumber=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link, $operationKey, $id, $name, $Description, $Tasks);
+        $this->size = $size;
         $this->Entity = $Entity;
         if (!is_null($Property)) {
             $this->Property = $Property;
         }
         $this->DateCreated = $DateCreated;
+        $this->VersionNumber = $VersionNumber;
         $this->tagName = 'CatalogItem';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -50,6 +56,18 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
     }
     public function setDateCreated($DateCreated) { 
         $this->DateCreated = $DateCreated;
+    }
+    public function getVersionNumber() {
+        return $this->VersionNumber;
+    }
+    public function setVersionNumber($VersionNumber) { 
+        $this->VersionNumber = $VersionNumber;
+    }
+    public function get_size(){
+        return $this->size;
+    }
+    public function set_size($size) {
+        $this->size = $size;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -86,6 +104,10 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
     protected function exportAttributes($out, $level, $name, $namespace, $rootNS) {
         $namespace = self::$defaultNS;
         $out = parent::exportAttributes($out, $level, $name, $namespace, $rootNS);
+        if (!is_null($this->size)) {
+            $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'size', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'size=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_integer($this->size, $input_name='size')));
+        }
         return $out;
     }
     protected function exportChildren($out, $level, $name, $namespace, $rootNS) {
@@ -104,6 +126,11 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'DateCreated', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "DateCreated>" . VMware_VCloud_API_Helper::quote_xml(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->DateCreated, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='DateCreated')) . "</" . $ns . "DateCreated>\n");
         }
+        if (!is_null($this->VersionNumber)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'VersionNumber', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "VersionNumber>" . VMware_VCloud_API_Helper::format_integer($this->VersionNumber, $input_name='VersionNumber') . "</" . $ns . "VersionNumber>\n");
+        }
         return $out;
     }
     protected function hasContent() {
@@ -111,6 +138,7 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
             !is_null($this->Entity) ||
             !empty($this->Property) ||
             !is_null($this->DateCreated) ||
+            !is_null($this->VersionNumber) ||
             parent::hasContent()
             ) {
             return true;
@@ -145,6 +173,17 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
             $this->namespacedef = VMware_VCloud_API_Helper::constructNS($attrs, $namespaces, $this->namespacedef) . $this->namespacedef;
         }
         $nsUri = self::$defaultNS;
+        $ndsize = $attrs->getNamedItem('size');
+        if (!is_null($ndsize)) {
+            $this->size = sprintf('%d', $ndsize->value);
+            if (isset($ndsize->prefix)) {
+                $this->namespace['size'] = $ndsize->prefix;
+                $nsUri = $ndsize->lookupNamespaceURI($ndsize->prefix);
+            }
+            $node->removeAttributeNS($nsUri, 'size');
+        } else {
+            $this->size = null;
+        }
         parent::buildAttributes($node, $namespaces);
     }
     protected function buildChildren($child, $nodeName, $namespace='') {
@@ -171,6 +210,13 @@ class VMware_VCloud_API_CatalogItemType extends VMware_VCloud_API_EntityType {
             $this->DateCreated = $sval;
             if (!empty($namespace)) {
                 $this->namespace['DateCreated'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'VersionNumber') {
+            $sval = $child->nodeValue;
+            $this->VersionNumber = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['VersionNumber'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

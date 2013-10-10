@@ -5,6 +5,9 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
     protected $ExpirationDate = null;
     protected $ValidSerial = null;
     protected $Expired = null;
+    protected $Persisted = null;
+    protected $PublishingToRemoteSitesFeature = null;
+    protected $SubscribingToRemoteSitesFeature = null;
     protected $LicenseMetricsInfo = null;
     protected $namespace = array();
     protected $namespacedef = null;
@@ -21,15 +24,21 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
     * @param string $ExpirationDate - [optional] 
     * @param boolean $ValidSerial - [optional] 
     * @param boolean $Expired - [optional] 
+    * @param boolean $Persisted - [optional] 
+    * @param boolean $PublishingToRemoteSitesFeature - [optional] 
+    * @param boolean $SubscribingToRemoteSitesFeature - [optional] 
     * @param VMware_VCloud_API_Extension_LicenseMetricsInfoType $LicenseMetricsInfo - [optional]
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $SerialNumber=null, $LicensedVMCount=null, $ExpirationDate=null, $ValidSerial=null, $Expired=null, $LicenseMetricsInfo=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $SerialNumber=null, $LicensedVMCount=null, $ExpirationDate=null, $ValidSerial=null, $Expired=null, $Persisted=null, $PublishingToRemoteSitesFeature=null, $SubscribingToRemoteSitesFeature=null, $LicenseMetricsInfo=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->SerialNumber = $SerialNumber;
         $this->LicensedVMCount = $LicensedVMCount;
         $this->ExpirationDate = $ExpirationDate;
         $this->ValidSerial = $ValidSerial;
         $this->Expired = $Expired;
+        $this->Persisted = $Persisted;
+        $this->PublishingToRemoteSitesFeature = $PublishingToRemoteSitesFeature;
+        $this->SubscribingToRemoteSitesFeature = $SubscribingToRemoteSitesFeature;
         $this->LicenseMetricsInfo = $LicenseMetricsInfo;
         $this->tagName = 'License';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
@@ -63,6 +72,24 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
     }
     public function setExpired($Expired) { 
         $this->Expired = $Expired;
+    }
+    public function getPersisted() {
+        return $this->Persisted;
+    }
+    public function setPersisted($Persisted) { 
+        $this->Persisted = $Persisted;
+    }
+    public function getPublishingToRemoteSitesFeature() {
+        return $this->PublishingToRemoteSitesFeature;
+    }
+    public function setPublishingToRemoteSitesFeature($PublishingToRemoteSitesFeature) { 
+        $this->PublishingToRemoteSitesFeature = $PublishingToRemoteSitesFeature;
+    }
+    public function getSubscribingToRemoteSitesFeature() {
+        return $this->SubscribingToRemoteSitesFeature;
+    }
+    public function setSubscribingToRemoteSitesFeature($SubscribingToRemoteSitesFeature) { 
+        $this->SubscribingToRemoteSitesFeature = $SubscribingToRemoteSitesFeature;
     }
     public function getLicenseMetricsInfo() {
         return $this->LicenseMetricsInfo;
@@ -135,6 +162,21 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'Expired', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "Expired>" . VMware_VCloud_API_Helper::format_boolean($this->Expired, $input_name='Expired') . "</" . $ns . "Expired>\n");
         }
+        if (!is_null($this->Persisted)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'Persisted', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "Persisted>" . VMware_VCloud_API_Helper::format_boolean($this->Persisted, $input_name='Persisted') . "</" . $ns . "Persisted>\n");
+        }
+        if (!is_null($this->PublishingToRemoteSitesFeature)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'PublishingToRemoteSitesFeature', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "PublishingToRemoteSitesFeature>" . VMware_VCloud_API_Helper::format_boolean($this->PublishingToRemoteSitesFeature, $input_name='PublishingToRemoteSitesFeature') . "</" . $ns . "PublishingToRemoteSitesFeature>\n");
+        }
+        if (!is_null($this->SubscribingToRemoteSitesFeature)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'SubscribingToRemoteSitesFeature', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "SubscribingToRemoteSitesFeature>" . VMware_VCloud_API_Helper::format_boolean($this->SubscribingToRemoteSitesFeature, $input_name='SubscribingToRemoteSitesFeature') . "</" . $ns . "SubscribingToRemoteSitesFeature>\n");
+        }
         if (!is_null($this->LicenseMetricsInfo)) {
             $out = $this->LicenseMetricsInfo->export('LicenseMetricsInfo', $out, $level, '', $namespace, $rootNS);
         }
@@ -147,6 +189,9 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
             !is_null($this->ExpirationDate) ||
             !is_null($this->ValidSerial) ||
             !is_null($this->Expired) ||
+            !is_null($this->Persisted) ||
+            !is_null($this->PublishingToRemoteSitesFeature) ||
+            !is_null($this->SubscribingToRemoteSitesFeature) ||
             !is_null($this->LicenseMetricsInfo) ||
             parent::hasContent()
             ) {
@@ -218,6 +263,27 @@ class VMware_VCloud_API_Extension_LicenseType extends VMware_VCloud_API_Resource
             $this->Expired = $sval;
             if (!empty($namespace)) {
                 $this->namespace['Expired'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'Persisted') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->Persisted = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['Persisted'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'PublishingToRemoteSitesFeature') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->PublishingToRemoteSitesFeature = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['PublishingToRemoteSitesFeature'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'SubscribingToRemoteSitesFeature') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->SubscribingToRemoteSitesFeature = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['SubscribingToRemoteSitesFeature'] = $namespace;
             }
         }
         elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'LicenseMetricsInfo') {

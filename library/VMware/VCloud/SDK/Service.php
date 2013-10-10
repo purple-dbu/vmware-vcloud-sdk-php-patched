@@ -62,41 +62,96 @@ class VMware_VCloud_SDK_Service extends VMware_VCloud_SDK_Service_Abstract
      * @param array  $config  An HTTP configuration array
      * @param string  $apiVersion  An API Version
      * @return VMware_VCloud_API_OrgListType
-     * @since Version 5.1.1
+     * @since API Version 1.0.0
+     * @since SDK Version 5.5.0
      */
-    public function login($server, $auth, $config, $apiVersion='5.1')
+    public function login($server, $auth, $config, $apiVersion)
     {
         if (false === strpos($server, 'http'))
         {
             $server = "https://$server";
         }
-        $this->setAuth($auth);
         $this->setConfig($config);
         $this->setAPIVersion($apiVersion);
         if (!$this->loginUrl)
         {
-            $this->loginUrl = $server . '/api/login';
+            $this->loginUrl = $server . '/api/sessions';
         }
-        $this->baseUrl = str_replace('/login', '', $this->loginUrl);
-        return $this->post($this->loginUrl, 200);
+        $this->baseUrl = str_replace('/sessions', '', $this->loginUrl);
+        $credential = $auth['username'] . ':' . $auth['password'];
+        // Encodes data with MIME base64
+        $encodeddata= base64_encode($credential);
+        $auth= "Basic " . $encodeddata;
+        return $this->post($this->loginUrl, 200, null, null, null, $auth);
     }
 
     /**
      * Login to VMware vCloud Director using the SAML Assertion XML from vSphere SSO/SAML IDP's.
+     * This method can be used in performing: SSO login with Bearer/HOK tokens in both Org/System scope. No signature verification is done when using this method.
      *
      * @param string $server  Server IP or host name and port
      * @param string $samlAssertionXML  SSO Token.
      * @param string $org  Organization name.
      * @param array  $config  An HTTP configuration array
-     * @return VMware_VCloud_API_OrgListType
-     * @since Version 5.1.0
+     * @param string  $apiVersion  An API Version
+     * @return VMware_VCloud_API_SessionType
+     * @since API Version 5.1.0
+     * @since SDK Version 5.5.0
      */
-    public function SSOLogin($server, $samlAssertionXML, $org, $config)
+    public function SSOLogin($server, $samlAssertionXML, $org, $config, $apiVersion = '5.1')
     {
-
         // Create a gzip compressed string by the samlAssertion XML from the Identity Provider.
         // The encoding mode Can be FORCE_GZIP (the default) or FORCE_DEFLATE.
-        $compressedxml = gzencode($samlAssertionXML,9,FORCE_GZIP);
+        $compressedxml = gzencode($samlAssertionXML, 9,FORCE_GZIP);
+        // Encodes data with MIME base64
+        $encodeddata= base64_encode($compressedxml);
+
+        if (false === strpos($server, 'http'))
+        {
+            $server = "https://$server";
+        }
+        $this->setConfig($config);
+        $this->setAPIVersion($apiVersion);
+        $auth = null;
+         if ($org == VMware_VCloud_SDK_Constants::SYSTEM_ORG)
+        {
+            $auth = VMware_VCloud_SDK_Constants::SIGN_ATTRIBUTE . " " . VMware_VCloud_SDK_Constants::TOKEN_ATTRIBUTE . "= \"" . $encodeddata . "\"";
+        }
+        else
+        {
+            $auth = VMware_VCloud_SDK_Constants::SIGN_ATTRIBUTE . " " . VMware_VCloud_SDK_Constants::TOKEN_ATTRIBUTE . "= \"" . $encodeddata . "\"" . "," . VMware_VCloud_SDK_Constants::ORG_ATTRIBUTE . "=" . "\"" . $org . "\"";
+        }
+
+        if (!$this->loginUrl)
+        {
+            $this->loginUrl = $server . '/api/sessions';
+        }
+        $this->baseUrl = str_replace('/sessions', '', $this->loginUrl);
+        return $this->post($this->loginUrl, 200, null, null, null, $auth);
+    }
+
+    /**
+     * Login to VMware vCloud Director using the SAML Assertion XML from vSphere SSO/SAML IDP's.
+     * This method can be used in performing: SSO login with HOK tokens and the signature attributes in Org/System scope. vCD also does the signature
+     * verification of the provided HOK token.
+     * Note: For Bearer tokens there is no signature verification done.
+     *
+     * @param string $server  Server IP or host name and port as https://<ip>:<port>
+     * @param string $samlAssertionXML  SSO HOK Token.
+     * @param string $org  The name of your vCloud Director organization.
+     * @param array  $config  An HTTP configuration array
+     * @param string  $apiVersion  An API Version
+     * @param string $signature  Base64 encoded signaure of the token XML generated using client's private key
+     * @param string $signature_alg  Standard signature algorithm name
+     * @return VMware_VCloud_API_SessionType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function HOKSSOLogin($server, $samlAssertionXML, $org, $config, $apiVersion, $signature, $signature_alg)
+    {
+        // Create a gzip compressed string by the samlAssertion XML from the Identity Provider.
+        // The encoding mode Can be FORCE_GZIP (the default) or FORCE_DEFLATE.
+        $compressedxml = gzencode($samlAssertionXML, 9, FORCE_GZIP);
 
         // Encodes data with MIME base64
         $encodeddata= base64_encode($compressedxml);
@@ -106,26 +161,36 @@ class VMware_VCloud_SDK_Service extends VMware_VCloud_SDK_Service_Abstract
             $server = "https://$server";
         }
         $this->setConfig($config);
-
-        $auth="SIGN token = \"" . $encodeddata."\"" ;
+        $this->setAPIVersion($apiVersion);
+        $auth = null;
+        if ($org == VMware_VCloud_SDK_Constants::SYSTEM_ORG)
+        {
+            $auth = VMware_VCloud_SDK_Constants::SIGN_ATTRIBUTE . " " . VMware_VCloud_SDK_Constants::TOKEN_ATTRIBUTE . "= \"" . $encodeddata . "\"" . "," . VMware_VCloud_SDK_Constants::SIGNATURE_ATTRIBUTE . "=\"" . $signature . "\"" . "," . VMware_VCloud_SDK_Constants::SIGNATURE_ALGORITHM_ATTRIBUTE . "=\"" . $signature_alg . "\"";
+        }
+        else
+        {
+            $auth = VMware_VCloud_SDK_Constants::SIGN_ATTRIBUTE . " " . VMware_VCloud_SDK_Constants::TOKEN_ATTRIBUTE . "= \"" . $encodeddata . "\"" . "," . VMware_VCloud_SDK_Constants::ORG_ATTRIBUTE . "=" . "\"" . $org . "\"" . "," . VMware_VCloud_SDK_Constants::SIGNATURE_ATTRIBUTE . "=\"" . $signature . "\"" . "," . VMware_VCloud_SDK_Constants::SIGNATURE_ALGORITHM_ATTRIBUTE . "=\"" . $signature_alg . "\"";
+        }
 
         if (!$this->loginUrl)
         {
             $this->loginUrl = $server . '/api/sessions';
         }
+        $this->baseUrl = str_replace('/sessions', '', $this->loginUrl);
         return $this->post($this->loginUrl, 200, null, null, null, $auth);
     }
-	
-	/**
+
+    /**
      * Set vcloud token for login.
      *
      * @param string $server  Server IP or host name and port
      * @param string $vcloudtoken  Vcloud Token
      * @param array $config  An HTTP configuration array
-     * @since API 5.1.0
-     * @since SDK 5.1.0
+     * @param string  $apiVersion  An API Version
+     * @since API Version 5.1.0
+     * @since SDK Version 5.1.0
      */
-    public function SetVcloudToken($server, $vcloudtoken, $config)
+    public function SetVcloudToken($server, $vcloudtoken, $config, $apiVersion)
     {
         if (false === strpos($server, 'http'))
         {
@@ -133,6 +198,7 @@ class VMware_VCloud_SDK_Service extends VMware_VCloud_SDK_Service_Abstract
         }
         $this->setToken($vcloudtoken);
         $this->setConfig($config);
+        $this->setAPIVersion($apiVersion);
 
         if (!$this->baseUrl)
         {

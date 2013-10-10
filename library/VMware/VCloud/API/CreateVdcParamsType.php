@@ -14,6 +14,7 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
     protected $NetworkPoolReference = null;
     protected $ProviderVdcReference = null;
     protected $UsesFastProvisioning = null;
+    protected $OverCommitAllowed = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -25,8 +26,8 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
     * @param string $Description - [optional] 
     * @param string $AllocationModel - [required] 
     * @param VMware_VCloud_API_ComputeCapacityType $ComputeCapacity - [required]
-    * @param int $NicQuota - [optional] 
-    * @param int $NetworkQuota - [optional] 
+    * @param int $NicQuota - [required] 
+    * @param int $NetworkQuota - [required] 
     * @param int $VmQuota - [optional] 
     * @param boolean $IsEnabled - [optional] 
     * @param array $VdcStorageProfile - [required] an array of VMware_VCloud_API_VdcStorageProfileParamsType objects
@@ -37,8 +38,9 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
     * @param VMware_VCloud_API_ReferenceType $NetworkPoolReference - [optional]
     * @param VMware_VCloud_API_ReferenceType $ProviderVdcReference - [optional]
     * @param boolean $UsesFastProvisioning - [optional] 
+    * @param boolean $OverCommitAllowed - [optional] default 'true'
     */
-    public function __construct($VCloudExtension=null, $name=null, $Description=null, $AllocationModel=null, $ComputeCapacity=null, $NicQuota=null, $NetworkQuota=null, $VmQuota=null, $IsEnabled=null, $VdcStorageProfile=null, $ResourceGuaranteedMemory=null, $ResourceGuaranteedCpu=null, $VCpuInMhz=null, $IsThinProvision=null, $NetworkPoolReference=null, $ProviderVdcReference=null, $UsesFastProvisioning=null) {
+    public function __construct($VCloudExtension=null, $name=null, $Description=null, $AllocationModel=null, $ComputeCapacity=null, $NicQuota=null, $NetworkQuota=null, $VmQuota=null, $IsEnabled=null, $VdcStorageProfile=null, $ResourceGuaranteedMemory=null, $ResourceGuaranteedCpu=null, $VCpuInMhz=null, $IsThinProvision=null, $NetworkPoolReference=null, $ProviderVdcReference=null, $UsesFastProvisioning=null, $OverCommitAllowed=True) {
         parent::__construct($VCloudExtension, $name, $Description);
         $this->AllocationModel = $AllocationModel;
         $this->ComputeCapacity = $ComputeCapacity;
@@ -56,6 +58,7 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
         $this->NetworkPoolReference = $NetworkPoolReference;
         $this->ProviderVdcReference = $ProviderVdcReference;
         $this->UsesFastProvisioning = $UsesFastProvisioning;
+        $this->OverCommitAllowed = $OverCommitAllowed;
         $this->tagName = 'CreateVdcParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -143,6 +146,12 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
     }
     public function setUsesFastProvisioning($UsesFastProvisioning) { 
         $this->UsesFastProvisioning = $UsesFastProvisioning;
+    }
+    public function getOverCommitAllowed() {
+        return $this->OverCommitAllowed;
+    }
+    public function setOverCommitAllowed($OverCommitAllowed) { 
+        $this->OverCommitAllowed = $OverCommitAllowed;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -248,6 +257,11 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'UsesFastProvisioning', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "UsesFastProvisioning>" . VMware_VCloud_API_Helper::format_boolean($this->UsesFastProvisioning, $input_name='UsesFastProvisioning') . "</" . $ns . "UsesFastProvisioning>\n");
         }
+        if (!is_null($this->OverCommitAllowed)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'OverCommitAllowed', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "OverCommitAllowed>" . VMware_VCloud_API_Helper::format_boolean($this->OverCommitAllowed, $input_name='OverCommitAllowed') . "</" . $ns . "OverCommitAllowed>\n");
+        }
         return $out;
     }
     protected function hasContent() {
@@ -266,6 +280,7 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
             !is_null($this->NetworkPoolReference) ||
             !is_null($this->ProviderVdcReference) ||
             !is_null($this->UsesFastProvisioning) ||
+            !is_null($this->OverCommitAllowed) ||
             parent::hasContent()
             ) {
             return true;
@@ -407,6 +422,13 @@ class VMware_VCloud_API_CreateVdcParamsType extends VMware_VCloud_API_ParamsType
             $this->UsesFastProvisioning = $sval;
             if (!empty($namespace)) {
                 $this->namespace['UsesFastProvisioning'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'OverCommitAllowed') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->OverCommitAllowed = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['OverCommitAllowed'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

@@ -1,6 +1,8 @@
 <?php
 class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_ResourceType {
     protected $CanPublishCatalogs = null;
+    protected $CanPublishExternally = null;
+    protected $CanSubscribe = null;
     protected $DeployedVMQuota = null;
     protected $StoredVmQuota = null;
     protected $UseServerBootSequence = null;
@@ -16,14 +18,18 @@ class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_Resourc
     * @param string $type - [optional] an attribute, 
     * @param array $Link - [optional] an array of VMware_VCloud_API_LinkType objects
     * @param boolean $CanPublishCatalogs - [optional] 
+    * @param boolean $CanPublishExternally - [optional] 
+    * @param boolean $CanSubscribe - [optional] 
     * @param int $DeployedVMQuota - [optional] 
     * @param int $StoredVmQuota - [optional] 
     * @param boolean $UseServerBootSequence - [optional] 
     * @param int $DelayAfterPowerOnSeconds - [optional] 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $CanPublishCatalogs=null, $DeployedVMQuota=null, $StoredVmQuota=null, $UseServerBootSequence=null, $DelayAfterPowerOnSeconds=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $CanPublishCatalogs=null, $CanPublishExternally=null, $CanSubscribe=null, $DeployedVMQuota=null, $StoredVmQuota=null, $UseServerBootSequence=null, $DelayAfterPowerOnSeconds=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->CanPublishCatalogs = $CanPublishCatalogs;
+        $this->CanPublishExternally = $CanPublishExternally;
+        $this->CanSubscribe = $CanSubscribe;
         $this->DeployedVMQuota = $DeployedVMQuota;
         $this->StoredVmQuota = $StoredVmQuota;
         $this->UseServerBootSequence = $UseServerBootSequence;
@@ -36,6 +42,18 @@ class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_Resourc
     }
     public function setCanPublishCatalogs($CanPublishCatalogs) { 
         $this->CanPublishCatalogs = $CanPublishCatalogs;
+    }
+    public function getCanPublishExternally() {
+        return $this->CanPublishExternally;
+    }
+    public function setCanPublishExternally($CanPublishExternally) { 
+        $this->CanPublishExternally = $CanPublishExternally;
+    }
+    public function getCanSubscribe() {
+        return $this->CanSubscribe;
+    }
+    public function setCanSubscribe($CanSubscribe) { 
+        $this->CanSubscribe = $CanSubscribe;
     }
     public function getDeployedVMQuota() {
         return $this->DeployedVMQuota;
@@ -106,6 +124,16 @@ class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_Resourc
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'CanPublishCatalogs', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "CanPublishCatalogs>" . VMware_VCloud_API_Helper::format_boolean($this->CanPublishCatalogs, $input_name='CanPublishCatalogs') . "</" . $ns . "CanPublishCatalogs>\n");
         }
+        if (!is_null($this->CanPublishExternally)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'CanPublishExternally', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "CanPublishExternally>" . VMware_VCloud_API_Helper::format_boolean($this->CanPublishExternally, $input_name='CanPublishExternally') . "</" . $ns . "CanPublishExternally>\n");
+        }
+        if (!is_null($this->CanSubscribe)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'CanSubscribe', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "CanSubscribe>" . VMware_VCloud_API_Helper::format_boolean($this->CanSubscribe, $input_name='CanSubscribe') . "</" . $ns . "CanSubscribe>\n");
+        }
         if (!is_null($this->DeployedVMQuota)) {
             $out = VMware_VCloud_API_Helper::showIndent($out, $level);
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'DeployedVMQuota', self::$defaultNS, $namespace, $rootNS);
@@ -131,6 +159,8 @@ class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_Resourc
     protected function hasContent() {
         if (
             !is_null($this->CanPublishCatalogs) ||
+            !is_null($this->CanPublishExternally) ||
+            !is_null($this->CanSubscribe) ||
             !is_null($this->DeployedVMQuota) ||
             !is_null($this->StoredVmQuota) ||
             !is_null($this->UseServerBootSequence) ||
@@ -177,6 +207,20 @@ class VMware_VCloud_API_OrgGeneralSettingsType extends VMware_VCloud_API_Resourc
             $this->CanPublishCatalogs = $sval;
             if (!empty($namespace)) {
                 $this->namespace['CanPublishCatalogs'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'CanPublishExternally') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->CanPublishExternally = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['CanPublishExternally'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'CanSubscribe') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->CanSubscribe = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['CanSubscribe'] = $namespace;
             }
         }
         elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'DeployedVMQuota') {

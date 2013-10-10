@@ -425,7 +425,7 @@ class VMware_VCloud_SDK_VApp extends VMware_VCloud_SDK_VApp_Abstract
     /**
      * Retrieve the OVF descriptor of a vApp directly.
      *
-     * @return String
+     * @return VMware_VCloud_API_OVF_EnvelopeType
      * @since Version 5.1.0
      */
     public function getOVFDescriptor()
@@ -433,8 +433,54 @@ class VMware_VCloud_SDK_VApp extends VMware_VCloud_SDK_VApp_Abstract
         $url = $this->url . '/ovf';
         return $this->svc->get($url);
     }
-	
-	/**
+
+    /**
+     * Retrieve the OVF descriptor of a vApp directly as string.
+     *
+     * @return String
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getOVFDescriptorAsString()
+    {
+        $url = $this->url . '/ovf';
+        return $this->svc->get($url, '', false);
+    }
+
+    /**
+     * Retrieve VM BIOS UUID as described in the OVF Virtual System.
+     *
+     * @return array VM BIOS UUIDs
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getVmUUIDs()
+    {
+        $uuid = array();
+        $ovf = $this->getOVFDescriptor();
+        $content = $ovf->getContent()->getContent();
+        foreach($content as $c)
+        {
+            $section = $c->getSection();
+            foreach($section as $s)
+            {
+                if(get_class($s) == 'VMware_VCloud_API_OVF_VirtualHardwareSection_Type')
+                {
+                    $any = $s->getAny();
+                    foreach($any as $a)
+                    {
+                        if($a->get_key() == 'uuid')
+                        {
+                            array_push($uuid, $a->get_value());
+                        }
+                    }
+                }
+            }
+        }
+        return $uuid;
+    }
+
+    /**
      * Retrieve SnapshotSection element for a vApp or VM.
      *
      * @return VMware_VCloud_API_SnapshotSectionType
@@ -509,5 +555,354 @@ snapshots, any existing user created snapshots associated with the virtual machi
     {
         $url = $this->url . '/action/revertToCurrentSnapshot';
         return $this->svc->post($url, 202);
+    }
+
+    /**
+     * Disable a vApp for downloading.
+     *
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function disableDownload()
+    {
+        $url = $this->url . '/action/disableDownload';
+        $this->svc->post($url, 204);
+    }
+
+    /**
+     * Enable a vApp for downloading.
+     *
+     * @param boolean $wait     To wait till finish, set to true
+     * @return VMware_VCloud_API_TaskType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function enableDownload($wait=true)
+    {
+        $url = $this->url . '/action/enableDownload';
+        $task = $this->svc->post($url, 202);
+        return ($wait)? $this->svc->waitForTask($task) : $task;
+    }
+
+    /**
+     * Get the suffix or prefix of a string with a seeking pattern.
+     *
+     * @param string $string  String for which to search (the haystack)
+     * @param bool $getSuffix A flag indicates get suffix (true) or prefix(false)
+     * @param string $seek    Pattern to search for (the needle)
+     * @return string         The suffix or prefix
+     * @access private
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function getStringSuffix($string, $getSuffix=true, $seek='/')
+    {
+        $pos = strrpos($string, $seek);
+        return $getSuffix? substr($string, $pos+1) : substr($string, 0, $pos);
+    }
+
+    /**
+     * Download an OVF descriptor.
+     *
+     * @param string $ovfDescUrl   URL of the OVF descriptor file
+     * @param string $ovfFile      Destination of the OVF file descriptor.
+     *                             If null, the content will not be dumped
+     *                             to a file
+     * @return string Content of the OVF descriptor file
+     * @access private
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function downloadOVFDescriptor($ovfDescUrl=null, $ovfFile=null)
+    {
+        if (is_null($ovfDescUrl))
+        {
+            $ovfDescUrl = $this->getDownloadOVFDescriptorUrl();
+        }
+        $resp = $this->svc->get($ovfDescUrl, '', false);
+        if (isset($ovfFile))
+        {
+            $fh = fopen($ovfFile, 'w');
+            fwrite($fh, $resp);
+            fclose($fh);
+        }
+        return $resp;
+    }
+
+    /**
+     * Download OVF package.
+     *
+     * @param string $destDir   Directory where to save the downloaded file
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function downloadOVFFile($destDir='.')
+    {
+        $ovfDescUrl = $this->getDownloadOVFDescriptorUrl();
+        if (!$ovfDescUrl)
+        {
+            throw new VMware_VCloud_SDK_Exception(
+                                      "getDownloadOVFDescriptorUrl() failed\n");
+        }
+        $dest = implode('/', array($destDir, 'descriptor.ovf'));
+        $this->svc->download($ovfDescUrl, $dest);
+        $srcDir = $this->getStringSuffix($ovfDescUrl, False);
+        $fnames = $this->getOVFPackageFileNames($ovfDescUrl);
+        if (!isset($fnames))
+        {
+            throw new VMware_VCloud_SDK_Exception("getOVFPackageFileNames() failed\n");
+        }
+        foreach ($fnames as $fname)
+        {
+            $src = implode('/', array($srcDir, $fname));
+            $dest = implode('/', array($destDir, $fname));
+            $this->svc->download($src, $dest);
+        }
+    }
+
+    /**
+     * Download the vApp as an ovf package. The ovf file and its vmdk
+     * contents are downloaded to the specified location. Before downloading
+     * make sure the vapp is enabled for download.
+     * @see Vapp#enableDownload()
+     *
+     * @param string $destDir   Directory where to save the downloaded file
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function downloadVapp($destDir='.')
+    {
+        $ovfDescUrl = $this->getDownloadOVFDescriptorUrl();
+        if (!$ovfDescUrl)
+        {
+            throw new VMware_VCloud_SDK_Exception(
+                                      "getDownloadOVFDescriptorUrl() failed\n");
+        }
+        $dest = implode('/', array($destDir, 'descriptor.ovf'));
+        $this->svc->download($ovfDescUrl, $dest);
+        $srcDir = $this->getStringSuffix($ovfDescUrl, False);
+        $fnames = $this->getOVFPackageFileNames($ovfDescUrl);
+        if (!isset($fnames))
+        {
+            throw new VMware_VCloud_SDK_Exception("getOVFPackageFileNames() failed\n");
+        }
+        foreach ($fnames as $fname)
+        {
+            $src = implode('/', array($srcDir, $fname));
+            $dest = implode('/', array($destDir, $fname));
+            $this->svc->download($src, $dest);
+        }
+    }
+
+    /**
+     * Get download URL of an OVF descriptor.
+     *
+     * @return string|null   OVF descriptor URL or null
+     * @access private
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function getDownloadOVFDescriptorUrl()
+    {
+        $refs = $this->getContainedLinks(null, 'download:default');
+        if (1 == count($refs))
+        {
+            return $refs[0]->get_href();
+        }
+        return null;
+    }
+
+    /**
+     * Download lossless vApp OVF.
+     * Lossless download mode generates ovf without loosing any of its configurations.
+     *
+     * @param string $destDir   Directory where to save the downloaded file
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function downloadLosslessOVFFile($destDir='.')
+    {
+        $ovfDescUrl = $this->getDownloadLosslessOVFDescriptorUrl();
+        if (!$ovfDescUrl)
+        {
+            throw new VMware_VCloud_SDK_Exception(
+                                      "getDownloadLosslessOVFDescriptorUrl() failed\n");
+        }
+        $srcDir = $this->getStringSuffix($ovfDescUrl, False);
+        $fnames = $this->getOVFPackageFileNames($ovfDescUrl);
+        if (!isset($fnames))
+        {
+            throw new VMware_VCloud_SDK_Exception("getOVFPackageFileNames() failed\n");
+        }
+        foreach ($fnames as $fname)
+        {
+            $src = implode('/', array($srcDir, $fname));
+            $dest = implode('/', array($destDir, $fname));
+            $this->svc->download($src, $dest);
+        }
+    }
+
+    /**
+     * Download lossless vApp OVF.
+     * Lossless download mode generates ovf without loosing any of its configurations.
+     *
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function getDownloadLosslessOVFDescriptorUrl()
+    {
+        $refs = $this->getContainedLinks(null, 'download:identity');
+        if (1 == count($refs))
+        {
+            return $refs[0]->get_href();
+        }
+        return null;
+    }
+
+    /**
+     * Get names of the component files in the OVF package.
+     *
+     * @param string $ovfDescUrl   OVF descriptor URL
+     * @return array File names
+     * @access private
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function getOVFPackageFileNames($ovfDescUrl)
+    {
+        $ovfFiles = array();
+        $envelope = $this->downloadOVFDescriptor($ovfDescUrl);
+        $envObj = VMware_VCloud_API_Helper::parseString($envelope);
+        $files = $envObj->getReferences()->getFile();
+        foreach ($files as $file)
+        {
+            $fileName = $file->get_href();
+            if ($fileName)
+            {
+                array_push($ovfFiles, $fileName);
+            }
+        }
+        return $ovfFiles;
+    }
+
+    /**
+     * Get file information after uploading vApp.
+     *
+     * @param VMware_VCloud_API_VAppType $vApp
+     * @return array VMware_VCloud_API_FileType object array
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getUploadedFileNames($vApp)
+    {
+        $fileList = $vApp->getFiles();
+        $outFiles = array();
+        if (!is_null($fileList))
+        {
+            $files = $fileList->getFile();
+            foreach ($files as $file)
+            {
+                $size = $file->get_size();
+                $transferred = $file->get_bytesTransferred();
+                if (0 != $transferred && $transferred == $size)
+                {
+                    array_push($outFiles, $file);
+                }
+            }
+        }
+        return $outFiles;
+    }
+
+    /**
+     * Get file information before uploading vApp.
+     *
+     * @param VMware_VCloud_API_VAppType $vApp
+     * @return array VMware_VCloud_API_FileType object array
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getUploadFileNames($vApp)
+    {
+        $fileList = $vApp->getFiles();
+        if (!isset($fileList))
+        {
+            throw new VMware_VCloud_SDK_Exception (
+                        "vApp does not contain the upload URLs.\n");
+        }
+        $files = $fileList->getFile();
+        $outFiles = array();
+        foreach ($files as $file)
+        {
+            $size = $file->get_size();
+            $transferred = $file->get_bytesTransferred();
+            if (0 == $transferred || $transferred < $size)
+            {
+                array_push($outFiles, $file);
+            }
+        }
+        return $outFiles;
+    }
+
+    /**
+     * Get upload URL of an OVF descriptor file.
+     *
+     * @return string|null   OVF descriptor file URL or null
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getUploadOVFDescriptorUrl($files)
+    {
+        $refs = VMware_VCloud_SDK_Helper::getContainedLinks(null, 'upload:default', $files[0]);
+        if (1 == count($refs))
+        {
+            return $refs[0]->get_href();
+        }
+        return null;
+    }
+
+    /**
+     * Upload OVF descriptor file.
+     *
+     * @param string $url        HTTP request URL
+     * @param string $filename   Path to the OVF descriptor
+     * @return null
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function uploadOVFDescriptor($url, $filename)
+    {
+        $this->svc->upload($url, $filename, 'text/xml');
+    }
+
+    /**
+     * Upload the vApp related files. This can be vmdk or a manifest.
+     *
+     * @param array VMware_VCloud_API_FileType object array  $files
+     * @param string $ovfDescriptorPath   Path to the OVF descriptor
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function UploadFile($files, $ovfDescriptorPath)
+    {
+        foreach ($files as $file)
+        {
+            $refs = $file->getLink();
+            $diskUrl = $refs[0]->get_href();
+            $name = $file->get_name();
+            $diskPath = null;
+            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
+            $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
+            $this->svc->upload($diskUrl, $diskPath);
+        }
     }
 }

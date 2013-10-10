@@ -2,6 +2,9 @@
 class VMware_VCloud_API_InstantiateOvfParamsType extends VMware_VCloud_API_VAppCreationParamsType {
     protected $transferFormat = null;
     protected $AllEULAsAccepted = null;
+    protected $NetworkMapping = array();
+    protected $InstantiateOvfProperty = array();
+    protected $InstantiateVmParams = array();
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -17,11 +20,23 @@ class VMware_VCloud_API_InstantiateOvfParamsType extends VMware_VCloud_API_VAppC
     * @param VMware_VCloud_API_InstantiationParamsType $InstantiationParams - [optional]
     * @param string $transferFormat - [optional] an attribute, 
     * @param boolean $AllEULAsAccepted - [optional] 
+    * @param array $NetworkMapping - [optional] an array of VMware_VCloud_API_NetworkMappingType objects
+    * @param array $InstantiateOvfProperty - [optional] an array of VMware_VCloud_API_InstantiateOvfPropertyType objects
+    * @param array $InstantiateVmParams - [optional] an array of VMware_VCloud_API_InstantiateVmParamsType objects
     */
-    public function __construct($VCloudExtension=null, $name=null, $Description=null, $powerOn=null, $deploy=null, $VAppParent=null, $InstantiationParams=null, $transferFormat=null, $AllEULAsAccepted=null) {
+    public function __construct($VCloudExtension=null, $name=null, $Description=null, $powerOn=null, $deploy=null, $VAppParent=null, $InstantiationParams=null, $transferFormat=null, $AllEULAsAccepted=null, $NetworkMapping=null, $InstantiateOvfProperty=null, $InstantiateVmParams=null) {
         parent::__construct($VCloudExtension, $name, $Description, $powerOn, $deploy, $VAppParent, $InstantiationParams);
         $this->transferFormat = $transferFormat;
         $this->AllEULAsAccepted = $AllEULAsAccepted;
+        if (!is_null($NetworkMapping)) {
+            $this->NetworkMapping = $NetworkMapping;
+        }
+        if (!is_null($InstantiateOvfProperty)) {
+            $this->InstantiateOvfProperty = $InstantiateOvfProperty;
+        }
+        if (!is_null($InstantiateVmParams)) {
+            $this->InstantiateVmParams = $InstantiateVmParams;
+        }
         $this->tagName = 'InstantiateOvfParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -31,6 +46,27 @@ class VMware_VCloud_API_InstantiateOvfParamsType extends VMware_VCloud_API_VAppC
     public function setAllEULAsAccepted($AllEULAsAccepted) { 
         $this->AllEULAsAccepted = $AllEULAsAccepted;
     }
+    public function getNetworkMapping() {
+        return $this->NetworkMapping;
+    }
+    public function setNetworkMapping($NetworkMapping) { 
+        $this->NetworkMapping = $NetworkMapping;
+    }
+    public function addNetworkMapping($value) { array_push($this->NetworkMapping, $value); }
+    public function getInstantiateOvfProperty() {
+        return $this->InstantiateOvfProperty;
+    }
+    public function setInstantiateOvfProperty($InstantiateOvfProperty) { 
+        $this->InstantiateOvfProperty = $InstantiateOvfProperty;
+    }
+    public function addInstantiateOvfProperty($value) { array_push($this->InstantiateOvfProperty, $value); }
+    public function getInstantiateVmParams() {
+        return $this->InstantiateVmParams;
+    }
+    public function setInstantiateVmParams($InstantiateVmParams) { 
+        $this->InstantiateVmParams = $InstantiateVmParams;
+    }
+    public function addInstantiateVmParams($value) { array_push($this->InstantiateVmParams, $value); }
     public function get_transferFormat(){
         return $this->transferFormat;
     }
@@ -86,11 +122,29 @@ class VMware_VCloud_API_InstantiateOvfParamsType extends VMware_VCloud_API_VAppC
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'AllEULAsAccepted', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "AllEULAsAccepted>" . VMware_VCloud_API_Helper::format_boolean($this->AllEULAsAccepted, $input_name='AllEULAsAccepted') . "</" . $ns . "AllEULAsAccepted>\n");
         }
+        if (isset($this->NetworkMapping)) {
+            foreach ($this->NetworkMapping as $NetworkMapping) {
+                $out = $NetworkMapping->export('NetworkMapping', $out, $level, '', $namespace, $rootNS);
+            }
+        }
+        if (isset($this->InstantiateOvfProperty)) {
+            foreach ($this->InstantiateOvfProperty as $InstantiateOvfProperty) {
+                $out = $InstantiateOvfProperty->export('InstantiateOvfProperty', $out, $level, '', $namespace, $rootNS);
+            }
+        }
+        if (isset($this->InstantiateVmParams)) {
+            foreach ($this->InstantiateVmParams as $InstantiateVmParams) {
+                $out = $InstantiateVmParams->export('InstantiateVmParams', $out, $level, '', $namespace, $rootNS);
+            }
+        }
         return $out;
     }
     protected function hasContent() {
         if (
             !is_null($this->AllEULAsAccepted) ||
+            !empty($this->NetworkMapping) ||
+            !empty($this->InstantiateOvfProperty) ||
+            !empty($this->InstantiateVmParams) ||
             parent::hasContent()
             ) {
             return true;
@@ -144,6 +198,33 @@ class VMware_VCloud_API_InstantiateOvfParamsType extends VMware_VCloud_API_VAppC
             $this->AllEULAsAccepted = $sval;
             if (!empty($namespace)) {
                 $this->namespace['AllEULAsAccepted'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'NetworkMapping') {
+            $obj = new VMware_VCloud_API_NetworkMappingType();
+            $obj->build($child);
+            $obj->set_tagName('NetworkMapping');
+            array_push($this->NetworkMapping, $obj);
+            if (!empty($namespace)) {
+                $this->namespace['NetworkMapping'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'InstantiateOvfProperty') {
+            $obj = new VMware_VCloud_API_InstantiateOvfPropertyType();
+            $obj->build($child);
+            $obj->set_tagName('InstantiateOvfProperty');
+            array_push($this->InstantiateOvfProperty, $obj);
+            if (!empty($namespace)) {
+                $this->namespace['InstantiateOvfProperty'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'InstantiateVmParams') {
+            $obj = new VMware_VCloud_API_InstantiateVmParamsType();
+            $obj->build($child);
+            $obj->set_tagName('InstantiateVmParams');
+            array_push($this->InstantiateVmParams, $obj);
+            if (!empty($namespace)) {
+                $this->namespace['InstantiateVmParams'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

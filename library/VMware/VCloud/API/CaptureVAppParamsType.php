@@ -3,6 +3,7 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
     protected $Source = null;
     protected $Section = array();
     protected $VdcStorageProfile = null;
+    protected $TargetCatalogItem = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -15,14 +16,16 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
     * @param VMware_VCloud_API_ReferenceType $Source - [required]
     * @param array $Section - [optional] an array of VMware_VCloud_API_OVF_Section_Type objects
     * @param VMware_VCloud_API_ReferenceType $VdcStorageProfile - [optional]
+    * @param VMware_VCloud_API_ReferenceType $TargetCatalogItem - [optional]
     */
-    public function __construct($VCloudExtension=null, $name=null, $Description=null, $Source=null, $Section=null, $VdcStorageProfile=null) {
+    public function __construct($VCloudExtension=null, $name=null, $Description=null, $Source=null, $Section=null, $VdcStorageProfile=null, $TargetCatalogItem=null) {
         parent::__construct($VCloudExtension, $name, $Description);
         $this->Source = $Source;
         if (!is_null($Section)) {
             $this->Section = $Section;
         }
         $this->VdcStorageProfile = $VdcStorageProfile;
+        $this->TargetCatalogItem = $TargetCatalogItem;
         $this->tagName = 'CaptureVAppParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -44,6 +47,12 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
     }
     public function setVdcStorageProfile($VdcStorageProfile) { 
         $this->VdcStorageProfile = $VdcStorageProfile;
+    }
+    public function getTargetCatalogItem() {
+        return $this->TargetCatalogItem;
+    }
+    public function setTargetCatalogItem($TargetCatalogItem) { 
+        $this->TargetCatalogItem = $TargetCatalogItem;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -100,6 +109,9 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
         if (!is_null($this->VdcStorageProfile)) {
             $out = $this->VdcStorageProfile->export('VdcStorageProfile', $out, $level, '', $namespace, $rootNS);
         }
+        if (!is_null($this->TargetCatalogItem)) {
+            $out = $this->TargetCatalogItem->export('TargetCatalogItem', $out, $level, '', $namespace, $rootNS);
+        }
         return $out;
     }
     protected function hasContent() {
@@ -107,6 +119,7 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
             !is_null($this->Source) ||
             !empty($this->Section) ||
             !is_null($this->VdcStorageProfile) ||
+            !is_null($this->TargetCatalogItem) ||
             parent::hasContent()
             ) {
             return true;
@@ -385,6 +398,15 @@ class VMware_VCloud_API_CaptureVAppParamsType extends VMware_VCloud_API_ParamsTy
             $this->setVdcStorageProfile($obj);
             if (!empty($namespace)) {
                 $this->namespace['VdcStorageProfile'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'TargetCatalogItem') {
+            $obj = new VMware_VCloud_API_ReferenceType();
+            $obj->build($child);
+            $obj->set_tagName('TargetCatalogItem');
+            $this->setTargetCatalogItem($obj);
+            if (!empty($namespace)) {
+                $this->namespace['TargetCatalogItem'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

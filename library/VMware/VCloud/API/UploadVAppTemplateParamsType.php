@@ -2,6 +2,7 @@
 class VMware_VCloud_API_UploadVAppTemplateParamsType extends VMware_VCloud_API_ParamsType {
     protected $manifestRequired = null;
     protected $transferFormat = null;
+    protected $sourceHref = null;
     protected $VdcStorageProfile = null;
     protected $namespace = array();
     protected $namespacedef = null;
@@ -14,12 +15,14 @@ class VMware_VCloud_API_UploadVAppTemplateParamsType extends VMware_VCloud_API_P
     * @param string $Description - [optional] 
     * @param boolean $manifestRequired - [optional] an attribute, 
     * @param string $transferFormat - [optional] an attribute, 
+    * @param anyURI $sourceHref - [optional] an attribute, 
     * @param VMware_VCloud_API_ReferenceType $VdcStorageProfile - [optional]
     */
-    public function __construct($VCloudExtension=null, $name=null, $Description=null, $manifestRequired=null, $transferFormat=null, $VdcStorageProfile=null) {
+    public function __construct($VCloudExtension=null, $name=null, $Description=null, $manifestRequired=null, $transferFormat=null, $sourceHref=null, $VdcStorageProfile=null) {
         parent::__construct($VCloudExtension, $name, $Description);
         $this->manifestRequired = $manifestRequired;
         $this->transferFormat = $transferFormat;
+        $this->sourceHref = $sourceHref;
         $this->VdcStorageProfile = $VdcStorageProfile;
         $this->tagName = 'UploadVAppTemplateParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
@@ -41,6 +44,12 @@ class VMware_VCloud_API_UploadVAppTemplateParamsType extends VMware_VCloud_API_P
     }
     public function set_transferFormat($transferFormat) {
         $this->transferFormat = $transferFormat;
+    }
+    public function get_sourceHref(){
+        return $this->sourceHref;
+    }
+    public function set_sourceHref($sourceHref) {
+        $this->sourceHref = $sourceHref;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -84,6 +93,10 @@ class VMware_VCloud_API_UploadVAppTemplateParamsType extends VMware_VCloud_API_P
         if (!is_null($this->transferFormat)) {
             $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'transferFormat', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'transferFormat=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->transferFormat, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='transferFormat')));
+        }
+        if (!is_null($this->sourceHref)) {
+            $ns = VMware_VCloud_API_Helper::getAttributeNamespaceTag($this->namespace, 'sourceHref', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, ' ' . $ns . 'sourceHref=' . VMware_VCloud_API_Helper::quote_attrib(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->sourceHref, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='sourceHref')));
         }
         return $out;
     }
@@ -153,6 +166,17 @@ class VMware_VCloud_API_UploadVAppTemplateParamsType extends VMware_VCloud_API_P
             $node->removeAttributeNS($nsUri, 'transferFormat');
         } else {
             $this->transferFormat = null;
+        }
+        $ndsourceHref = $attrs->getNamedItem('sourceHref');
+        if (!is_null($ndsourceHref)) {
+            $this->sourceHref = $ndsourceHref->value;
+            if (isset($ndsourceHref->prefix)) {
+                $this->namespace['sourceHref'] = $ndsourceHref->prefix;
+                $nsUri = $ndsourceHref->lookupNamespaceURI($ndsourceHref->prefix);
+            }
+            $node->removeAttributeNS($nsUri, 'sourceHref');
+        } else {
+            $this->sourceHref = null;
         }
         parent::buildAttributes($node, $namespaces);
     }

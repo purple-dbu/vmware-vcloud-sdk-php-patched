@@ -29,6 +29,7 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
     protected $VcTruststoreType = null;
     protected $VmrcVersion = null;
     protected $VerifyVsmCertificates = null;
+    protected $ElasticAllocationPool = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -68,8 +69,9 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
     * @param string $VcTruststoreType - [required] 
     * @param string $VmrcVersion - [optional] 
     * @param boolean $VerifyVsmCertificates - [optional] 
+    * @param boolean $ElasticAllocationPool - [optional] 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $AbsoluteSessionTimeoutMinutes=null, $ActivityLogDisplayDays=null, $ActivityLogKeepDays=null, $AllowOverlappingExtNets=null, $ChargebackEventsKeepDays=null, $ChargebackTablesCleanupJobTimeInSeconds=null, $ConsoleProxyExternalAddress=null, $HostCheckDelayInSeconds=null, $HostCheckTimeoutSeconds=null, $InstallationId=null, $IpReservationTimeoutSeconds=null, $SyslogServerSettings=null, $LoginNameOnly=null, $PrePopDefaultName=null, $QuarantineEnabled=null, $QuarantineResponseTimeoutSeconds=null, $RestApiBaseUri=null, $SessionTimeoutMinutes=null, $ShowStackTraces=null, $SyncStartDate=null, $SyncIntervalInHours=null, $SystemExternalAddress=null, $TransferSessionTimeoutSeconds=null, $VerifyVcCertificates=null, $VcTruststorePassword=null, $VcTruststoreContents=null, $VcTruststoreType=null, $VmrcVersion=null, $VerifyVsmCertificates=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $AbsoluteSessionTimeoutMinutes=null, $ActivityLogDisplayDays=null, $ActivityLogKeepDays=null, $AllowOverlappingExtNets=null, $ChargebackEventsKeepDays=null, $ChargebackTablesCleanupJobTimeInSeconds=null, $ConsoleProxyExternalAddress=null, $HostCheckDelayInSeconds=null, $HostCheckTimeoutSeconds=null, $InstallationId=null, $IpReservationTimeoutSeconds=null, $SyslogServerSettings=null, $LoginNameOnly=null, $PrePopDefaultName=null, $QuarantineEnabled=null, $QuarantineResponseTimeoutSeconds=null, $RestApiBaseUri=null, $SessionTimeoutMinutes=null, $ShowStackTraces=null, $SyncStartDate=null, $SyncIntervalInHours=null, $SystemExternalAddress=null, $TransferSessionTimeoutSeconds=null, $VerifyVcCertificates=null, $VcTruststorePassword=null, $VcTruststoreContents=null, $VcTruststoreType=null, $VmrcVersion=null, $VerifyVsmCertificates=null, $ElasticAllocationPool=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->AbsoluteSessionTimeoutMinutes = $AbsoluteSessionTimeoutMinutes;
         $this->ActivityLogDisplayDays = $ActivityLogDisplayDays;
@@ -100,6 +102,7 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
         $this->VcTruststoreType = $VcTruststoreType;
         $this->VmrcVersion = $VmrcVersion;
         $this->VerifyVsmCertificates = $VerifyVsmCertificates;
+        $this->ElasticAllocationPool = $ElasticAllocationPool;
         $this->tagName = 'GeneralSettings';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -276,6 +279,12 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
     }
     public function setVerifyVsmCertificates($VerifyVsmCertificates) { 
         $this->VerifyVsmCertificates = $VerifyVsmCertificates;
+    }
+    public function getElasticAllocationPool() {
+        return $this->ElasticAllocationPool;
+    }
+    public function setElasticAllocationPool($ElasticAllocationPool) { 
+        $this->ElasticAllocationPool = $ElasticAllocationPool;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -460,6 +469,11 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'VerifyVsmCertificates', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "VerifyVsmCertificates>" . VMware_VCloud_API_Helper::format_boolean($this->VerifyVsmCertificates, $input_name='VerifyVsmCertificates') . "</" . $ns . "VerifyVsmCertificates>\n");
         }
+        if (!is_null($this->ElasticAllocationPool)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'ElasticAllocationPool', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "ElasticAllocationPool>" . VMware_VCloud_API_Helper::format_boolean($this->ElasticAllocationPool, $input_name='ElasticAllocationPool') . "</" . $ns . "ElasticAllocationPool>\n");
+        }
         return $out;
     }
     protected function hasContent() {
@@ -493,6 +507,7 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
             !is_null($this->VcTruststoreType) ||
             !is_null($this->VmrcVersion) ||
             !is_null($this->VerifyVsmCertificates) ||
+            !is_null($this->ElasticAllocationPool) ||
             parent::hasContent()
             ) {
             return true;
@@ -733,6 +748,13 @@ class VMware_VCloud_API_Extension_GeneralSettingsType extends VMware_VCloud_API_
             $this->VerifyVsmCertificates = $sval;
             if (!empty($namespace)) {
                 $this->namespace['VerifyVsmCertificates'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ElasticAllocationPool') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->ElasticAllocationPool = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['ElasticAllocationPool'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

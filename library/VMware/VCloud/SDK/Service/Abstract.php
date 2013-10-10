@@ -110,7 +110,7 @@ abstract class VMware_VCloud_SDK_Service_Abstract
         if (200 != $code)
         {
             throw new VMware_VCloud_SDK_Exception (
-                        "GET $url failed, return code: $code, error: $body\n");
+                        "$body");
         }
         return (true === $reObj)? 
              VMware_VCloud_SDK_Helper::getObjByXml($body, $return) : $body;

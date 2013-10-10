@@ -270,6 +270,7 @@ class VMware_VCloud_SDK_Extension extends VMware_VCloud_SDK_Abstract
      *
      * @return array VMware_VCloud_API_LinkType object array
      * @since Version 1.5.0
+     * @deprecated since version 5.5.0
      */
     public function getLicensingReportRefs()
     {
@@ -283,6 +284,7 @@ class VMware_VCloud_SDK_Extension extends VMware_VCloud_SDK_Abstract
      *
      * @return array VMware_VCloud_API_Extension_LicensingReportType object array
      * @since Version 1.5.0
+     * @deprecated since version 5.5.0
      */
     public function getLicensingReports()
     {
@@ -940,6 +942,34 @@ class VMware_VCloud_SDK_Extension extends VMware_VCloud_SDK_Abstract
         $url = $this->url . '/settings/lookupService';
         $type = VMware_VCloud_SDK_Constants::LOOKUPSERVICE_SETTINGS_CONTENT_TYPE;
         return $this->svc->put($url, 202, $type, $settings);
+    }
+
+    /**
+     * Retrieve vCloud Director catalog setting details.
+     *
+     * @return VMware_VCloud_API_Extension_CatalogSettingsType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getCatalogSettings()
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::CATALOG_SETTINGS_URL;
+        return $this->svc->get($url);
+    }
+
+    /**
+     * Update catalog settings details.
+     *
+     * @param VMware_VCloud_API_Extension_CatalogSettingsType $settings
+     * @return VMware_VCloud_API_Extension_CatalogSettingsType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function updateCatalogSettings($settings)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::CATALOG_SETTINGS_URL;
+        $type = VMware_VCloud_SDK_Constants::CATALOG_SETTINGS_CONTENT_TYPE;
+        return $this->svc->put($url, 200, $type, $settings);
     }
 
     /**

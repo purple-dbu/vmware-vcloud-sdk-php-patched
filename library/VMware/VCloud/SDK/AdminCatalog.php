@@ -267,4 +267,31 @@ class VMware_VCloud_SDK_AdminCatalog extends VMware_VCloud_SDK_Abstract
         $ref = $this->getCatalogRef();
         return isset($ref)? $this->svc->createSDKObj($ref) : null;
     }
+
+    /**
+     * Publish a catalog to external orgs.
+     *
+     * @param VMware_VCloud_API_PublishExternalCatalogParamsType $params
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function publishToExternalOrganizations($params)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_PUBLISH_TO_EXTERNAL_ORGANIZATIONS_URL;
+        $type = VMware_VCloud_SDK_Constants::PUBLISH_TO_EXTERNAL_ORGANIZATIONS_CONTENT_TYPE;
+        $this->svc->post($url, 204, $type, $params);
+    }
+
+    /**
+     * Subscribe to an external catalog.
+     * @param VMware_VCloud_API_ExternalCatalogSubscriptionParamsType $params
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function subscribeToExternalCatalog($params)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_SUBSCRIBE_TO_EXTERNAL_CATALOG_URL;
+        $type = VMware_VCloud_SDK_Constants::SUBSCRIBE_TO_EXTERNAL_CATALOG_CONTENT_TYPE;
+        $this->svc->post($url, 204, $type, $params);
+    }
 }

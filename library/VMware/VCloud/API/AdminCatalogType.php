@@ -1,5 +1,8 @@
 <?php
 class VMware_VCloud_API_AdminCatalogType extends VMware_VCloud_API_CatalogType {
+    protected $CatalogStorageProfiles = null;
+    protected $ExternalCatalogSubscriptionParams = null;
+    protected $PublishExternalCatalogParams = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -19,11 +22,36 @@ class VMware_VCloud_API_AdminCatalogType extends VMware_VCloud_API_CatalogType {
     * @param VMware_VCloud_API_CatalogItemsType $CatalogItems - [optional]
     * @param boolean $IsPublished - [optional] 
     * @param string $DateCreated - [optional] 
+    * @param int $VersionNumber - [optional] 
+    * @param VMware_VCloud_API_CatalogStorageProfilesType $CatalogStorageProfiles - [optional]
+    * @param VMware_VCloud_API_ExternalCatalogSubscriptionParamsType $ExternalCatalogSubscriptionParams - [optional]
+    * @param VMware_VCloud_API_PublishExternalCatalogParamsType $PublishExternalCatalogParams - [optional]
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $operationKey=null, $id=null, $name=null, $Description=null, $Tasks=null, $Owner=null, $CatalogItems=null, $IsPublished=null, $DateCreated=null) {
-        parent::__construct($VCloudExtension, $href, $type, $Link, $operationKey, $id, $name, $Description, $Tasks, $Owner, $CatalogItems, $IsPublished, $DateCreated);
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $operationKey=null, $id=null, $name=null, $Description=null, $Tasks=null, $Owner=null, $CatalogItems=null, $IsPublished=null, $DateCreated=null, $VersionNumber=null, $CatalogStorageProfiles=null, $ExternalCatalogSubscriptionParams=null, $PublishExternalCatalogParams=null) {
+        parent::__construct($VCloudExtension, $href, $type, $Link, $operationKey, $id, $name, $Description, $Tasks, $Owner, $CatalogItems, $IsPublished, $DateCreated, $VersionNumber);
+        $this->CatalogStorageProfiles = $CatalogStorageProfiles;
+        $this->ExternalCatalogSubscriptionParams = $ExternalCatalogSubscriptionParams;
+        $this->PublishExternalCatalogParams = $PublishExternalCatalogParams;
         $this->tagName = 'AdminCatalog';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
+    }
+    public function getCatalogStorageProfiles() {
+        return $this->CatalogStorageProfiles;
+    }
+    public function setCatalogStorageProfiles($CatalogStorageProfiles) { 
+        $this->CatalogStorageProfiles = $CatalogStorageProfiles;
+    }
+    public function getExternalCatalogSubscriptionParams() {
+        return $this->ExternalCatalogSubscriptionParams;
+    }
+    public function setExternalCatalogSubscriptionParams($ExternalCatalogSubscriptionParams) { 
+        $this->ExternalCatalogSubscriptionParams = $ExternalCatalogSubscriptionParams;
+    }
+    public function getPublishExternalCatalogParams() {
+        return $this->PublishExternalCatalogParams;
+    }
+    public function setPublishExternalCatalogParams($PublishExternalCatalogParams) { 
+        $this->PublishExternalCatalogParams = $PublishExternalCatalogParams;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -65,10 +93,22 @@ class VMware_VCloud_API_AdminCatalogType extends VMware_VCloud_API_CatalogType {
     protected function exportChildren($out, $level, $name, $namespace, $rootNS) {
         $namespace = self::$defaultNS;
         $out = parent::exportChildren($out, $level, $name, $namespace, $rootNS);
+        if (!is_null($this->CatalogStorageProfiles)) {
+            $out = $this->CatalogStorageProfiles->export('CatalogStorageProfiles', $out, $level, '', $namespace, $rootNS);
+        }
+        if (!is_null($this->ExternalCatalogSubscriptionParams)) {
+            $out = $this->ExternalCatalogSubscriptionParams->export('ExternalCatalogSubscriptionParams', $out, $level, '', $namespace, $rootNS);
+        }
+        if (!is_null($this->PublishExternalCatalogParams)) {
+            $out = $this->PublishExternalCatalogParams->export('PublishExternalCatalogParams', $out, $level, '', $namespace, $rootNS);
+        }
         return $out;
     }
     protected function hasContent() {
         if (
+            !is_null($this->CatalogStorageProfiles) ||
+            !is_null($this->ExternalCatalogSubscriptionParams) ||
+            !is_null($this->PublishExternalCatalogParams) ||
             parent::hasContent()
             ) {
             return true;
@@ -106,6 +146,33 @@ class VMware_VCloud_API_AdminCatalogType extends VMware_VCloud_API_CatalogType {
         parent::buildAttributes($node, $namespaces);
     }
     protected function buildChildren($child, $nodeName, $namespace='') {
+        if ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'CatalogStorageProfiles') {
+            $obj = new VMware_VCloud_API_CatalogStorageProfilesType();
+            $obj->build($child);
+            $obj->set_tagName('CatalogStorageProfiles');
+            $this->setCatalogStorageProfiles($obj);
+            if (!empty($namespace)) {
+                $this->namespace['CatalogStorageProfiles'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ExternalCatalogSubscriptionParams') {
+            $obj = new VMware_VCloud_API_ExternalCatalogSubscriptionParamsType();
+            $obj->build($child);
+            $obj->set_tagName('ExternalCatalogSubscriptionParams');
+            $this->setExternalCatalogSubscriptionParams($obj);
+            if (!empty($namespace)) {
+                $this->namespace['ExternalCatalogSubscriptionParams'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'PublishExternalCatalogParams') {
+            $obj = new VMware_VCloud_API_PublishExternalCatalogParamsType();
+            $obj->build($child);
+            $obj->set_tagName('PublishExternalCatalogParams');
+            $this->setPublishExternalCatalogParams($obj);
+            if (!empty($namespace)) {
+                $this->namespace['PublishExternalCatalogParams'] = $namespace;
+            }
+        }
         parent::buildChildren($child, $nodeName, $namespace);
     }
 }

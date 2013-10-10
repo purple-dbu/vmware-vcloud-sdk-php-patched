@@ -73,6 +73,29 @@ class VMware_VCloud_SDK_Org extends VMware_VCloud_SDK_Abstract
     }
 
     /**
+     * Get references to VMware vCloud catalog entities.
+     *
+     * @param string $name  Name of the catalog. If null, returns all
+     * @return array        VMware_VCloud_API_ReferenceType object array
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function getCatalogReferences($name=null)
+    {
+        $refs= array();
+        $links = $this->getCatalogRefs($name);
+        if($links)
+        {
+            foreach($links as $link)
+            {
+                $ref = VMware_VCloud_SDK_Helper::createReferenceTypeObj($link->get_href(), null, $link->get_type(), $link->get_name());
+                array_push($refs, $ref);
+            }
+        }
+        return $refs;
+    }
+
+    /**
      * Get all catalogs or catalogs with a given name in the organization.
      *
      * @param string $name  Name of the catalog. If null, returns all

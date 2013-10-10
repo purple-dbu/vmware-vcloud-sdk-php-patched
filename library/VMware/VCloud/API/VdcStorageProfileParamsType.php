@@ -25,7 +25,7 @@ class VMware_VCloud_API_VdcStorageProfileParamsType extends VMware_VCloud_API_VC
         $this->Limit = $Limit;
         $this->Default = $Default;
         $this->ProviderVdcStorageProfile = $ProviderVdcStorageProfile;
-        $this->tagName = 'VdcStorageProfile';
+        $this->tagName = 'VdcStorageProfileParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
     public function getEnabled() {

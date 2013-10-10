@@ -379,4 +379,20 @@ class VMware_VCloud_SDK_AdminVdc extends VMware_VCloud_SDK_Abstract
                 EDGE_GATEWAYS_CONTENT_TYPE;
         return $this->svc->post($url, 201, $type, $params);
     }
+
+    /**
+     * Create a vApp based on a set of .vmx files and resource mappings
+     *
+     * @param VMware_VCloud_API_RegisterVAppParamsType $params
+     * @return VMware_VCloud_API_TaskType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function registerVApp($params)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_REGISTER_VAPP_URL;
+        $type = VMware_VCloud_SDK_Constants::
+                REGISTER_VAPP_PARAMS_CONTENT_TYPE;
+        return $this->svc->post($url, 202, $type, $params);
+    }
 }

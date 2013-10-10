@@ -3,6 +3,7 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
     protected $Source = null;
     protected $StorageProfile = null;
     protected $LocalityParams = null;
+    protected $HardwareCustomization = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -13,12 +14,14 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
     * @param VMware_VCloud_API_ReferenceType $Source - [required]
     * @param VMware_VCloud_API_ReferenceType $StorageProfile - [optional]
     * @param VMware_VCloud_API_LocalityParamsType $LocalityParams - [optional]
+    * @param VMware_VCloud_API_InstantiateVmHardwareCustomizationParamsType $HardwareCustomization - [optional]
     */
-    public function __construct($VCloudExtension=null, $Source=null, $StorageProfile=null, $LocalityParams=null) {
+    public function __construct($VCloudExtension=null, $Source=null, $StorageProfile=null, $LocalityParams=null, $HardwareCustomization=null) {
         parent::__construct($VCloudExtension);
         $this->Source = $Source;
         $this->StorageProfile = $StorageProfile;
         $this->LocalityParams = $LocalityParams;
+        $this->HardwareCustomization = $HardwareCustomization;
         $this->tagName = 'SourcedVmInstantiationParams';
         $this->namespacedef = ' xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:ns12="http://www.vmware.com/vcloud/v1.5" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovfenv="http://schemas.dmtf.org/ovf/environment/1" xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -39,6 +42,12 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
     }
     public function setLocalityParams($LocalityParams) { 
         $this->LocalityParams = $LocalityParams;
+    }
+    public function getHardwareCustomization() {
+        return $this->HardwareCustomization;
+    }
+    public function setHardwareCustomization($HardwareCustomization) { 
+        $this->HardwareCustomization = $HardwareCustomization;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -89,6 +98,9 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
         if (!is_null($this->LocalityParams)) {
             $out = $this->LocalityParams->export('LocalityParams', $out, $level, '', $namespace, $rootNS);
         }
+        if (!is_null($this->HardwareCustomization)) {
+            $out = $this->HardwareCustomization->export('HardwareCustomization', $out, $level, '', $namespace, $rootNS);
+        }
         return $out;
     }
     protected function hasContent() {
@@ -96,6 +108,7 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
             !is_null($this->Source) ||
             !is_null($this->StorageProfile) ||
             !is_null($this->LocalityParams) ||
+            !is_null($this->HardwareCustomization) ||
             parent::hasContent()
             ) {
             return true;
@@ -158,6 +171,15 @@ class VMware_VCloud_API_SourcedVmInstantiationParamsType extends VMware_VCloud_A
             $this->setLocalityParams($obj);
             if (!empty($namespace)) {
                 $this->namespace['LocalityParams'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'HardwareCustomization') {
+            $obj = new VMware_VCloud_API_InstantiateVmHardwareCustomizationParamsType();
+            $obj->build($child);
+            $obj->set_tagName('HardwareCustomization');
+            $this->setHardwareCustomization($obj);
+            if (!empty($namespace)) {
+                $this->namespace['HardwareCustomization'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);

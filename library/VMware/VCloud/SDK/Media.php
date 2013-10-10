@@ -132,8 +132,8 @@ class VMware_VCloud_SDK_Media extends VMware_VCloud_SDK_Abstract
      * Deletes media alone. If the media is not attached to any catalog item.
      *
      * @return VMware_VCloud_API_TaskType
-     * @since Version 1.5.0
-     * @since SDK 5.1.0
+     * @since API Version 1.5.0
+     * @since SDK Version 5.5.0
      */
     public function deleteMedia()
     {
@@ -141,8 +141,9 @@ class VMware_VCloud_SDK_Media extends VMware_VCloud_SDK_Abstract
         {
             $this->svc->createSDKObj($this->getCatalogItemLink())->delete();
         }
-        $this->svc->delete($this->url, 202);
+        $task = $this->svc->delete($this->url, 202);
         $this->destroy();
+        return $task;
     }
 
     /**
@@ -219,5 +220,108 @@ class VMware_VCloud_SDK_Media extends VMware_VCloud_SDK_Abstract
     {
         $url = $this->getMetadataUrl($key, $domain);
         return $this->svc->delete($url, 202);
+    }
+
+    /**
+     * Enable downloading for the media.
+     *
+     * @param boolean $wait     To wait till finish, set to true
+     * @return VMware_VCloud_API_TaskType
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function enableDownload($wait=true)
+    {
+        $url = $this->url . VMware_VCloud_SDK_Constants::ACTION_ENABLE_DOWNLOAD_URL;
+        $task = $this->svc->post($url, 202);
+        return ($wait)? $this->svc->waitForTask($task) : $task;
+    }
+
+    /**
+     * Get download URL of an iso or floppy media.
+     *
+     * @param array VMware_VCloud_API_FileType object array $files
+     * @return string  an iso media URL
+     * @access private
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    private function getDownloadMediaUrl($files)
+    {
+        $refs = VMware_VCloud_SDK_Helper::getContainedLinks(null, 'download:default', $files[0]);
+        if (1 == count($refs))
+        {
+            return $refs[0]->get_href();
+        }
+    }
+
+    /**
+     * Download the media as an iso or floppy image.
+     * contents are downloaded to the specified location. Before downloading
+     * make sure the media is enabled for download.
+     * The downloaded media file name will be the same as the current media file name in execution.
+     * @see Media#enableDownload()
+     *
+     * @param string $destDir   Directory where to save the downloaded file
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function downloadMedia($destDir='.')
+    {
+        $mediaName = $this->getMedia()->get_name();
+        if(is_null($this->getMedia()->getFiles()))
+        {
+            throw new VMware_VCloud_SDK_Exception ( "Make sure the media is enabled for downloading.\n");
+        }
+        $files = $this->getMedia()->getFiles()->getFile();
+        // get download URL of an iso media.
+        $mediaUrl = $this->getDownloadMediaUrl($files);
+
+        if(!is_null($mediaUrl))
+        {
+            $dest = implode('/', array($destDir, $mediaName));
+            $this->svc->download($mediaUrl, $dest);
+        }
+        else
+        {
+            throw new VMware_VCloud_SDK_Exception ( "Media doesn't have download url.\n");
+        }
+    }
+
+    /**
+     * Download the media as an iso or floppy image.
+     * contents are downloaded to the specified location. Before downloading
+     * make sure the media is enabled for download.
+     * @see Media#enableDownload()
+     *
+     * @param string $destDir   Directory where to save the downloaded file
+     * @param string $mediaName  Name of the Media which you want to give
+     * @return null
+     * @throws VMware_VCloud_SDK_Exception
+     * @since API Version 5.5.0
+     * @since SDK Version 5.5.0
+     */
+    public function downloadMediaByName($destDir='.', $mediaName)
+    {
+        $mediaName = $mediaName .'.'. $this->getMedia()->get_imageType();
+        if(is_null($this->getMedia()->getFiles()))
+        {
+            throw new VMware_VCloud_SDK_Exception ( "Make sure the media is enabled for downloading.\n");
+        }
+        $files = $this->getMedia()->getFiles()->getFile();
+        // get download URL of an iso media.
+        $mediaUrl = $this->getDownloadMediaUrl($files);
+
+        if(!is_null($mediaUrl))
+        {
+            $dest = implode('/', array($destDir, $mediaName));
+            $this->svc->download($mediaUrl, $dest);
+        }
+        else
+        {
+            throw new VMware_VCloud_SDK_Exception ( "Media doesn't have download url.\n");
+        }
     }
 }

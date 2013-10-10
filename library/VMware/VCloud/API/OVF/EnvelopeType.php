@@ -617,6 +617,60 @@ class VMware_VCloud_API_OVF_EnvelopeType {
                 $this->namespace['VAppOrgVdcNetworkRelationReferences'] = $namespace;
             }
         }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ServiceOfferingInstanceReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('ServiceOfferingInstanceReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['ServiceOfferingInstanceReferences'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ServiceOfferingReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('ServiceOfferingReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['ServiceOfferingReferences'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'VmServiceOfferingInstanceReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('VmServiceOfferingInstanceReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['VmServiceOfferingInstanceReferences'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'VdcServiceOfferingReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('VdcServiceOfferingReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['VdcServiceOfferingReferences'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'AdminServiceOfferingInstanceReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('AdminServiceOfferingInstanceReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['AdminServiceOfferingInstanceReferences'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'ServiceExtensionReferences') {
+            $obj = new VMware_VCloud_API_ReferencesType();
+            $obj->build($child);
+            $obj->set_tagName('ServiceExtensionReferences');
+            $this->setReferences($obj);
+            if (!empty($namespace)) {
+                $this->namespace['ServiceExtensionReferences'] = $namespace;
+            }
+        }
         elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'Section') {
             $obj = new VMware_VCloud_API_OVF_Section_Type();
             $obj->build($child);

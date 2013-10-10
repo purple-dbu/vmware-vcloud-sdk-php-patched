@@ -7,6 +7,8 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
     protected $PhysicalSocketCount = null;
     protected $AvailablePhysicalMemory = null;
     protected $LastUpdate = null;
+    protected $PublishingToRemoteSites = null;
+    protected $SubscribingToRemoteSites = null;
     protected $namespace = array();
     protected $namespacedef = null;
     protected $tagName = null;
@@ -24,8 +26,10 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
     * @param int $PhysicalSocketCount - [optional] 
     * @param int $AvailablePhysicalMemory - [optional] 
     * @param string $LastUpdate - [optional] 
+    * @param boolean $PublishingToRemoteSites - [optional] 
+    * @param boolean $SubscribingToRemoteSites - [optional] 
     */
-    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $vRAM=null, $vCPU=null, $RunningVMs=null, $PhysicalMemoryUsed=null, $PhysicalSocketCount=null, $AvailablePhysicalMemory=null, $LastUpdate=null) {
+    public function __construct($VCloudExtension=null, $href=null, $type=null, $Link=null, $vRAM=null, $vCPU=null, $RunningVMs=null, $PhysicalMemoryUsed=null, $PhysicalSocketCount=null, $AvailablePhysicalMemory=null, $LastUpdate=null, $PublishingToRemoteSites=null, $SubscribingToRemoteSites=null) {
         parent::__construct($VCloudExtension, $href, $type, $Link);
         $this->vRAM = $vRAM;
         $this->vCPU = $vCPU;
@@ -34,6 +38,8 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
         $this->PhysicalSocketCount = $PhysicalSocketCount;
         $this->AvailablePhysicalMemory = $AvailablePhysicalMemory;
         $this->LastUpdate = $LastUpdate;
+        $this->PublishingToRemoteSites = $PublishingToRemoteSites;
+        $this->SubscribingToRemoteSites = $SubscribingToRemoteSites;
         $this->tagName = '';
         $this->namespacedef = ' xmlns:vmext="http://www.vmware.com/vcloud/extension/v1.5" xmlns:vcloud="http://www.vmware.com/vcloud/v1.5" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
     }
@@ -78,6 +84,18 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
     }
     public function setLastUpdate($LastUpdate) { 
         $this->LastUpdate = $LastUpdate;
+    }
+    public function getPublishingToRemoteSites() {
+        return $this->PublishingToRemoteSites;
+    }
+    public function setPublishingToRemoteSites($PublishingToRemoteSites) { 
+        $this->PublishingToRemoteSites = $PublishingToRemoteSites;
+    }
+    public function getSubscribingToRemoteSites() {
+        return $this->SubscribingToRemoteSites;
+    }
+    public function setSubscribingToRemoteSites($SubscribingToRemoteSites) { 
+        $this->SubscribingToRemoteSites = $SubscribingToRemoteSites;
     }
     public function get_tagName() { return $this->tagName; }
     public function set_tagName($tagName) { $this->tagName = $tagName; }
@@ -154,6 +172,16 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
             $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'LastUpdate', self::$defaultNS, $namespace, $rootNS);
             $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "LastUpdate>" . VMware_VCloud_API_Helper::quote_xml(VMware_VCloud_API_Helper::format_string(mb_convert_encoding($this->LastUpdate, VMware_VCloud_API_Helper::$ExternalEncoding, "auto"), $input_name='LastUpdate')) . "</" . $ns . "LastUpdate>\n");
         }
+        if (!is_null($this->PublishingToRemoteSites)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'PublishingToRemoteSites', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "PublishingToRemoteSites>" . VMware_VCloud_API_Helper::format_boolean($this->PublishingToRemoteSites, $input_name='PublishingToRemoteSites') . "</" . $ns . "PublishingToRemoteSites>\n");
+        }
+        if (!is_null($this->SubscribingToRemoteSites)) {
+            $out = VMware_VCloud_API_Helper::showIndent($out, $level);
+            $ns = VMware_VCloud_API_Helper::getNamespaceTag($this->namespace, 'SubscribingToRemoteSites', self::$defaultNS, $namespace, $rootNS);
+            $out = VMware_VCloud_API_Helper::addString($out, "<" . $ns . "SubscribingToRemoteSites>" . VMware_VCloud_API_Helper::format_boolean($this->SubscribingToRemoteSites, $input_name='SubscribingToRemoteSites') . "</" . $ns . "SubscribingToRemoteSites>\n");
+        }
         return $out;
     }
     protected function hasContent() {
@@ -165,6 +193,8 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
             !is_null($this->PhysicalSocketCount) ||
             !is_null($this->AvailablePhysicalMemory) ||
             !is_null($this->LastUpdate) ||
+            !is_null($this->PublishingToRemoteSites) ||
+            !is_null($this->SubscribingToRemoteSites) ||
             parent::hasContent()
             ) {
             return true;
@@ -249,6 +279,20 @@ class VMware_VCloud_API_Extension_LicenseMetricsInfoType extends VMware_VCloud_A
             $this->LastUpdate = $sval;
             if (!empty($namespace)) {
                 $this->namespace['LastUpdate'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'PublishingToRemoteSites') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->PublishingToRemoteSites = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['PublishingToRemoteSites'] = $namespace;
+            }
+        }
+        elseif ($child->nodeType == XML_ELEMENT_NODE && $nodeName == 'SubscribingToRemoteSites') {
+            $sval = VMware_VCloud_API_Helper::get_boolean($child->nodeValue);
+            $this->SubscribingToRemoteSites = $sval;
+            if (!empty($namespace)) {
+                $this->namespace['SubscribingToRemoteSites'] = $namespace;
             }
         }
         parent::buildChildren($child, $nodeName, $namespace);
