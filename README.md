@@ -17,7 +17,9 @@ with the exception of the following additions and changes:
 ✔ Fixed [#8](https://github.com/amercier/vmware-vcloud-sdk-php-patched/issues/8): Set image type in VMWare_VCloud_SDK_Vdc::uploadMedia (credits to @brianium)  
 ✔ Fixed [#9](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/9): Add support for storageKB field on VMware_VCloud_API_QueryResultVAppTemp (credits to @brianium)  
 ✔ Fixed [#12](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/12): VMware_VCloud_SDK_Vdc::sendUploadVAppTemplateRequest should uses $vdcStorageProfileRef (credits to @brianium)  
-✔ Fixed [#15](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/15): OperatingSytemSection and VirtualHardwareSection should have the "ovf" namespace (credits to @brianium)  
+✔ Fixed [#16](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/16): OperatingSytemSection and VirtualHardwareSection should have the "ovf" namespace (credits to @brianium)  
+✔ Fixed [#17](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/17): Add support for details in VMware_VCloud_API_QueryResultTaskRecordType (credits to @brianium)  
+✔ Fixed [#18](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/18): Add vmPendingQuestion to SDK_Constants (credits to @brianium)  
 
 
 Versioning
