@@ -22,6 +22,36 @@ with the exception of the following additions and changes:
 ✔ Fixed [#18](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/18): Add vmPendingQuestion to SDK_Constants (credits to @brianium)  
 
 
+Installation
+------------
+
+_vmware/vcloud-sdk-patched_ is available through [Composer](http://getcomposer.org/).
+```json
+  "repositories": [
+    {
+        "type": "pear",
+        "url": "http://pear.php.net"
+    }
+  ],
+  "require": {
+    "vmware/vcloud-sdk-patched": "550.0.0",
+    "pear-pear/HTTP_Request2": "*"
+  }
+```
+```bash
+php composer.phar update
+```
+
+If you are not familiar with _Composer_, please read the
+[full installation intructions](docs/install.md).
+
+
+Usage
+-----
+
+See [official VMware documentation](http://www.vmware.com/support/pubs/vcd_pubs.html)
+
+
 Versioning
 ----------
 
@@ -37,23 +67,18 @@ format `vwx.y.z` where:
 Licensing
 ---------
 
-This project is released under [Creative Commons - Attribution 3.0 Unported](LICENSE-CC-BY.md)
-license. If this license does not fit your requirement for whatever reason, but
-you would be interested in using the work (as defined below) under another
-license, please contact Alexandre Mercier at pro.alexandre.mercier@gmail.com .
+This project is released under
+[Creative Commons - Attribution 3.0 Unported](LICENSE-CC-BY.md) license. If this
+license does not fit your requirement for whatever reason, but you would be
+interested in using the work (as defined below) under another license, please
+contact [authors](docs/authors.md).
 
 
 Contributing
 ------------
 
 Contributions (issues ♥, pull requests ♥♥♥) are more than welcome! Feel free to
-clone, fork, modify, extend, etc, as long as you respect the [license terms](LICENSE-CC-BY.md).
+clone, fork, modify, extend, etc, as long as you respect the
+[license terms](LICENSE-CC-BY.md).
 
-**Installation**: after cloning the project, all you need to to is execute
-`make install`.
-
-**SDK Generation**: you need to execute `make` in order to generate SDK from the
-original SDK.
-
-**Testing**: `make test`
-
+See [contributing intructions](docs/contributing.md) for details.
