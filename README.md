@@ -19,6 +19,7 @@ with the exception of the following additions and changes:
 ✔ Fixed [#12](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/12): VMware_VCloud_SDK_Vdc::sendUploadVAppTemplateRequest should uses $vdcStorageProfileRef (credits to @brianium)  
 ✔ Fixed [#13](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/13): VMware_VCloud_SDK_VAppTemplate::delete should return a task (credits to @brianium)  
 ✔ Fixed [#14](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/14): VMware_VCloud_SDK_VAppTemplate::deleteVAppTemplate should return a task (credits to @brianium)  
+✔ Fixed [#15](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/15): OperatingSytemSection and VirtualHardwareSection should have the "ovf" namespace (credits to @brianium)  
 
 
 Versioning
