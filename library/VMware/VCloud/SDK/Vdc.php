@@ -450,6 +450,7 @@ $vdcStorageProfileRef, $catalogRef)
      */
     private function uploadMedia($filename, $imageType, $mediaType)
     {
+        $mediaType->set_imageType($imageType);
         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
         $url = $this->getMediaUploadInfo($mediaUpInfo);
         $durl =  $mediaUpInfo->get_href();
