@@ -264,4 +264,24 @@ class VMware_VCloud_SDK_Http_Client implements
         }
         fclose($fh);
     }
+
+    /**
+     * @amercier #2
+     *
+     * Get the username of a HTTP vCloud authentication token
+     * @return string Returns the vCloud username@organization
+     */
+    public function getUsername() {
+        return $this->username;
+    }
+
+    /**
+     * @amercier #2
+     *
+     * Get the vCloud authentication token
+     * @return Returns the vCloud authentication token
+     */
+    public function getToken() {
+        return $this->authToken;
+    }
 }
