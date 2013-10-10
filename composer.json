@@ -33,7 +33,7 @@
     }
   ],
   "require-dev": {
-    "vmware/vcloud-sdk": "5.1.2",
+    "vmware/vcloud-sdk": "5.5.0",
     "pear-pear/HTTP_Request2": "*"
   }
 }
