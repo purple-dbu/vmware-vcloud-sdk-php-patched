@@ -222,7 +222,7 @@ class VMware_VCloud_API_QueryResultAdminApiDefinitionRecordType extends VMware_V
         }
         $ndnamespace = $attrs->getNamedItem('namespace');
         if (!is_null($ndnamespace)) {
-            $this->namespace = $ndnamespace->value;
+            $this->namespace = array();
             if (isset($ndnamespace->prefix)) {
                 $this->namespace['namespace'] = $ndnamespace->prefix;
                 $nsUri = $ndnamespace->lookupNamespaceURI($ndnamespace->prefix);
