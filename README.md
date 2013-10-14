@@ -20,6 +20,7 @@ with the exception of the following additions and changes:
 ✔ Fixed [#16](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/16): OperatingSytemSection and VirtualHardwareSection should have the "ovf" namespace (credits to @brianium)  
 ✔ Fixed [#17](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/17): Add support for details in VMware_VCloud_API_QueryResultTaskRecordType (credits to @brianium)  
 ✔ Fixed [#18](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/18): Add vmPendingQuestion to SDK_Constants (credits to @brianium)  
+✔ Fixed [#19](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/19): PHP Warning: Illegal string offset on multiple API_QueryResult* classes  
 
 
 Installation
