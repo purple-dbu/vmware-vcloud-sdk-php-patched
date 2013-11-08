@@ -471,7 +471,7 @@ $vdcStorageProfileRef, $catalogRef)
      * @return VMware_VCloud_API_MediaType
      * @since Version 1.0.0
      */
-    public function uploadIsoMedia($isoName, $mediaType , $onProgress = false)
+    public function uploadIsoMedia($isoName, $mediaType, $onProgress = false)
     {
         //return $this->uploadMedia($isoName, 'iso', $mediaType);
         return $this->uploadMedia($isoName, 'iso', $mediaType, $onProgress); // @yconan

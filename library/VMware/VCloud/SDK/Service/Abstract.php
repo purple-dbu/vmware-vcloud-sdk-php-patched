@@ -266,7 +266,7 @@ abstract class VMware_VCloud_SDK_Service_Abstract
      * @return null
      * @since Version 1.0.0
      */
-    public function upload($url, $file, $type='application/octet-stream',$onProgress = false)
+    public function upload($url, $file, $type='application/octet-stream', $onProgress = false)
     {
         $headers = array('Content-Type'=>$type);
         //$this->httpClient->upload($url, $headers, $file);
