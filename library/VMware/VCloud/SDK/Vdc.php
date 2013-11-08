@@ -447,16 +447,18 @@ $vdcStorageProfileRef, $catalogRef)
      * @param string $filename    Path to the media to be uploaded
      * @param string $imageType   ImageType ('iso' or 'floppy')
      * @param VMware_VCloud_API_MediaType $mediaType
+     * @param function $onProgress @yconan
      * @return VMware_VCloud_API_MediaType
      * @access private
      */
-    private function uploadMedia($filename, $imageType, $mediaType)
+    private function uploadMedia($filename, $imageType, $mediaType, $onProgress = false)
     {
         $mediaType->set_imageType($imageType);
         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
         $url = $this->getMediaUploadInfo($mediaUpInfo);
         $durl =  $mediaUpInfo->get_href();
-        $this->svc->upload($url, $filename);
+        //$this->svc->upload($url, $filename);
+        $this->svc->upload($url, $filename,'application/octet-stream',$onProgress); // @yconan
         return $this->svc->get($durl);
     }
 
@@ -465,12 +467,14 @@ $vdcStorageProfileRef, $catalogRef)
      *
      * @param string $isoName   Media full path file name
      * @param VMware_VCloud_API_MediaType $mediaType
+     * @param function $onProgress @yconan
      * @return VMware_VCloud_API_MediaType
      * @since Version 1.0.0
      */
-    public function uploadIsoMedia($isoName, $mediaType)
+    public function uploadIsoMedia($isoName, $mediaType , $onProgress = false)
     {
-        return $this->uploadMedia($isoName, 'iso', $mediaType);
+        //return $this->uploadMedia($isoName, 'iso', $mediaType);
+        return $this->uploadMedia($isoName, 'iso', $mediaType, $onProgress); // @yconan
     }
 
     /**
