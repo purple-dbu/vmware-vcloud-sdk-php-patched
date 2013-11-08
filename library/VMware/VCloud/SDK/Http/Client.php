@@ -251,10 +251,11 @@ class VMware_VCloud_SDK_Http_Client implements
      * @param array  $headers    HTTP request headers
      * @param string $file       Full path of the file to be uploaded
      * @param int    $windowSize Chunk size in bytes, defaults to 10M
+     * @param function $onProgress @yconan
      * @return null
      * @since Version 1.0.0
      */
-    public function upload($url, $headers, $file, $windowSize = 10485760)
+    public function upload($url, $headers, $file, $windowSize = 10485760, $onProgress = false)
     {
         if( filesize($file) <= $windowSize )
         {
@@ -266,6 +267,9 @@ class VMware_VCloud_SDK_Http_Client implements
                 flush();
             }
             fclose($fh);
+            if ($onProgress) {
+                $onProgress(filesize($file));
+            }
         }
         else
         {
@@ -290,19 +294,39 @@ class VMware_VCloud_SDK_Http_Client implements
 
                     $headers['Content-Range'] = 'bytes ' . $transferred . '-' . ($transferred + $contentLength) . '/' . $total;
                     $headers['Content-Length'] = $contentLength;
-                    $response = $this->put($url, $headers, $data);
-
-                    if( $response->getStatus() !== 200 )
-                    {
-                        throw new Exception('Can\'t upload ' . $file . ' (HTTP ' . $response->getStatus() . '): ' . $response->getBody());
-                    }
-
+                    $this->putAndCheck($url, $headers, $data);
                     $transferred += $contentLength;
-                    $remaining   .= $contentLength;
+                    if ($onProgress) {
+                        $onProgress($transferred);
+                    }
                 }
                 flush();
             }
             fclose($fh);
+        }
+    }
+
+    /**
+     * @yconan #1
+     * 
+     * upload data and retrieve 3 times if http status is 416
+     * @param string $url        Target where to upload the file
+     * @param array  $headers    HTTP request headers
+     * @param string $data 
+     * @param integer $attemptNumber number of attempt to send data
+     * @param integer $sendAttemps maximum attempts following a HTTP 416
+     */
+    public function putAndCheck($url, $headers, $data, $attemptNumber = 0, $sendAttempts = 5) {
+        $response = $this->put($url, $headers, $data);
+        if ( $response->getStatus() === 416 && $attemptNumber <= $sendAttempts) {
+            //echo "An HTTP 416 occured retry sending last chunk. attempt $attemptNumber\n";
+            $attemptNumber++;
+            sleep(2);
+            return $this->putAndCheck($url, $headers, $data,$attemptNumber);
+        }
+
+        if( $response->getStatus() !== 200 ) {
+            throw new Exception('Can\'t upload ' . $file . ' (HTTP ' . $response->getStatus() . '): ' . $response->getBody());
         }
     }
 

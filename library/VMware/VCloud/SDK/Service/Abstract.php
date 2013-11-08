@@ -261,13 +261,15 @@ abstract class VMware_VCloud_SDK_Service_Abstract
      * @param string $url   Target to upload the file
      * @param string $file  Full path of a file to be uploaded
      * @param string $type  HTTP request Content-Type
+     * @param function $onProgress @yconan
      * @throws VMware_VCloud_SDK_Exception
      * @return null
      * @since Version 1.0.0
      */
-    public function upload($url, $file, $type='application/octet-stream')
+    public function upload($url, $file, $type='application/octet-stream', $onProgress = false)
     {
         $headers = array('Content-Type'=>$type);
-        $this->httpClient->upload($url, $headers, $file);
+        //$this->httpClient->upload($url, $headers, $file);
+        $this->httpClient->upload($url, $headers, $file, 10485760, $onProgress); // @yconan
     }
 }
