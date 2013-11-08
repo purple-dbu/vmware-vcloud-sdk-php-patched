@@ -458,7 +458,7 @@ $vdcStorageProfileRef, $catalogRef)
         $url = $this->getMediaUploadInfo($mediaUpInfo);
         $durl =  $mediaUpInfo->get_href();
         //$this->svc->upload($url, $filename);
-        $this->svc->upload($url, $filename,'application/octet-stream',$onProgress); // @yconan
+        $this->svc->upload($url, $filename, 'application/octet-stream', $onProgress); // @yconan
         return $this->svc->get($durl);
     }
 
