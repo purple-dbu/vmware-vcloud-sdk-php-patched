@@ -268,7 +268,7 @@ class VMware_VCloud_SDK_Http_Client implements
             }
             fclose($fh);
             if ($onProgress) {
-                $onProgress(filesize($file)) ;
+                $onProgress(filesize($file));
             }
         }
         else
@@ -294,10 +294,10 @@ class VMware_VCloud_SDK_Http_Client implements
 
                     $headers['Content-Range'] = 'bytes ' . $transferred . '-' . ($transferred + $contentLength) . '/' . $total;
                     $headers['Content-Length'] = $contentLength;
-                    $this->putAndCheck($url, $headers, $data) ;
+                    $this->putAndCheck($url, $headers, $data);
                     $transferred += $contentLength;
                     if ($onProgress) {
-                        $onProgress($transferred) ;
+                        $onProgress($transferred);
                     }
                 }
                 flush();
@@ -319,10 +319,10 @@ class VMware_VCloud_SDK_Http_Client implements
     public function putAndCheck($url, $headers, $data, $attemptNumber = 0, $sendAttempts = 5) {
         $response = $this->put($url, $headers, $data);
         if ( $response->getStatus() === 416 && $attemptNumber <= $sendAttempts) {
-            //echo "An HTTP 416 occured retry sending last chunk. attempt $attemptNumber\n" ;
-            $attemptNumber++ ;
-            sleep(2) ;
-            return $this->putAndCheck($url, $headers, $data,$attemptNumber) ;
+            //echo "An HTTP 416 occured retry sending last chunk. attempt $attemptNumber\n";
+            $attemptNumber++;
+            sleep(2);
+            return $this->putAndCheck($url, $headers, $data,$attemptNumber);
         }
 
         if( $response->getStatus() !== 200 ) {
