@@ -21,6 +21,7 @@ with the exception of the following additions and changes:
 ✔ Fixed [#17](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/17): Add support for details in VMware_VCloud_API_QueryResultTaskRecordType (credits to @brianium)  
 ✔ Fixed [#18](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/18): Add vmPendingQuestion to SDK_Constants (credits to @brianium)  
 ✔ Fixed [#19](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/19): PHP Warning: Illegal string offset on multiple API_QueryResult* classes  
+✔ Fixed [#20](https://github.com/amercier/vmware-vcloud-sdk-php-patched/pull/20): Added onProgress function for http-client upload method and vdc uploads  
 
 
 Installation
