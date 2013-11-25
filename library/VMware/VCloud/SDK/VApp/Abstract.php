@@ -193,9 +193,9 @@ abstract class VMware_VCloud_SDK_VApp_Abstract extends
      * @param string $op    Name of the operation
      * @param int $expect   Expected return code
      * @return VMware_VCloud_API_TaskType
-     * @access private
+     * @access protected
      */
-    private function action($op, $expect=202)
+    protected function action($op, $expect=202)
     {
         $url = $this->url . '/power/action/' . $op;
         return $this->svc->post($url, $expect);

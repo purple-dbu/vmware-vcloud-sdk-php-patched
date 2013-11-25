@@ -104,9 +104,9 @@ class VMware_VCloud_SDK_Catalog extends VMware_VCloud_SDK_Abstract
      *
      * @param  string $action   Operation on the control access
      * @return string
-     * @access private
+     * @access protected
      */
-    private function getControlAccessUrl($action=null)
+    protected function getControlAccessUrl($action=null)
     {
         $orgUrl = $this->getOrgRef()->get_href();
         $url = $orgUrl . "/catalog/" . $this->getUuid();
@@ -247,7 +247,7 @@ class VMware_VCloud_SDK_Catalog extends VMware_VCloud_SDK_Abstract
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function createVappTemplateRequest($name, $description=null, $manifestRequired=false, $vdcStorageProfileRef)
+    protected function createVappTemplateRequest($name, $description=null, $manifestRequired=false, $vdcStorageProfileRef)
     {
         $url = $this->url . '/action/upload';
         $type =

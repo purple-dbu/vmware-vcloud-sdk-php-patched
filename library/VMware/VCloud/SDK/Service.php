@@ -4,20 +4,20 @@ class VMware_VCloud_SDK_Service extends VMware_VCloud_SDK_Service_Abstract
     /**
      * vCloud Director login URL.
      */
-    private $loginUrl = null;
+    protected $loginUrl = null;
 
     /**
      * vCloud Director base URL.
      */
-    private $baseUrl = null;
+    protected $baseUrl = null;
 
     /**
      * Constructor
      *
      * @param VMware_VCloud_SDK_Http_Client_Interface $client
-     * @access private
+     * @access protected
      */
-    private function __construct($client)
+    protected function __construct($client)
     {
         $this->setHttpClient($client);
     }
@@ -141,7 +141,7 @@ class VMware_VCloud_SDK_Service extends VMware_VCloud_SDK_Service_Abstract
      * @param string $org  The name of your vCloud Director organization.
      * @param array  $config  An HTTP configuration array
      * @param string  $apiVersion  An API Version
-     * @param string $signature  Base64 encoded signaure of the token XML generated using client's private key
+     * @param string $signature  Base64 encoded signaure of the token XML generated using client's protected key
      * @param string $signature_alg  Standard signature algorithm name
      * @return VMware_VCloud_API_SessionType
      * @since API Version 5.5.0

@@ -6,7 +6,7 @@ class VMware_VCloud_SDK_Query_Params
      *
      * @var array
      */
-    private $params = array (
+    protected $params = array (
                'sortAsc'=>null,
                'sortDesc'=>null,
                'page'=>null,

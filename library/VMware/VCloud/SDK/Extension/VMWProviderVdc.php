@@ -79,9 +79,9 @@ class VMware_VCloud_SDK_Extension_VMWProviderVdc extends
      * Retrieve provider vDC resource pool set.
      *
      * @return VMware_VCloud_API_Extension_VMWProviderVdcResourcePoolSetType
-     * @access private
+     * @access protected
      */
-    private function getResourcePoolSet()
+    protected function getResourcePoolSet()
     {
         $url = $this->url . '/resourcePools';
         return $this->svc->get($url);

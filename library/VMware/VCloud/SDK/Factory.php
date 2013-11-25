@@ -1,7 +1,7 @@
 <?php
 class VMware_VCloud_SDK_Factory extends VMware_VCloud_SDK_Abstract
 {
-     private static $typeMap = array (
+     protected static $typeMap = array (
         VMware_VCloud_SDK_Constants::ORG_REFERENCE_CONTENT_TYPE => 'Org',
         VMware_VCloud_SDK_Constants::VDC_CONTENT_TYPE => 'Vdc',
         VMware_VCloud_SDK_Constants::VAPP_CONTENT_TYPE => 'VApp',
@@ -56,7 +56,7 @@ class VMware_VCloud_SDK_Factory extends VMware_VCloud_SDK_Abstract
         VMware_VCloud_SDK_Constants::EDGE_GATEWAYS_CONTENT_TYPE => 'EdgeGateway'
     );
 
-    private static $urlMap = array (
+    protected static $urlMap = array (
         'org' => 'Org',
         'vdc' => 'Vdc',
         'vapp' => 'VApp',
@@ -217,9 +217,9 @@ class VMware_VCloud_SDK_Factory extends VMware_VCloud_SDK_Abstract
      *
      * @param string $type  The 'type' attribute of a vCloud data object
      * @return string|null
-     * @access private
+     * @access protected
      */
-    private static function getClassnameByType($type)
+    protected static function getClassnameByType($type)
     {
         $typeMap = self::$typeMap;
         $className = "VMware_VCloud_SDK_{$typeMap[$type]}";
@@ -233,9 +233,9 @@ class VMware_VCloud_SDK_Factory extends VMware_VCloud_SDK_Abstract
      * @param VMware_VCloud_SDK_Service $svc
      * @param string $url    URL of the resource entity or the entry point
      * @return string|null
-     * @access private
+     * @access protected
      */
-    private static function getClassnameByUrl($svc, $url)
+    protected static function getClassnameByUrl($svc, $url)
     {
         $urlMap = self::$urlMap;
         $baseUrl = $svc->getBaseUrl();

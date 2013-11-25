@@ -140,9 +140,9 @@ class VMware_VCloud_SDK_Vm extends VMware_VCloud_SDK_VApp_Abstract
      *
      * @param string $item
      * @return VMware_VCloud_API_RasdItemsListType
-     * @access private
+     * @access protected
      */
-    private function getVirtualHardwareItems($item)
+    protected function getVirtualHardwareItems($item)
     {
         $url = $this->url . '/virtualHardwareSection/' . $item;
         return $this->svc->get($url);

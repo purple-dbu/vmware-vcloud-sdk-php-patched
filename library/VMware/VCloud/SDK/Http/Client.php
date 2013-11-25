@@ -5,29 +5,29 @@ class VMware_VCloud_SDK_Http_Client implements
     /**
      * Represents an HTTP_Request2 object
      */
-    private $request = null;
+    protected $request = null;
     /**
      * User name to log into VMware vCloud
      */
-    private $username = null;
+    protected $username = null;
     /**
      * Password to log into VMware vCloud
      */
-    private $password = null;
+    protected $password = null;
     /**
      * HTTP_Request2 configuration parameters
      * @see HTTP_Request2 $config variable
      */
-    private $config = null;
+    protected $config = null;
     /**
      * HTTP_Request2 configuration parameters
      * @see HTTP_Request2 $apiVersion variable
      */
-    private $apiVersion = null;
+    protected $apiVersion = null;
     /**
      * Authentication token used for login to the session
      */
-    private $authToken = null;
+    protected $authToken = null;
 
     /**
      * Constructor, creates a new HTTP_Request2 instance.
@@ -118,9 +118,9 @@ class VMware_VCloud_SDK_Http_Client implements
      * @param string $headers  HTTP headers
      * @param string $body     HTTP request body
      * @return VMware_VCloud_SDK_Http_Response_Interface   An Response object
-     * @access private
+     * @access protected
      */
-    private function sendRequest($url, $method, $headers=null, $body=null)
+    protected function sendRequest($url, $method, $headers=null, $body=null)
     {
         # 'Accept' header is used to identify VMware vCloud Director version
         $headers['Accept'] = VMware_VCloud_SDK_Constants::VCLOUD_ACCEPT_HEADER .

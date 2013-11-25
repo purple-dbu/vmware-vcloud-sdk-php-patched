@@ -591,11 +591,11 @@ snapshots, any existing user created snapshots associated with the virtual machi
      * @param bool $getSuffix A flag indicates get suffix (true) or prefix(false)
      * @param string $seek    Pattern to search for (the needle)
      * @return string         The suffix or prefix
-     * @access private
+     * @access protected
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function getStringSuffix($string, $getSuffix=true, $seek='/')
+    protected function getStringSuffix($string, $getSuffix=true, $seek='/')
     {
         $pos = strrpos($string, $seek);
         return $getSuffix? substr($string, $pos+1) : substr($string, 0, $pos);
@@ -609,11 +609,11 @@ snapshots, any existing user created snapshots associated with the virtual machi
      *                             If null, the content will not be dumped
      *                             to a file
      * @return string Content of the OVF descriptor file
-     * @access private
+     * @access protected
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function downloadOVFDescriptor($ovfDescUrl=null, $ovfFile=null)
+    protected function downloadOVFDescriptor($ovfDescUrl=null, $ovfFile=null)
     {
         if (is_null($ovfDescUrl))
         {
@@ -702,11 +702,11 @@ snapshots, any existing user created snapshots associated with the virtual machi
      * Get download URL of an OVF descriptor.
      *
      * @return string|null   OVF descriptor URL or null
-     * @access private
+     * @access protected
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function getDownloadOVFDescriptorUrl()
+    protected function getDownloadOVFDescriptorUrl()
     {
         $refs = $this->getContainedLinks(null, 'download:default');
         if (1 == count($refs))
@@ -757,7 +757,7 @@ snapshots, any existing user created snapshots associated with the virtual machi
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function getDownloadLosslessOVFDescriptorUrl()
+    protected function getDownloadLosslessOVFDescriptorUrl()
     {
         $refs = $this->getContainedLinks(null, 'download:identity');
         if (1 == count($refs))
@@ -772,11 +772,11 @@ snapshots, any existing user created snapshots associated with the virtual machi
      *
      * @param string $ovfDescUrl   OVF descriptor URL
      * @return array File names
-     * @access private
+     * @access protected
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function getOVFPackageFileNames($ovfDescUrl)
+    protected function getOVFPackageFileNames($ovfDescUrl)
     {
         $ovfFiles = array();
         $envelope = $this->downloadOVFDescriptor($ovfDescUrl);

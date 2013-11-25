@@ -41,9 +41,9 @@ class VMware_VCloud_SDK_Extension_Host extends VMware_VCloud_SDK_Abstract
      * @param int  $expect  Expected return code of the HTTP request on success
      * @param mix    $obj   Represents as the HTTP request body
      * @param string $type  HTTP request Content-Type.
-     * @access private
+     * @access protected
      */
-    private function action($name, $expect=202, $obj=null, $type=null)
+    protected function action($name, $expect=202, $obj=null, $type=null)
     {
         $url = $this->url . "/action/$name";
         return $this->svc->post($url, $expect, $type, $obj);

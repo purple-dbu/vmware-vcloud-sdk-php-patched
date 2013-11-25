@@ -4,17 +4,17 @@ class VMware_VCloud_SDK_Query extends VMware_VCloud_SDK_Query_Abstract
     /**
      * An instance of VMware_VCloud_SDK_Service.
      */
-    private $svc = null;
+    protected $svc = null;
 
     /**
      * An instance of VMware_VCloud_SDK_Query
      */
-    private static $sdkQuery = null;
+    protected static $sdkQuery = null;
 
     /**
      * The base query URL.
      */
-    private $queryUrl = null;
+    protected $queryUrl = null;
 
     /**
      * 'references' query format.
@@ -35,9 +35,9 @@ class VMware_VCloud_SDK_Query extends VMware_VCloud_SDK_Query_Abstract
      * Constructor
      *
      * @param VMware_VCloud_SDK_Service
-     * @access private
+     * @access protected
      */
-    private function __construct($svc)
+    protected function __construct($svc)
     {
         $this->svc = $svc;
         $this->queryUrl = $svc->getBaseUrl() . '/query?type=';
@@ -105,9 +105,9 @@ class VMware_VCloud_SDK_Query extends VMware_VCloud_SDK_Query_Abstract
      * @param array|VMware_VCloud_SDK_QueryParams $params
      * @param string $format
      * @return VMware_VCloud_API_QueryResultRecordsType
-     * @access private
+     * @access protected
      */
-    private function query($type, $params, $format)
+    protected function query($type, $params, $format)
     {
         $url = $this->constructUrl($type, $params);
         $url .= '&format=' . $format;
@@ -120,9 +120,9 @@ class VMware_VCloud_SDK_Query extends VMware_VCloud_SDK_Query_Abstract
      * @param string $type
      * @param array|VMware_VCloud_SDK_QueryParams $params
      * @return string
-     * @access private
+     * @access protected
      */
-    private function constructUrl($type, $params=null)
+    protected function constructUrl($type, $params=null)
     {
         $url = $this->queryUrl . $type;
         if (!is_null($params))

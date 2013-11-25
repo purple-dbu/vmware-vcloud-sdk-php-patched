@@ -242,11 +242,11 @@ class VMware_VCloud_SDK_Media extends VMware_VCloud_SDK_Abstract
      *
      * @param array VMware_VCloud_API_FileType object array $files
      * @return string  an iso media URL
-     * @access private
+     * @access protected
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    private function getDownloadMediaUrl($files)
+    protected function getDownloadMediaUrl($files)
     {
         $refs = VMware_VCloud_SDK_Helper::getContainedLinks(null, 'download:default', $files[0]);
         if (1 == count($refs))

@@ -402,7 +402,7 @@ $vdcStorageProfileRef, $catalogRef)
      * @return VMware_VCloud_API_MediaType
      * @since Version 1.0.0
      */
-    private function sendUploadMediaRequest($media)
+    protected function sendUploadMediaRequest($media)
     {
         $url = $this->url . '/media';
         $type = VMware_VCloud_SDK_Constants::MEDIA_CONTENT_TYPE;
@@ -415,9 +415,9 @@ $vdcStorageProfileRef, $catalogRef)
      * @param VMware_VCloud_API_MediaType $media
      * @return string  Media upload URL
      * @throws VMware_VCloud_SDK_Exception
-     * @access private
+     * @access protected
      */
-    private function getMediaUploadInfo($media)
+    protected function getMediaUploadInfo($media)
     {
         if (!$media instanceof VMware_VCloud_API_MediaType ||
              $media->get_status() != 0)
@@ -449,9 +449,9 @@ $vdcStorageProfileRef, $catalogRef)
      * @param VMware_VCloud_API_MediaType $mediaType
      * @param function $onProgress @yconan
      * @return VMware_VCloud_API_MediaType
-     * @access private
+     * @access protected
      */
-    private function uploadMedia($filename, $imageType, $mediaType, $onProgress = false)
+    protected function uploadMedia($filename, $imageType, $mediaType, $onProgress = false)
     {
         $mediaType->set_imageType($imageType);
         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
