@@ -3,6 +3,9 @@ vmware-vcloud-sdk-php-patched version 5.5.0
 
 VMware vCloud SDK for PHP (patched version) - Repository for importing with Composer
 
+[![Latest Unstable Version](https://poser.pugx.org/amercier/vmware-vcloud-sdk-php-patched/v/unstable.png)](https://packagist.org/packages/amercier/vmware-vcloud-sdk-php-patched)
+[![Dependency Status](https://www.versioneye.com/user/projects/52937db1632bac86a500022d/badge.png)](https://www.versioneye.com/user/projects/52937db1632bac86a500022d)
+
 This project is a fork from the [original VMWare SDK for PHP](https://github.com/amercier/vmware-vcloud-sdk-php),
 with the exception of the following additions and changes:
 
