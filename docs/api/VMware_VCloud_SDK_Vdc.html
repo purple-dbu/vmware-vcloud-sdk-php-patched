@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Vdc | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Vdc</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Vdc</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVdcRef">getVdcRef</a>()
+                    <p>Get a reference to a VMware vCloud vDC entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVdc">getVdc</a>()
+                    <p>Get a VMware vCloud vDC entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of this vDC from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgRef">getOrgRef</a>()
+                    <p>Get the link to the container of the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrg">getOrg</a>()
+                    <p>Get the container entity of the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableNetworkRefs">getAvailableNetworkRefs</a>(string $name = null)
+                    <p>Get references to VMware vCloud available organization networks.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getEdgeGatewayRefs">getEdgeGatewayRefs</a>(string $name = null)
+                    <p>Get references to all edgegateways for this Org vDC with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableNetworks">getAvailableNetworks</a>(string $name = null)
+                    <p>Get VMware vCloud available organization networks/organization vdc networks.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addOrgVdcNetwork">addOrgVdcNetwork</a>(<a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a> $vdcNetwork)
+                    <p>Create an isolated/routed Org vDC network which can be created by an org administrator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVAppRefs">getVAppRefs</a>(string $name = null)
+                    <p>Get references to all vApps or vApps with a given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVApps">getVApps</a>(string $name = null)
+                    <p>Get all vApps or vApps with a given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVAppTemplateRefs">getVAppTemplateRefs</a>(string $name = null)
+                    <p>Get references to all VMware vCloud vApp templates or vApp templates with a given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVAppTemplates">getVAppTemplates</a>(string $name = null)
+                    <p>Get all VMware vCloud vApp templates in this vDC or vApp templates with a given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFAsVAppTemplate">uploadOVFAsVAppTemplate</a>(string $name, string $ovfDescriptorPath, string $description = null, boolean $manifestRequired = null, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $catalogRef)
+                    <p>Upload vApp template from an OVF pacakage.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkCatalogForDuplicates">checkCatalogForDuplicates</a>(<a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $catalogRef, string $resourceName)
+                    <p>Check if the resource name is already existing in the catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addResourceToCatalog">addResourceToCatalog</a>($resourceRef, $catalog)
+                    <p>Add the resource to catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFDescriptor">uploadOVFDescriptor</a>(string $url, string $filename)
+                    <p>Upload OVF descriptor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadFiles">getUploadFiles</a>(<a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a> $vAppTemplate)
+                    <p>Get file information for uploading vApp template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_sendUploadVAppTemplateRequest">sendUploadVAppTemplateRequest</a>(string $name, string $format, string $description = null, boolean $manifestRequired = false, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef = null)
+                    <p>Send a upload vApp template request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getMediaRefs">getMediaRefs</a>(string $name = null)
+                    <p>Get references to all VMware vCloud media or media with the given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getMedias">getMedias</a>(string $name = null)
+                    <p>Get all VMware vCloud media or media with the given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_uploadIsoMedia">uploadIsoMedia</a>(string $isoName, <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a> $mediaType, <abbr title="function">function</abbr> $onProgress = false)
+                    <p>Upload an ISO format media.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_uploadFloppyMedia">uploadFloppyMedia</a>(string $floppyName, <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a> $mediaType)
+                    <p>Upload a floppy format media.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_captureVApp">captureVApp</a>(<a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a> $params)
+                    <p>Capture a vApp to create a vApp template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_cloneMoveMedia">cloneMoveMedia</a>(<a href="VMware_VCloud_API_CloneMediaParamsType.html"><abbr title="VMware_VCloud_API_CloneMediaParamsType">VMware_VCloud_API_CloneMediaParamsType</abbr></a> $params)
+                    <p>Clone or move a media image.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_cloneMoveVApp">cloneMoveVApp</a>(<a href="VMware_VCloud_API_CloneVAppParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppParamsType">VMware_VCloud_API_CloneVAppParamsType</abbr></a> $params)
+                    <p>Clone or move a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_cloneMoveVAppTemplate">cloneMoveVAppTemplate</a>(<a href="VMware_VCloud_API_CloneVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppTemplateParamsType">VMware_VCloud_API_CloneVAppTemplateParamsType</abbr></a> $params)
+                    <p>Clone or move a vApp template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_composeVApp">composeVApp</a>(<a href="VMware_VCloud_API_ComposeVAppParamsType.html"><abbr title="VMware_VCloud_API_ComposeVAppParamsType">VMware_VCloud_API_ComposeVAppParamsType</abbr></a> $params)
+                    <p>Compose a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_instantiateVAppTemplate">instantiateVAppTemplate</a>(<a href="VMware_VCloud_API_InstantiateVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_InstantiateVAppTemplateParamsType">VMware_VCloud_API_InstantiateVAppTemplateParamsType</abbr></a> $params)
+                    <p>Instantiate a vApp template by providing a VMware<em>VCloud</em>API_InstantiateVAppTemplateParamsType data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_instantiateVAppTemplateDefault">instantiateVAppTemplateDefault</a>(string $name, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $sourceRef, boolean $deploy = false, boolean $powerOn = false, string $description = null)
+                    <p>Instantiate a vApp template with default settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getMetadata">getMetadata</a>(string $key = null, string $domain = null)
+                    <p>Get metadata associated with the vDC or metadata associated with the vDC for the specified key in the specified domain.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_DiskType.html"><abbr title="VMware_VCloud_API_DiskType">VMware_VCloud_API_DiskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDisk">createDisk</a>(<a href="VMware_VCloud_API_DiskCreateParamsType.html"><abbr title="VMware_VCloud_API_DiskCreateParamsType">VMware_VCloud_API_DiskCreateParamsType</abbr></a> $params)
+                    <p>Create a disk.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDiskRefs">getDiskRefs</a>(string $name = null)
+                    <p>Get references to all disks or a disk with a given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDisks">getDisks</a>(string $name = null)
+                    <p>Get all disks or disk with a given name in the vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getVdcStorageProfileRefs">getVdcStorageProfileRefs</a>(string $name = null)
+                    <p>Get vDC storage profile references.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getVdcStorageProfiles">getVdcStorageProfiles</a>(string $name = null)
+                    <p>Get vDC storage profiles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFAsVApp">uploadOVFAsVApp</a>(<a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a> $params, string $ovfDescriptorPath)
+                    <p>Creating vApp by uploading an ovf package.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_instantiateOvf">instantiateOvf</a>(<a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a> $params)
+                    <p>Instantiate a vApp or VM from an OVF.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdcRef">
+        <div class="location">at line 10</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getVdcRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a VMware vCloud vDC entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdc">
+        <div class="location">at line 21</div>
+        <code>            public            <a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a>
+    <strong>getVdc</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud vDC entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 32</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of this vDC from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgRef">
+        <div class="location">at line 43</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the link to the container of the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrg">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+    <strong>getOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the container entity of the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableNetworkRefs">
+        <div class="location">at line 67</div>
+        <code>            public            array
+    <strong>getAvailableNetworkRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware vCloud available organization networks.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the available networks. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEdgeGatewayRefs">
+        <div class="location">at line 81</div>
+        <code>            public            array
+    <strong>getEdgeGatewayRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all edgegateways for this Org vDC with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the edgegateway to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableNetworks">
+        <div class="location">at line 104</div>
+        <code>            public            array
+    <strong>getAvailableNetworks</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get VMware vCloud available organization networks/organization vdc networks.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the available networks. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_OrgNetworkType object array for 1.5</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addOrgVdcNetwork">
+        <div class="location">at line 119</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a>
+    <strong>addOrgVdcNetwork</strong>(<a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a> $vdcNetwork)</code>
+    </h3>
+    <div class="details">
+        <p>Create an isolated/routed Org vDC network which can be created by an org administrator.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a></td>
+                <td>$vdcNetwork</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgVdcNetworkType.html"><abbr title="VMware_VCloud_API_OrgVdcNetworkType">VMware_VCloud_API_OrgVdcNetworkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVAppRefs">
+        <div class="location">at line 146</div>
+        <code>            public            array
+    <strong>getVAppRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all vApps or vApps with a given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ResourceReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVApps">
+        <div class="location">at line 159</div>
+        <code>            public            array
+    <strong>getVApps</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all vApps or vApps with a given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_VAppType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVAppTemplateRefs">
+        <div class="location">at line 173</div>
+        <code>            public            array
+    <strong>getVAppTemplateRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all VMware vCloud vApp templates or vApp templates with a given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp template. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVAppTemplates">
+        <div class="location">at line 189</div>
+        <code>            public            array
+    <strong>getVAppTemplates</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all VMware vCloud vApp templates in this vDC or vApp templates with a given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp template. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_VAppTemplateType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFAsVAppTemplate">
+        <div class="location">at line 210</div>
+        <code>            public            string
+    <strong>uploadOVFAsVAppTemplate</strong>(string $name, string $ovfDescriptorPath, string $description = null, boolean $manifestRequired = null, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $catalogRef)</code>
+    </h3>
+    <div class="details">
+        <p>Upload vApp template from an OVF pacakage.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp template to be created</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ovfDescriptorPath</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Description of the vApp template to be created</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$manifestRequired</td>
+                <td>A flag indicates the manifest file is required or not</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$vdcStorageProfileRef</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$catalogRef</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>A URL of the newly created vApp template.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkCatalogForDuplicates">
+        <div class="location">at line 270</div>
+        <code>            public            
+    <strong>checkCatalogForDuplicates</strong>(<a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $catalogRef, string $resourceName)</code>
+    </h3>
+    <div class="details">
+        <p>Check if the resource name is already existing in the catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$catalogRef</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceName</td>
+                <td>Name of the vApp template to be created.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addResourceToCatalog">
+        <div class="location">at line 291</div>
+        <code>            public            
+    <strong>addResourceToCatalog</strong>($resourceRef, $catalog)</code>
+    </h3>
+    <div class="details">
+        <p>Add the resource to catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$resourceRef</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$catalog</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFDescriptor">
+        <div class="location">at line 308</div>
+        <code>            public            null
+    <strong>uploadOVFDescriptor</strong>(string $url, string $filename)</code>
+    </h3>
+    <div class="details">
+        <p>Upload OVF descriptor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>HTTP request URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadFiles">
+        <div class="location">at line 321</div>
+        <code>            public            array
+    <strong>getUploadFiles</strong>(<a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a> $vAppTemplate)</code>
+    </h3>
+    <div class="details">
+        <p>Get file information for uploading vApp template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+                <td>$vAppTemplate</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_FileType object array</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sendUploadVAppTemplateRequest">
+        <div class="location">at line 357</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+    <strong>sendUploadVAppTemplateRequest</strong>(string $name, string $format, string $description = null, boolean $manifestRequired = false, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send a upload vApp template request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp template</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>Format of the package to be uploaded</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Description of the vApp template to be created</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$manifestRequired</td>
+                <td>A flag indicates the manifest file is required or not</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$vdcStorageProfileRef</td>
+                <td>A reference to the storage profile being used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMediaRefs">
+        <div class="location">at line 380</div>
+        <code>            public            array
+    <strong>getMediaRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all VMware vCloud media or media with the given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the media. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ResourceReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMedias">
+        <div class="location">at line 393</div>
+        <code>            public            array
+    <strong>getMedias</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all VMware vCloud media or media with the given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the media. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_MediaType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadIsoMedia">
+        <div class="location">at line 474</div>
+        <code>            public            <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+    <strong>uploadIsoMedia</strong>(string $isoName, <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a> $mediaType, <abbr title="function">function</abbr> $onProgress = false)</code>
+    </h3>
+    <div class="details">
+        <p>Upload an ISO format media.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$isoName</td>
+                <td>Media full path file name</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+                <td>$mediaType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="function">function</abbr></td>
+                <td>$onProgress</td>
+                <td>@yconan</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadFloppyMedia">
+        <div class="location">at line 488</div>
+        <code>            public            <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+    <strong>uploadFloppyMedia</strong>(string $floppyName, <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a> $mediaType)</code>
+    </h3>
+    <div class="details">
+        <p>Upload a floppy format media.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$floppyName</td>
+                <td>Full path of a floppy file</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+                <td>$mediaType</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_captureVApp">
+        <div class="location">at line 500</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+    <strong>captureVApp</strong>(<a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Capture a vApp to create a vApp template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cloneMoveMedia">
+        <div class="location">at line 514</div>
+        <code>            public            <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+    <strong>cloneMoveMedia</strong>(<a href="VMware_VCloud_API_CloneMediaParamsType.html"><abbr title="VMware_VCloud_API_CloneMediaParamsType">VMware_VCloud_API_CloneMediaParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Clone or move a media image.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CloneMediaParamsType.html"><abbr title="VMware_VCloud_API_CloneMediaParamsType">VMware_VCloud_API_CloneMediaParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cloneMoveVApp">
+        <div class="location">at line 528</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>cloneMoveVApp</strong>(<a href="VMware_VCloud_API_CloneVAppParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppParamsType">VMware_VCloud_API_CloneVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Clone or move a vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CloneVAppParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppParamsType">VMware_VCloud_API_CloneVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_cloneMoveVAppTemplate">
+        <div class="location">at line 542</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+    <strong>cloneMoveVAppTemplate</strong>(<a href="VMware_VCloud_API_CloneVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppTemplateParamsType">VMware_VCloud_API_CloneVAppTemplateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Clone or move a vApp template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CloneVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_CloneVAppTemplateParamsType">VMware_VCloud_API_CloneVAppTemplateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_composeVApp">
+        <div class="location">at line 557</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>composeVApp</strong>(<a href="VMware_VCloud_API_ComposeVAppParamsType.html"><abbr title="VMware_VCloud_API_ComposeVAppParamsType">VMware_VCloud_API_ComposeVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Compose a vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ComposeVAppParamsType.html"><abbr title="VMware_VCloud_API_ComposeVAppParamsType">VMware_VCloud_API_ComposeVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_instantiateVAppTemplate">
+        <div class="location">at line 572</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>instantiateVAppTemplate</strong>(<a href="VMware_VCloud_API_InstantiateVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_InstantiateVAppTemplateParamsType">VMware_VCloud_API_InstantiateVAppTemplateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a vApp template by providing a VMware<em>VCloud</em>API_InstantiateVAppTemplateParamsType data object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_InstantiateVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_InstantiateVAppTemplateParamsType">VMware_VCloud_API_InstantiateVAppTemplateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_instantiateVAppTemplateDefault">
+        <div class="location">at line 594</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>instantiateVAppTemplateDefault</strong>(string $name, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $sourceRef, boolean $deploy = false, boolean $powerOn = false, string $description = null)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a vApp template with default settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp to be created</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$sourceRef</td>
+                <td>Reference to the source vApp template</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$deploy</td>
+                <td>A flag indicates deploy or not after instantiation</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$powerOn</td>
+                <td>A flag indicates power on or not after instantiation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Description of the vApp to be created</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMetadata">
+        <div class="location">at line 618</div>
+        <code>            public            <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+    <strong>getMetadata</strong>(string $key = null, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get metadata associated with the vDC or metadata associated with the vDC for the specified key in the specified domain.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDisk">
+        <div class="location">at line 630</div>
+        <code>            public            <a href="VMware_VCloud_API_DiskType.html"><abbr title="VMware_VCloud_API_DiskType">VMware_VCloud_API_DiskType</abbr></a>
+    <strong>createDisk</strong>(<a href="VMware_VCloud_API_DiskCreateParamsType.html"><abbr title="VMware_VCloud_API_DiskCreateParamsType">VMware_VCloud_API_DiskCreateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a disk.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_DiskCreateParamsType.html"><abbr title="VMware_VCloud_API_DiskCreateParamsType">VMware_VCloud_API_DiskCreateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_DiskType.html"><abbr title="VMware_VCloud_API_DiskType">VMware_VCloud_API_DiskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDiskRefs">
+        <div class="location">at line 644</div>
+        <code>            public            array
+    <strong>getDiskRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all disks or a disk with a given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the disk. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ResourceReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDisks">
+        <div class="location">at line 657</div>
+        <code>            public            array
+    <strong>getDisks</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all disks or disk with a given name in the vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the disk. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_DiskType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdcStorageProfileRefs">
+        <div class="location">at line 670</div>
+        <code>            public            array|null
+    <strong>getVdcStorageProfileRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get vDC storage profile references.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vDC storage profile. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdcStorageProfiles">
+        <div class="location">at line 684</div>
+        <code>            public            array|null
+    <strong>getVdcStorageProfiles</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get vDC storage profiles.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vDC storage profile. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API_VdcStorageProfileType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFAsVApp">
+        <div class="location">at line 699</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>uploadOVFAsVApp</strong>(<a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a> $params, string $ovfDescriptorPath)</code>
+    </h3>
+    <div class="details">
+        <p>Creating vApp by uploading an ovf package.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ovfDescriptorPath</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_instantiateOvf">
+        <div class="location">at line 746</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>instantiateOvf</strong>(<a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a vApp or VM from an OVF.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_InstantiateOvfParamsType.html"><abbr title="VMware_VCloud_API_InstantiateOvfParamsType">VMware_VCloud_API_InstantiateOvfParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

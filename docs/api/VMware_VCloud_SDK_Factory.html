@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Factory | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Factory</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Factory</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a> $svc, mixed $obj)
+                    <p>Static method for creating a VMware vCloud SDK object.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 176</div>
+        <code>        static    public            mixed
+    <strong>create</strong>(<a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a> $svc, mixed $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Static method for creating a VMware vCloud SDK object.</p>
+        <p>The object type
+ is constructed based on the type of the input vCloud data object or a
+ URL string, which represents an VMware vCloud resource entity or the
+ entry point of these resource entities, from where to get references or
+ links of the resource entities.</p>
+
+<p>Table below lists how to get a reference type for a VMware vCloud
+ entity. To be simple, here omits the package name (VMware<em>VCloud</em>SDK)
+ from the class name. Each line is in the following format:</p>
+
+<p>[SDK Object to creat] &lt;= [SDK Object to invoke the get reference method]
+                          ->[Method to get ReferenceType object]
+ <ul>
+   <li>Org          &lt;= Service->getOrgRefs()</p>
+
+<p><li>Vdc          &lt;= Org->getVdcRefs()
+   <li>Catalog      &lt;= Org->getCatalogRefs()
+   <li>Task         &lt;= Org->getTasks()
+   <li>CatalogItem  &lt;= Catalog->getCatalogItemRefs()
+   <li>Media        &lt;= Vdc->getMediaRefs()
+   <li>Network      &lt;= Vdc->getAvailableNetworkRefs()
+   <li>VApp         &lt;= Vdc->getVAppRefs() or VApp->getContainedVAppRefs()
+   <li>VAppTemplate &lt;= Vdc->getVAppTemplateRefs()
+   <li>Vm           &lt;= VApp->getContainedVmRefs() or VAppTemplate->getContainedVms()
+   <li>Disk         &lt;= Vdc->getDiskRefs()
+   <li>VdcStorageProfile &lt;= Vdc->getVdcStorageProfileRefs()</p>
+
+<p><li>AdminOrg     &lt;= Admin->getAdminOrgRefs()
+   <li>ProviderVdc  &lt;= Admin->getProviderVdcRefs()
+   <li>Role         &lt;= Admin->getRoleRefs()
+   <li>AdminVdc     &lt;= AdminOrg->getAdminVdcRefs()
+   <li>AdminCatalog &lt;= AdminOrg->getAdminCatalogRefs()
+   <li>AdminNetwork &lt;= AdminOrg->getAdminNetworkRefs()
+   <li>Group        &lt;= AdminOrg->getGroupRefs()
+   <li>User         &lt;= AdminOrg->getUserRefs()
+   <li>Right        &lt;= Admin->getRightRefs()
+   <li>AdminVdcStorageProfile &lt;= AdminVdc->getAdminVdcStorageProfileRefs()
+   <li>ProviderVdcStorageProfile &lt;= AdminVdcStorageProfile->getProviderVdcStorageProfileRefs()</p>
+
+<p><li>Extension<em>Datastore           &lt;= Extension->getDatastoreRefs()
+   <li>Extension</em>Host                &lt;= Extension->getHostRefs()
+   <li>Extension<em>VMWExternalNetwork  &lt;= Extension->getVMWExternalNetworkRefs()
+   <li>Extension</em>VMWNetworkPool      &lt;= Extension->getVMWNetworkPoolRefs()
+   <li>Extension<em>VMWProviderVdc      &lt;= Extension->getVMWProviderVdcRefs()
+   <li>Extension</em>VimServer           &lt;= Extension->getVimServerRefs()
+   <li>Extension<em>BlockingTask        &lt;= Extension->getBlockingTaskRefs()
+   <li>Extension</em>StrandedItem        &lt;= Extension->getStrandedItems()
+   <li>Extension<em>VMWProviderVdcStorageProfile &lt;= Extension</em>VMWProviderVdc->getProviderVdcStorageProfileRefs()
+   <li>Extension<em>Service             &lt;= Extension->getServiceRef()
+   <li>Extension</em>ServiceLink         &lt;= Extension->getServiceLinkRef()
+   <li>Extension<em>APIDefinition       &lt;= Extension->getAPIDefinitionRef()
+   <li>Extension</em>ResourceClass       &lt;= Extension->getResourceClassRef()
+   <li>Extension<em>ResourceClassAction &lt;= Extension->getResourceClassActionRef()
+   <li>Extension</em>AclRule             &lt;= Extension->getAclRuleRef()
+   <li>Extension_serviceResources    &lt;= Extension->getserviceResourcesRef()
+ </ul></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a></td>
+                <td>$svc</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$obj</td>
+                <td>A data object represents or references a vCloud entity or the URL of a vCloud entity.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>A VMware vCloud SDK object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

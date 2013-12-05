@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Extension_Service | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Extension_Service</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Extension_Service</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getServiceRef">getServiceRef</a>()
+                    <p>Get a reference to the service entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getService">getService</a>()
+                    <p>Gets the service data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updatesService">updatesService</a>(<a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a> $settings)
+                    <p>Updates the Extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAPIDefinitions">getAPIDefinitions</a>()
+                    <p>Returns the API definitions registered by this service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addAPIDefinitions">addAPIDefinitions</a>(<a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a> $params)
+                    <p>Creates API definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getServiceLinks">getServiceLinks</a>()
+                    <p>Returns the Links registered by this service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createServiceLinks">createServiceLinks</a>(<a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a> $params)
+                    <p>Create service link.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getApiFilterRefs">getApiFilterRefs</a>()
+                    <p>Retrieves API filter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createApiFilter">createApiFilter</a>(<a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a> $params)
+                    <p>Creates API filter.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getResourceClass">getResourceClass</a>()
+                    <p>List registered resource class for extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_registerResourceClass">registerResourceClass</a>(<a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a> $params)
+                    <p>Registers resource class for extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="VMware_VCloud_API_ResourceClassActionType">VMware_VCloud_API_ResourceClassActionType</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getResourceClassAction">getResourceClassAction</a>()
+                    <p>List registered resource class actions for extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getServiceResources">getServiceResources</a>()
+                    <p>List registered service resources for extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_RightRefsType.html"><abbr title="VMware_VCloud_API_Extension_RightRefsType">VMware_VCloud_API_Extension_RightRefsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRights">getRights</a>()
+                    <p>Gives the rights registered by this extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_registerRights">registerRights</a>(<a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a> $params)
+                    <p>Registers right to the rights managed by this extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="VMware_VCloud_API_RightRefsType">VMware_VCloud_API_RightRefsType</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_updateRights">updateRights</a>(<abbr title="VMware_VCloud_API_UpdateRightsParamsType">VMware_VCloud_API_UpdateRightsParamsType</abbr> $params)
+                    <p>Registers right to the rights managed by this extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAclRule">getAclRule</a>()
+                    <p>List registered resource class ACL rule for extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAuthorized">isAuthorized</a>(<a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a> $params)
+                    <p>Checks user authorization for service, URL and request verb.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminFileDescriptorType.html"><abbr title="VMware_VCloud_API_Extension_AdminFileDescriptorType">VMware_VCloud_API_Extension_AdminFileDescriptorType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFileDescriptor">getFileDescriptor</a>()
+                    <p>Retrieve a file descriptor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>()
+                    <p>Delete Service.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getServiceRef">
+        <div class="location">at line 11</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getServiceRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to the service entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getService">
+        <div class="location">at line 22</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+    <strong>getService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the service data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatesService">
+        <div class="location">at line 34</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+    <strong>updatesService</strong>(<a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the Extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAPIDefinitions">
+        <div class="location">at line 46</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a>
+    <strong>getAPIDefinitions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the API definitions registered by this service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addAPIDefinitions">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a>
+    <strong>addAPIDefinitions</strong>(<a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Creates API definition.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminApiDefinitionType.html"><abbr title="VMware_VCloud_API_Extension_AdminApiDefinitionType">VMware_VCloud_API_Extension_AdminApiDefinitionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getServiceLinks">
+        <div class="location">at line 72</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a>
+    <strong>getServiceLinks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the Links registered by this service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createServiceLinks">
+        <div class="location">at line 84</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a>
+    <strong>createServiceLinks</strong>(<a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create service link.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminServiceLinkType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceLinkType">VMware_VCloud_API_Extension_AdminServiceLinkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getApiFilterRefs">
+        <div class="location">at line 98</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a>
+    <strong>getApiFilterRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves API filter.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createApiFilter">
+        <div class="location">at line 110</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a>
+    <strong>createApiFilter</strong>(<a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Creates API filter.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_ApiFilterType.html"><abbr title="VMware_VCloud_API_Extension_ApiFilterType">VMware_VCloud_API_Extension_ApiFilterType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourceClass">
+        <div class="location">at line 124</div>
+        <code>            public            <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+    <strong>getResourceClass</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List registered resource class for extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registerResourceClass">
+        <div class="location">at line 136</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a>
+    <strong>registerResourceClass</strong>(<a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Registers resource class for extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_ResourceClassType.html"><abbr title="VMware_VCloud_API_Extension_ResourceClassType">VMware_VCloud_API_Extension_ResourceClassType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourceClassAction">
+        <div class="location">at line 150</div>
+        <code>            public            <abbr title="VMware_VCloud_API_ResourceClassActionType">VMware_VCloud_API_ResourceClassActionType</abbr>
+    <strong>getResourceClassAction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List registered resource class actions for extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="VMware_VCloud_API_ResourceClassActionType">VMware_VCloud_API_ResourceClassActionType</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getServiceResources">
+        <div class="location">at line 162</div>
+        <code>            public            <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+    <strong>getServiceResources</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List registered service resources for extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRights">
+        <div class="location">at line 174</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_RightRefsType.html"><abbr title="VMware_VCloud_API_Extension_RightRefsType">VMware_VCloud_API_Extension_RightRefsType</abbr></a>
+    <strong>getRights</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gives the rights registered by this extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_RightRefsType.html"><abbr title="VMware_VCloud_API_Extension_RightRefsType">VMware_VCloud_API_Extension_RightRefsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registerRights">
+        <div class="location">at line 187</div>
+        <code>            public            <a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a>
+    <strong>registerRights</strong>(<a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Registers right to the rights managed by this extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_RightType.html"><abbr title="VMware_VCloud_API_RightType">VMware_VCloud_API_RightType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateRights">
+        <div class="location">at line 201</div>
+        <code>            public            <abbr title="VMware_VCloud_API_RightRefsType">VMware_VCloud_API_RightRefsType</abbr>
+    <strong>updateRights</strong>(<abbr title="VMware_VCloud_API_UpdateRightsParamsType">VMware_VCloud_API_UpdateRightsParamsType</abbr> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Registers right to the rights managed by this extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="VMware_VCloud_API_UpdateRightsParamsType">VMware_VCloud_API_UpdateRightsParamsType</abbr></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="VMware_VCloud_API_RightRefsType">VMware_VCloud_API_RightRefsType</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAclRule">
+        <div class="location">at line 215</div>
+        <code>            public            <a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a>
+    <strong>getAclRule</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List registered resource class ACL rule for extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ContainerType.html"><abbr title="VMware_VCloud_API_ContainerType">VMware_VCloud_API_ContainerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAuthorized">
+        <div class="location">at line 227</div>
+        <code>            public            boolean
+    <strong>isAuthorized</strong>(<a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Checks user authorization for service, URL and request verb.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileDescriptor">
+        <div class="location">at line 242</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminFileDescriptorType.html"><abbr title="VMware_VCloud_API_Extension_AdminFileDescriptorType">VMware_VCloud_API_Extension_AdminFileDescriptorType</abbr></a>
+    <strong>getFileDescriptor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve a file descriptor.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminFileDescriptorType.html"><abbr title="VMware_VCloud_API_Extension_AdminFileDescriptorType">VMware_VCloud_API_Extension_AdminFileDescriptorType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 254</div>
+        <code>            public            
+    <strong>delete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete Service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

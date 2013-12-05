@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Query_Abstract | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Query_Abstract</h1>
+                    <p>abstract     class
+    <strong>VMware_VCloud_SDK_Query_Abstract</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferencesType.html"><abbr title="VMware_VCloud_API_ReferencesType">VMware_VCloud_API_ReferencesType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_queryReferences">queryReferences</a>(string $type, array $params = null)
+                    <p>Requests a query which returns a list of object references.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_queryRecords">queryRecords</a>(string $type, array $params = null)
+                    <p>Requests a query which returns a list of object records.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_queryIdRecords">queryIdRecords</a>(string $type, array $params = null)
+                    <p>Requests a query which returns a list of object idrecords.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSupportedQueryReferencesTypes">getSupportedQueryReferencesTypes</a>()
+                    <p>Returns a list of supported query types used to query in references format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSupportedQueryRecordsTypes">getSupportedQueryRecordsTypes</a>()
+                    <p>Returns a list of supported query types used to query in records format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getSupportedQueryIdRecordsTypes">getSupportedQueryIdRecordsTypes</a>()
+                    <p>Returns a list of supported query types used to query in idrecords format.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_queryReferences">
+        <div class="location">at line 12</div>
+        <code>    abstract        public            <a href="VMware_VCloud_API_ReferencesType.html"><abbr title="VMware_VCloud_API_ReferencesType">VMware_VCloud_API_ReferencesType</abbr></a>
+    <strong>queryReferences</strong>(string $type, array $params = null)</code>
+    </h3>
+    <div class="details">
+        <p>Requests a query which returns a list of object references.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Name of the query type.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>or VMware<em>VCloud</em>SDK_QueryParam $params Query parameters map.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferencesType.html"><abbr title="VMware_VCloud_API_ReferencesType">VMware_VCloud_API_ReferencesType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_queryRecords">
+        <div class="location">at line 22</div>
+        <code>    abstract        public            <a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a>
+    <strong>queryRecords</strong>(string $type, array $params = null)</code>
+    </h3>
+    <div class="details">
+        <p>Requests a query which returns a list of object records.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Name of the query type.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>or VMware<em>VCloud</em>SDK_QueryParam $params Query parameters map.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_queryIdRecords">
+        <div class="location">at line 32</div>
+        <code>    abstract        public            <a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a>
+    <strong>queryIdRecords</strong>(string $type, array $params = null)</code>
+    </h3>
+    <div class="details">
+        <p>Requests a query which returns a list of object idrecords.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Name of the query type.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>or VMware<em>VCloud</em>SDK_QueryParam $params Query parameters map.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_QueryResultRecordsType.html"><abbr title="VMware_VCloud_API_QueryResultRecordsType">VMware_VCloud_API_QueryResultRecordsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSupportedQueryReferencesTypes">
+        <div class="location">at line 41</div>
+        <code>final        static    public            array
+    <strong>getSupportedQueryReferencesTypes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of supported query types used to query in references format.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSupportedQueryRecordsTypes">
+        <div class="location">at line 125</div>
+        <code>final        static    public            array
+    <strong>getSupportedQueryRecordsTypes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of supported query types used to query in records format.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSupportedQueryIdRecordsTypes">
+        <div class="location">at line 233</div>
+        <code>final        static    public            array
+    <strong>getSupportedQueryIdRecordsTypes</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of supported query types used to query in idrecords format.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

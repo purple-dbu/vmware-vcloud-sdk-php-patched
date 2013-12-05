@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Http_Client_Interface | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Interface</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Http_Client_Interface</h1>
+                    <p>    interface
+    <strong>VMware_VCloud_SDK_Http_Client_Interface</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAuth">setAuth</a>(array $auth)
+                    <p>Set the login user name and password.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfig">setConfig</a>(array $config)
+                    <p>Set the HTTP configurations used by HTTP request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $url, array $headers = null)
+                    <p>HTTP GET request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $url, array $headers, mixed $data)
+                    <p>HTTP POST request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $url, array $headers, mixed $data)
+                    <p>HTTP POST request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $url)
+                    <p>HTTP DELETE request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_download">download</a>(string $url, array $headers, string $dest)
+                    <p>Download a file and dump to specified location.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_upload">upload</a>(string $url, array $headers, string $file)
+                    <p>Upload a file.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setAuth">
+        <div class="location">at line 11</div>
+        <code>            public            
+    <strong>setAuth</strong>(array $auth)</code>
+    </h3>
+    <div class="details">
+        <p>Set the login user name and password.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$auth</td>
+                <td>In array('username'=><username>, 'password'=><password>) format</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfig">
+        <div class="location">at line 21</div>
+        <code>            public            
+    <strong>setConfig</strong>(array $config)</code>
+    </h3>
+    <div class="details">
+        <p>Set the HTTP configurations used by HTTP request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>In array('<param1>'=><value1>, '<param2>'=><value2>, ... '<paramn>'=><valuen>) format</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 31</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>get</strong>(string $url, array $headers = null)</code>
+    </h3>
+    <div class="details">
+        <p>HTTP GET request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">at line 42</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>post</strong>(string $url, array $headers, mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>HTTP POST request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>HTTP request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">at line 53</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>put</strong>(string $url, array $headers, mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>HTTP POST request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>HTTP request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 62</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null
+    <strong>delete</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>HTTP DELETE request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_download">
+        <div class="location">at line 72</div>
+        <code>            public            
+    <strong>download</strong>(string $url, array $headers, string $dest)</code>
+    </h3>
+    <div class="details">
+        <p>Download a file and dump to specified location.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Download source</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dest</td>
+                <td>Destination of the file to write to</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_upload">
+        <div class="location">at line 82</div>
+        <code>            public            
+    <strong>upload</strong>(string $url, array $headers, string $file)</code>
+    </h3>
+    <div class="details">
+        <p>Upload a file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Target to upload the file</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>Full path of the file to be uploaded</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Catalog | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Catalog</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Catalog</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCatalogRef">getCatalogRef</a>()
+                    <p>Get a reference to a VMware vCloud catalog entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_CatalogType.html"><abbr title="VMware_VCloud_API_CatalogType">VMware_VCloud_API_CatalogType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCatalog">getCatalog</a>()
+                    <p>Get a VMware vCloud catalog entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of the catalog from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgRef">getOrgRef</a>()
+                    <p>Get the link to the container of the catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrg">getOrg</a>()
+                    <p>Get the container of the catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getCatalogItemRefs">getCatalogItemRefs</a>(string $name = null)
+                    <p>Get references to catalog items entity in this catalog entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getCatalogItems">getCatalogItems</a>(string $name = null)
+                    <p>Get all catalog items or catalog items with the given name in this catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addCatalogItem">addCatalogItem</a>(<a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a> $catalogItem)
+                    <p>Add a catalog item to this VMware vCloud catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getControlAccess">getControlAccess</a>()
+                    <p>Get the control access of this catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyControlAccess">modifyControlAccess</a>(<a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a> $controlAccess)
+                    <p>Modify the control access of this catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getMetadata">getMetadata</a>(string $key = null, string $domain = null)
+                    <p>Get metadata associated with the catalog or metadata associated with the catalog for the specified key in the specified domain.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFAsVAppTemplate">uploadOVFAsVAppTemplate</a>(string $name, string $ovfDescriptorPath, string $description = null, boolean $manifestRequired = null, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef)
+                    <p>Creating vAppTemplate by uploading an ovf package.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_checkCatalogForDuplicates">checkCatalogForDuplicates</a>(<a href="VMware_VCloud_SDK_Catalog.html"><abbr title="VMware_VCloud_SDK_Catalog">VMware_VCloud_SDK_Catalog</abbr></a> $catalog, string $resourceName)
+                    <p>Check if the resource name is already existing in the catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadFiles">getUploadFiles</a>(<a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a> $vAppTemplate)
+                    <p>Get file information for uploading vApp template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFDescriptor">uploadOVFDescriptor</a>(string $url, string $filename)
+                    <p>Upload OVF descriptor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_captureVApp">captureVApp</a>(<a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a> $params)
+                    <p>Create a vApp template in this library from a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_sync">sync</a>()
+                    <p>Force sync the library to the remote subscribed library.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copyCatalogItem">copyCatalogItem</a>(<a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a> $params)
+                    <p>Copy a library item from one library to another.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_moveCatalogItem">moveCatalogItem</a>(<a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a> $params)
+                    <p>Move a library item from one library to another.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCatalogRef">
+        <div class="location">at line 10</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getCatalogRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a VMware vCloud catalog entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCatalog">
+        <div class="location">at line 21</div>
+        <code>            public            <a href="VMware_VCloud_API_CatalogType.html"><abbr title="VMware_VCloud_API_CatalogType">VMware_VCloud_API_CatalogType</abbr></a>
+    <strong>getCatalog</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud catalog entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_CatalogType.html"><abbr title="VMware_VCloud_API_CatalogType">VMware_VCloud_API_CatalogType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 32</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of the catalog from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgRef">
+        <div class="location">at line 43</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the link to the container of the catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrg">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+    <strong>getOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the container of the catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCatalogItemRefs">
+        <div class="location">at line 67</div>
+        <code>            public            array
+    <strong>getCatalogItemRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to catalog items entity in this catalog entity.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the catalog item. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCatalogItems">
+        <div class="location">at line 81</div>
+        <code>            public            array
+    <strong>getCatalogItems</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all catalog items or catalog items with the given name in this catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the catalog item. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_CatalogItemType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addCatalogItem">
+        <div class="location">at line 95</div>
+        <code>            public            <a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a>
+    <strong>addCatalogItem</strong>(<a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a> $catalogItem)</code>
+    </h3>
+    <div class="details">
+        <p>Add a catalog item to this VMware vCloud catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a></td>
+                <td>$catalogItem</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_CatalogItemType.html"><abbr title="VMware_VCloud_API_CatalogItemType">VMware_VCloud_API_CatalogItemType</abbr></a></td>
+            <td>Represents the newly created catalog item</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getControlAccess">
+        <div class="location">at line 123</div>
+        <code>            public            <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+    <strong>getControlAccess</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the control access of this catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyControlAccess">
+        <div class="location">at line 137</div>
+        <code>            public            <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+    <strong>modifyControlAccess</strong>(<a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a> $controlAccess)</code>
+    </h3>
+    <div class="details">
+        <p>Modify the control access of this catalog.</p>
+        <p>Modify catalog sharing can
+be done with this function.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+                <td>$controlAccess</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMetadata">
+        <div class="location">at line 154</div>
+        <code>            public            <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+    <strong>getMetadata</strong>(string $key = null, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get metadata associated with the catalog or metadata associated with the catalog for the specified key in the specified domain.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFAsVAppTemplate">
+        <div class="location">at line 174</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+    <strong>uploadOVFAsVAppTemplate</strong>(string $name, string $ovfDescriptorPath, string $description = null, boolean $manifestRequired = null, <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vdcStorageProfileRef)</code>
+    </h3>
+    <div class="details">
+        <p>Creating vAppTemplate by uploading an ovf package.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp template to be created</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ovfDescriptorPath</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>Description of the vApp template to be created</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$manifestRequired</td>
+                <td>A flag indicates the manifest file is required or not</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$vdcStorageProfileRef</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+            <td>object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_checkCatalogForDuplicates">
+        <div class="location">at line 224</div>
+        <code>            public            
+    <strong>checkCatalogForDuplicates</strong>(<a href="VMware_VCloud_SDK_Catalog.html"><abbr title="VMware_VCloud_SDK_Catalog">VMware_VCloud_SDK_Catalog</abbr></a> $catalog, string $resourceName)</code>
+    </h3>
+    <div class="details">
+        <p>Check if the resource name is already existing in the catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Catalog.html"><abbr title="VMware_VCloud_SDK_Catalog">VMware_VCloud_SDK_Catalog</abbr></a></td>
+                <td>$catalog</td>
+                <td>object  $catalog</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resourceName</td>
+                <td>Name of the vApp template to be created.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadFiles">
+        <div class="location">at line 273</div>
+        <code>            public            array
+    <strong>getUploadFiles</strong>(<a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a> $vAppTemplate)</code>
+    </h3>
+    <div class="details">
+        <p>Get file information for uploading vApp template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+                <td>$vAppTemplate</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_FileType object array</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFDescriptor">
+        <div class="location">at line 304</div>
+        <code>            public            null
+    <strong>uploadOVFDescriptor</strong>(string $url, string $filename)</code>
+    </h3>
+    <div class="details">
+        <p>Upload OVF descriptor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>HTTP request URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_captureVApp">
+        <div class="location">at line 317</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>captureVApp</strong>(<a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a vApp template in this library from a vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CaptureVAppParamsType.html"><abbr title="VMware_VCloud_API_CaptureVAppParamsType">VMware_VCloud_API_CaptureVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sync">
+        <div class="location">at line 331</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>sync</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Force sync the library to the remote subscribed library.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copyCatalogItem">
+        <div class="location">at line 345</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>copyCatalogItem</strong>(<a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Copy a library item from one library to another.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveCatalogItem">
+        <div class="location">at line 360</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>moveCatalogItem</strong>(<a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Move a library item from one library to another.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType.html"><abbr title="VMware_VCloud_API_CopyOrMoveCatalogItemParamsType">VMware_VCloud_API_CopyOrMoveCatalogItemParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

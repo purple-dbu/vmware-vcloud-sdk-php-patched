@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Http_Client | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Http_Client</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Http_Client</strong>        implements
+        <a href="VMware_VCloud_SDK_Http_Client_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Client_Interface">VMware_VCloud_SDK_Http_Client_Interface</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>Constructor, creates a new HTTP_Request2 instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_setAuth">setAuth</a>(array $auth)
+                    <p>Set the login user name and password.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setConfig">setConfig</a>(array $config)
+                    <p>Set the HTTP configurations</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setAPIVersion">setAPIVersion</a>(array $apiVersion)
+                    <p>Set the API Version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_getVcloudToken">getVcloudToken</a>()
+                    <p>Gets the vcloud token</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setVcloudToken">setVcloudToken</a>(string $vcloudToken)
+                    <p>Sets the vcloud token</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $url, array $headers = null)
+                    <p>Send an HTTP GET request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $url, array $headers = null, mixed $data = null)
+                    <p>Send an HTTP POST request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $url, array $headers = null, mixed $data = null)
+                    <p>Send an HTTP PUT request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $url)
+                    <p>Send an HTTP DELETE request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_download">download</a>(string $url, array $headers, string $dest)
+                    <p>Download a file and dump to specified location.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_upload">upload</a>(string $url, array $headers, string $file, int $windowSize = 10485760, <abbr title="function">function</abbr> $onProgress = false)
+                    <p>Upload a file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_putAndCheck">putAndCheck</a>($url, $headers, $data, $attemptNumber, $sendAttempts = 5)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getUsername">getUsername</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Returns">Returns</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getToken">getToken</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 35</div>
+        <code>            public            
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructor, creates a new HTTP_Request2 instance.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAuth">
+        <div class="location">at line 49</div>
+        <code>            public            null
+    <strong>setAuth</strong>(array $auth)</code>
+    </h3>
+    <div class="details">
+        <p>Set the login user name and password.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$auth</td>
+                <td>In array('username'=><username>, 'password'=><password>) format</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Http_Exception.html"><abbr title="VMware_VCloud_SDK_Http_Exception">VMware_VCloud_SDK_Http_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setConfig">
+        <div class="location">at line 71</div>
+        <code>            public            
+    <strong>setConfig</strong>(array $config)</code>
+    </h3>
+    <div class="details">
+        <p>Set the HTTP configurations</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>An HTTP configuration array</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAPIVersion">
+        <div class="location">at line 82</div>
+        <code>            public            
+    <strong>setAPIVersion</strong>(array $apiVersion)</code>
+    </h3>
+    <div class="details">
+        <p>Set the API Version</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$apiVersion</td>
+                <td>An API Version</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVcloudToken">
+        <div class="location">at line 94</div>
+        <code>            public            String
+    <strong>getVcloudToken</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the vcloud token</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setVcloudToken">
+        <div class="location">at line 108</div>
+        <code>            public            
+    <strong>setVcloudToken</strong>(string $vcloudToken)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the vcloud token</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$vcloudToken</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 177</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>get</strong>(string $url, array $headers = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP GET request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">at line 193</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>post</strong>(string $url, array $headers = null, mixed $data = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP POST request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>HTTP request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">at line 210</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>
+    <strong>put</strong>(string $url, array $headers = null, mixed $data = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP PUT request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>HTTP request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 225</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null
+    <strong>delete</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP DELETE request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Response_Interface.html"><abbr title="VMware_VCloud_SDK_Http_Response_Interface">VMware_VCloud_SDK_Http_Response_Interface</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_download">
+        <div class="location">at line 240</div>
+        <code>            public            null
+    <strong>download</strong>(string $url, array $headers, string $dest)</code>
+    </h3>
+    <div class="details">
+        <p>Download a file and dump to specified location.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Download source</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dest</td>
+                <td>Destination of the file to write to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_upload">
+        <div class="location">at line 258</div>
+        <code>            public            null
+    <strong>upload</strong>(string $url, array $headers, string $file, int $windowSize = 10485760, <abbr title="function">function</abbr> $onProgress = false)</code>
+    </h3>
+    <div class="details">
+        <p>Upload a file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Target where to upload the file</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP request headers</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>Full path of the file to be uploaded</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$windowSize</td>
+                <td>Chunk size in bytes, defaults to 10M</td>
+            </tr>
+                    <tr>
+                <td><abbr title="function">function</abbr></td>
+                <td>$onProgress</td>
+                <td>@yconan</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_putAndCheck">
+        <div class="location">at line 319</div>
+        <code>            public            
+    <strong>putAndCheck</strong>($url, $headers, $data, $attemptNumber, $sendAttempts = 5)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attemptNumber</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sendAttempts</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUsername">
+        <div class="location">at line 339</div>
+        <code>            public            string
+    <strong>getUsername</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>Returns the vCloud username@organization</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToken">
+        <div class="location">at line 349</div>
+        <code>            public            <abbr title="Returns">Returns</abbr>
+    <strong>getToken</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Returns">Returns</abbr></td>
+            <td>the vCloud authentication token</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

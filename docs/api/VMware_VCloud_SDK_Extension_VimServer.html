@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Extension_VimServer | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Extension_VimServer</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Extension_VimServer</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVimServerRef">getVimServerRef</a>()
+                    <p>Get a reference to a Vim server entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVimServer">getVimServer</a>()
+                    <p>Get a Vim server settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of the Vim server from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modify">modify</a>(<a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a> $vc)
+                    <p>Modify a vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enable">enable</a>(boolean $enable = true)
+                    <p>Enable the Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_disable">disable</a>()
+                    <p>Disable the Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEnabled">isEnabled</a>()
+                    <p>Check whether the Vim server is enabled or not.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVmRefsList">getVmRefsList</a>()
+                    <p>Get references to all VMs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVmRefsListByPage">getVmRefsListByPage</a>(int $page = 1, int $size = null)
+                    <p>Get VMs list by page number.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_ResourcePoolListType.html"><abbr title="VMware_VCloud_API_Extension_ResourcePoolListType">VMware_VCloud_API_Extension_ResourcePoolListType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getResourcePoolList">getResourcePoolList</a>()
+                    <p>Retrieves references to all resource pools.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getResourcePools">getResourcePools</a>(string $name = null)
+                    <p>Get resource pools or resource pool with specified name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableNetworks">getAvailableNetworks</a>()
+                    <p>Get references for all the available networks for the Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importVmAsVApp">importVmAsVApp</a>(<a href="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppParamsType</abbr></a> $params)
+                    <p>Imports a VM from vSphere to a vDC as a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importVmAsVAppTemplate">importVmAsVAppTemplate</a>(<a href="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType</abbr></a> $params)
+                    <p>Imports a VM from vSphere to a vDC as a vApp template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importMedia">importMedia</a>(<a href="VMware_VCloud_API_Extension_ImportMediaParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportMediaParamsType">VMware_VCloud_API_Extension_ImportMediaParamsType</abbr></a> $params)
+                    <p>Import media from vSphere to a vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importVmIntoExistingVApp">importVmIntoExistingVApp</a>(<a href="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType">VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType</abbr></a> $params)
+                    <p>Import a vSphere VM into an existing vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_forceReconnect">forceReconnect</a>()
+                    <p>Force Vim server reconnect.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_refreshStorageProfiles">refreshStorageProfiles</a>()
+                    <p>Refresh storage profiles data from a registered Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_refresh">refresh</a>()
+                    <p>Refresh vCenter server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getHostRefs">getHostRefs</a>()
+                    <p>Gets all the references for each host attached to the Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStorageProfiles">getStorageProfiles</a>()
+                    <p>Retrieves all storage profiles in the Vim server.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVsmRef">getVsmRef</a>()
+                    <p>Get a link to the registered vShield Manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVsm">getVsm</a>()
+                    <p>Get configuration details of registered vShield Manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateVsm">updateVsm</a>(<a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a> $vsm)
+                    <p>Update configuration details of registered vShield Manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VSphereWebClientUrlType.html"><abbr title="VMware_VCloud_API_Extension_VSphereWebClientUrlType">VMware_VCloud_API_Extension_VSphereWebClientUrlType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVSphereWebClientUrl">getVSphereWebClientUrl</a>(<abbr title="vimObjectType">vimObjectType</abbr> $vimObjectType, <abbr title="vimObjectMoref">vimObjectMoref</abbr> $vimObjectMoref)
+                    <p>Retrieve the vSphere URL of an object.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVimServerRef">
+        <div class="location">at line 11</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getVimServerRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a Vim server entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVimServer">
+        <div class="location">at line 23</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a>
+    <strong>getVimServer</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a Vim server settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 34</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of the Vim server from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modify">
+        <div class="location">at line 46</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>modify</strong>(<a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a> $vc)</code>
+    </h3>
+    <div class="details">
+        <p>Modify a vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VimServerType.html"><abbr title="VMware_VCloud_API_Extension_VimServerType">VMware_VCloud_API_Extension_VimServerType</abbr></a></td>
+                <td>$vc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enable">
+        <div class="location">at line 60</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>enable</strong>(boolean $enable = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enable the Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$enable</td>
+                <td>To enable, set to true; to disable, set to false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disable">
+        <div class="location">at line 83</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>disable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disable the Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEnabled">
+        <div class="location">at line 94</div>
+        <code>            public            boolean
+    <strong>isEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the Vim server is enabled or not.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVmRefsList">
+        <div class="location">at line 104</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a>
+    <strong>getVmRefsList</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all VMs.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVmRefsListByPage">
+        <div class="location">at line 117</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a>
+    <strong>getVmRefsListByPage</strong>(int $page = 1, int $size = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get VMs list by page number.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td>Page number, starts from 1. Default to 0.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>Page size, maximum to 100. Default to null.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VmObjectRefsListType.html"><abbr title="VMware_VCloud_API_Extension_VmObjectRefsListType">VMware_VCloud_API_Extension_VmObjectRefsListType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourcePoolList">
+        <div class="location">at line 134</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_ResourcePoolListType.html"><abbr title="VMware_VCloud_API_Extension_ResourcePoolListType">VMware_VCloud_API_Extension_ResourcePoolListType</abbr></a>
+    <strong>getResourcePoolList</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves references to all resource pools.</p>
+        <p>Resource pools that are
+not assigned to org or provider vDC.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_ResourcePoolListType.html"><abbr title="VMware_VCloud_API_Extension_ResourcePoolListType">VMware_VCloud_API_Extension_ResourcePoolListType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourcePools">
+        <div class="location">at line 148</div>
+        <code>            public            array|null
+    <strong>getResourcePools</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get resource pools or resource pool with specified name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the resource pool to retrieve. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>ResourcePoolType array object or null.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableNetworks">
+        <div class="location">at line 179</div>
+        <code>            public            array|null
+    <strong>getAvailableNetworks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get references for all the available networks for the Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VimObjectRefType objects array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importVmAsVApp">
+        <div class="location">at line 198</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>importVmAsVApp</strong>(<a href="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Imports a VM from vSphere to a vDC as a vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importVmAsVAppTemplate">
+        <div class="location">at line 212</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a>
+    <strong>importVmAsVAppTemplate</strong>(<a href="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Imports a VM from vSphere to a vDC as a vApp template.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType">VMware_VCloud_API_Extension_ImportVmAsVAppTemplateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppTemplateType.html"><abbr title="VMware_VCloud_API_VAppTemplateType">VMware_VCloud_API_VAppTemplateType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importMedia">
+        <div class="location">at line 227</div>
+        <code>            public            <a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a>
+    <strong>importMedia</strong>(<a href="VMware_VCloud_API_Extension_ImportMediaParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportMediaParamsType">VMware_VCloud_API_Extension_ImportMediaParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Import media from vSphere to a vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ImportMediaParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportMediaParamsType">VMware_VCloud_API_Extension_ImportMediaParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MediaType.html"><abbr title="VMware_VCloud_API_MediaType">VMware_VCloud_API_MediaType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importVmIntoExistingVApp">
+        <div class="location">at line 241</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>importVmIntoExistingVApp</strong>(<a href="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType">VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Import a vSphere VM into an existing vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType.html"><abbr title="VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType">VMware_VCloud_API_Extension_ImportVmIntoExistingVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_forceReconnect">
+        <div class="location">at line 255</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>forceReconnect</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Force Vim server reconnect.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_refreshStorageProfiles">
+        <div class="location">at line 267</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>refreshStorageProfiles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Refresh storage profiles data from a registered Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_refresh">
+        <div class="location">at line 279</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>refresh</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Refresh vCenter server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHostRefs">
+        <div class="location">at line 291</div>
+        <code>            public            array|null
+    <strong>getHostRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets all the references for each host attached to the Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStorageProfiles">
+        <div class="location">at line 305</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a>
+    <strong>getStorageProfiles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves all storage profiles in the Vim server.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVsmRef">
+        <div class="location">at line 317</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>
+    <strong>getVsmRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a link to the registered vShield Manager.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVsm">
+        <div class="location">at line 329</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a>
+    <strong>getVsm</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get configuration details of registered vShield Manager.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateVsm">
+        <div class="location">at line 349</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>updateVsm</strong>(<a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a> $vsm)</code>
+    </h3>
+    <div class="details">
+        <p>Update configuration details of registered vShield Manager.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ShieldManagerType.html"><abbr title="VMware_VCloud_API_Extension_ShieldManagerType">VMware_VCloud_API_Extension_ShieldManagerType</abbr></a></td>
+                <td>$vsm</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVSphereWebClientUrl">
+        <div class="location">at line 372</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VSphereWebClientUrlType.html"><abbr title="VMware_VCloud_API_Extension_VSphereWebClientUrlType">VMware_VCloud_API_Extension_VSphereWebClientUrlType</abbr></a>
+    <strong>getVSphereWebClientUrl</strong>(<abbr title="vimObjectType">vimObjectType</abbr> $vimObjectType, <abbr title="vimObjectMoref">vimObjectMoref</abbr> $vimObjectMoref)</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve the vSphere URL of an object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="vimObjectType">vimObjectType</abbr></td>
+                <td>$vimObjectType</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="vimObjectMoref">vimObjectMoref</abbr></td>
+                <td>$vimObjectMoref</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VSphereWebClientUrlType.html"><abbr title="VMware_VCloud_API_Extension_VSphereWebClientUrlType">VMware_VCloud_API_Extension_VSphereWebClientUrlType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

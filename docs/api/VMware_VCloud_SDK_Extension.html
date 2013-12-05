@@ -1,0 +1,3272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Extension | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Extension</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Extension</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($svc)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWExtensionType.html"><abbr title="VMware_VCloud_API_Extension_VMWExtensionType">VMware_VCloud_API_Extension_VMWExtensionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getExtension">getExtension</a>()
+                    <p>Get the VMware vCloud admin extension entry point.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getHostRefs">getHostRefs</a>(string $name = null)
+                    <p>Get the references to all the hosts.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getHosts">getHosts</a>(string $name = null)
+                    <p>Get all hosts.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVimServerRefs">getVimServerRefs</a>(string $name = null)
+                    <p>Get references to VMware vim servers.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVimServers">getVimServers</a>(string $name = null)
+                    <p>Get VMware vim server objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWProviderVdcRefs">getVMWProviderVdcRefs</a>(string $name = null)
+                    <p>Get references to VMware provider vDCs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWProviderVdcQueryRefs">getVMWProviderVdcQueryRefs</a>(string $name = null)
+                    <p>Get list of provider vDCs by using REST API general QueryHandler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createService">createService</a>(<a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a> $params)
+                    <p>Create a Extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="list">list</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getExtensionService">getExtensionService</a>()
+                    <p>Get a Extension service.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWProviderVdcs">getVMWProviderVdcs</a>(string $name = null)
+                    <p>Get VMware provider vDC objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWExternalNetworkRefs">getVMWExternalNetworkRefs</a>(string $name = null)
+                    <p>Get references to VMware external network.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWExternalNetworks">getVMWExternalNetworks</a>(string $name = null)
+                    <p>Get external network objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWNetworkPoolRefs">getVMWNetworkPoolRefs</a>(string $name = null)
+                    <p>Get references to VMware network pools.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWNetworkPools">getVMWNetworkPools</a>(string $name = null)
+                    <p>Get VMware network pool objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDatastoreRefs">getDatastoreRefs</a>(string $name = null)
+                    <p>Get the references of data stores.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDatastores">getDatastores</a>(string $name = null)
+                    <p>Get the data store objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBlockingTaskRefs">getBlockingTaskRefs</a>()
+                    <p>Get the references of the blocking tasks.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getBlockingTasks">getBlockingTasks</a>()
+                    <p>Get the blocking tasks objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLicensingReportRefs">getLicensingReportRefs</a>()
+                    <p>Get the references of the licensing report objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getLicensingReports">getLicensingReports</a>()
+                    <p>Get the licensing report objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createVMWProviderVdc">createVMWProviderVdc</a>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a> $providerVdc)
+                    <p>Create a provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createProviderVdc">createProviderVdc</a>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcParamsType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcParamsType">VMware_VCloud_API_Extension_VMWProviderVdcParamsType</abbr></a> $params)
+                    <p>Create a provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createVMWExternalNetwork">createVMWExternalNetwork</a>(<a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a> $externalNet)
+                    <p>Create an external network.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createVMWNetworkPool">createVMWNetworkPool</a>(<a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a> $vmwNetPool)
+                    <p>Create a network pool.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_registerVimServer">registerVimServer</a>(<a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a> $params)
+                    <p>Register a Vim Server and a vShield manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_unregisterVimServer">unregisterVimServer</a>(<a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vimServerRef, boolean $disable = true)
+                    <p>Unregister Vim Server and vShield manager.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSystemSettings">getSystemSettings</a>()
+                    <p>Retrieves the system settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateSystemSettings">updateSystemSettings</a>(<a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a> $settings)
+                    <p>Updates the system settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAmqpSettings">getAmqpSettings</a>()
+                    <p>Retrieves the AMQP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateAmqpSettings">updateAmqpSettings</a>(<a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a> $settings)
+                    <p>Updates the AMQP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetAmqpCertificate">resetAmqpCertificate</a>()
+                    <p>Resets AMQP certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetAmqpTruststore">resetAmqpTruststore</a>()
+                    <p>Resets AMQP truststore.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateAmqpCertificate">updateAmqpCertificate</a>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)
+                    <p>Updates AMQP certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_TrustStoreUploadSocketType">VMware_VCloud_API_TrustStoreUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateAmqpTruststore">updateAmqpTruststore</a>(<a href="VMware_VCloud_API_TrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_TrustStoreUpdateParamsType">VMware_VCloud_API_TrustStoreUpdateParamsType</abbr></a> $params)
+                    <p>Updates AMQP trust store.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_testAmqpConnection">testAmqpConnection</a>(<a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a> $settings)
+                    <p>Tests the AMQP connection.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getBlockingTaskSettings">getBlockingTaskSettings</a>()
+                    <p>Returns global blocking task settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateBlockingTaskSettings">updateBlockingTaskSettings</a>(<a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a> $settings)
+                    <p>Updates global blocking task settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getEnabledBlockingTaskOperations">getEnabledBlockingTaskOperations</a>()
+                    <p>Gets blocking task operations which are enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateEnabledBlockingTaskOperations">updateEnabledBlockingTaskOperations</a>(<a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a> $list)
+                    <p>Updates the blocking task operations which are enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getBrandingSettings">getBrandingSettings</a>()
+                    <p>Retrieves the product branding settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateBrandingSettings">updateBrandingSettings</a>(<a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a> $settings)
+                    <p>Updates the product branding settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getEmailSettings">getEmailSettings</a>()
+                    <p>Retrieves the email related settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateEmailSettings">updateEmailSettings</a>(<a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a> $settings)
+                    <p>Updates email related settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGeneralSettings">getGeneralSettings</a>()
+                    <p>Retrieves the general settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateGeneralSettings">updateGeneralSettings</a>(<a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a> $settings)
+                    <p>Updates the general settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetVcTrustsore">resetVcTrustsore</a>()
+                    <p>Resets vCenter trust store.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType">VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateVcTrustsore">updateVcTrustsore</a>(<a href="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType">VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType</abbr></a> $params)
+                    <p>Updates vCenter trust store.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLdapSettings">getLdapSettings</a>()
+                    <p>Retrieves the LDAP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapSettings">updateLdapSettings</a>(<a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a> $settings)
+                    <p>Updates the LDAP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapCertificate">resetLdapCertificate</a>()
+                    <p>Resets system LDAP SSL certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapKeyStore">resetLdapKeyStore</a>()
+                    <p>Resets system LDAP keystore.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapSspiKeytab">resetLdapSspiKeytab</a>()
+                    <p>Resets system LDAP SSPI key tab.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapCertificate">updateLdapCertificate</a>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)
+                    <p>Updates system LDAP SSL certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapKeyStore">updateLdapKeyStore</a>(<a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a> $params)
+                    <p>Updates system LDAP keystore.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapSspiKeytab">updateLdapSspiKeytab</a>(<a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a> $params)
+                    <p>Updates system LDAP SSPI key tab.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLicenseSettings">getLicenseSettings</a>()
+                    <p>Retrieves the license settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLicenseSettings">updateLicenseSettings</a>(<a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a> $settings)
+                    <p>Updates the license settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNotificationsSettings">getNotificationsSettings</a>()
+                    <p>Retrieves the notifications settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateNotificationsSettings">updateNotificationsSettings</a>(<a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a> $settings)
+                    <p>Updates the notifications settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isNotificationEnabled">isNotificationEnabled</a>()
+                    <p>Checks non-blocking extensions is enabled or not.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enableNotification">enableNotification</a>($enable = true)
+                    <p>Enables non-blocking extensions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_disableNotification">disableNotification</a>()
+                    <p>Disables non-blocking extensions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPasswordPolicySettings">getPasswordPolicySettings</a>()
+                    <p>Retrieves the password policy settings at the system level.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updatePasswordPolicySettings">updatePasswordPolicySettings</a>(<a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a> $settings)
+                    <p>Updates the system password policy settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getKerberosSettings">getKerberosSettings</a>()
+                    <p>Retrieves the kerberos settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateKerberosSettings">updateKerberosSettings</a>(<a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a> $settings)
+                    <p>Updates the system kerberos settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_LookupServiceSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceSettingsType">VMware_VCloud_API_Extension_LookupServiceSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLookUpServiceSettings">getLookUpServiceSettings</a>()
+                    <p>Retrieves the lookupService settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="VMware_VCloud_API_Extension_TaskType">VMware_VCloud_API_Extension_TaskType</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLookUpServiceSettings">updateLookUpServiceSettings</a>(<a href="VMware_VCloud_API_Extension_LookupServiceParamsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceParamsType">VMware_VCloud_API_Extension_LookupServiceParamsType</abbr></a> $settings)
+                    <p>Register / unregister Lookup Service to / from vCD.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCatalogSettings">getCatalogSettings</a>()
+                    <p>Retrieve vCloud Director catalog setting details.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateCatalogSettings">updateCatalogSettings</a>(<a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a> $settings)
+                    <p>Update catalog settings details.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_StrandedItemType.html"><abbr title="VMware_VCloud_API_Extension_StrandedItemType">VMware_VCloud_API_Extension_StrandedItemType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStrandedItems">getStrandedItems</a>()
+                    <p>Gets the representation of a strandedItem.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_clearUnusedRights">clearUnusedRights</a>()
+                    <p>Clears all the rights that are not associated with a role or acl rule and which extension service is already deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_clearUnusedLocalizationBundles">clearUnusedLocalizationBundles</a>()
+                    <p>Cleanup for unused external localization resources.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAuthorized">isAuthorized</a>(<a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a> $params)
+                    <p>Checks user authorization for all services with enabled authorization, URL and request verb.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_BundleUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadSocketType">VMware_VCloud_API_Extension_BundleUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_initiatesLocalizationBundles">initiatesLocalizationBundles</a>(<a href="VMware_VCloud_API_Extension_BundleUploadParamsType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadParamsType">VMware_VCloud_API_Extension_BundleUploadParamsType</abbr></a> $params)
+                    <p>Initiates localization bundle upload.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getQueryExtensionServices">getQueryExtensionServices</a>()
+                    <p>Retrieve extension services query.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 7</div>
+        <code>            public            
+    <strong>__construct</strong>($svc)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$svc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtension">
+        <div class="location">at line 18</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWExtensionType.html"><abbr title="VMware_VCloud_API_Extension_VMWExtensionType">VMware_VCloud_API_Extension_VMWExtensionType</abbr></a>
+    <strong>getExtension</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the VMware vCloud admin extension entry point.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWExtensionType.html"><abbr title="VMware_VCloud_API_Extension_VMWExtensionType">VMware_VCloud_API_Extension_VMWExtensionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHostRefs">
+        <div class="location">at line 30</div>
+        <code>            public            array
+    <strong>getHostRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the references to all the hosts.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the host to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHosts">
+        <div class="location">at line 45</div>
+        <code>            public            array
+    <strong>getHosts</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all hosts.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the host. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>HostType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVimServerRefs">
+        <div class="location">at line 58</div>
+        <code>            public            array
+    <strong>getVimServerRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware vim servers.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vim server to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVimServers">
+        <div class="location">at line 74</div>
+        <code>            public            array
+    <strong>getVimServers</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get VMware vim server objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vim server to get. If null, returns all.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VimServerType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWProviderVdcRefs">
+        <div class="location">at line 88</div>
+        <code>            public            array
+    <strong>getVMWProviderVdcRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware provider vDCs.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware provider vDC to get. If null, returns all.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWProviderVdcQueryRefs">
+        <div class="location">at line 104</div>
+        <code>            public            array
+    <strong>getVMWProviderVdcQueryRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get list of provider vDCs by using REST API general QueryHandler.</p>
+        <p>This is read only list and is not bound to specific states. If filter is provided it will be applied to the corresponding result set. Format determines the elements representation - references, records or idrecords. Default format is records.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware provider vDC query to get. If null, returns all.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createService">
+        <div class="location">at line 117</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a>
+    <strong>createService</strong>(<a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a Extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AdminServiceType.html"><abbr title="VMware_VCloud_API_Extension_AdminServiceType">VMware_VCloud_API_Extension_AdminServiceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtensionService">
+        <div class="location">at line 131</div>
+        <code>            public            <abbr title="list">list</abbr>
+    <strong>getExtensionService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a Extension service.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="list">list</abbr></td>
+            <td>of all the extension services.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWProviderVdcs">
+        <div class="location">at line 146</div>
+        <code>            public            array
+    <strong>getVMWProviderVdcs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get VMware provider vDC objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware provider vDC to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VMWProviderVdcType objects array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWExternalNetworkRefs">
+        <div class="location">at line 161</div>
+        <code>            public            array
+    <strong>getVMWExternalNetworkRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware external network.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware external network to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWExternalNetworks">
+        <div class="location">at line 178</div>
+        <code>            public            array
+    <strong>getVMWExternalNetworks</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get external network objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the external network to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VMWExternalNetworkType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWNetworkPoolRefs">
+        <div class="location">at line 192</div>
+        <code>            public            array
+    <strong>getVMWNetworkPoolRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware network pools.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware network pool. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWNetworkPools">
+        <div class="location">at line 208</div>
+        <code>            public            array
+    <strong>getVMWNetworkPools</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get VMware network pool objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VMware network pool. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VMWNetworkPoolType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatastoreRefs">
+        <div class="location">at line 221</div>
+        <code>            public            array
+    <strong>getDatastoreRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the references of data stores.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the data store to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDatastores">
+        <div class="location">at line 236</div>
+        <code>            public            array
+    <strong>getDatastores</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the data store objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the data store to get. If null, returns all.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>DatastoreType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBlockingTaskRefs">
+        <div class="location">at line 248</div>
+        <code>            public            array
+    <strong>getBlockingTaskRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the references of the blocking tasks.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBlockingTasks">
+        <div class="location">at line 262</div>
+        <code>            public            array
+    <strong>getBlockingTasks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the blocking tasks objects.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>BlockingTaskType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLicensingReportRefs">
+        <div class="location">at line 275</div>
+        <code>            public            array
+    <strong>getLicensingReportRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the references of the licensing report objects.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_LinkType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLicensingReports">
+        <div class="location">at line 289</div>
+        <code>            public            array
+    <strong>getLicensingReports</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the licensing report objects.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>LicensingReportType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createVMWProviderVdc">
+        <div class="location">at line 303</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+    <strong>createVMWProviderVdc</strong>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a> $providerVdc)</code>
+    </h3>
+    <div class="details">
+        <p>Create a provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+                <td>$providerVdc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createProviderVdc">
+        <div class="location">at line 317</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+    <strong>createProviderVdc</strong>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcParamsType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcParamsType">VMware_VCloud_API_Extension_VMWProviderVdcParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcParamsType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcParamsType">VMware_VCloud_API_Extension_VMWProviderVdcParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createVMWExternalNetwork">
+        <div class="location">at line 331</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a>
+    <strong>createVMWExternalNetwork</strong>(<a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a> $externalNet)</code>
+    </h3>
+    <div class="details">
+        <p>Create an external network.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a></td>
+                <td>$externalNet</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWExternalNetworkType.html"><abbr title="VMware_VCloud_API_Extension_VMWExternalNetworkType">VMware_VCloud_API_Extension_VMWExternalNetworkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createVMWNetworkPool">
+        <div class="location">at line 349</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a>
+    <strong>createVMWNetworkPool</strong>(<a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a> $vmwNetPool)</code>
+    </h3>
+    <div class="details">
+        <p>Create a network pool.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a></td>
+                <td>$vmwNetPool</td>
+                <td>| VMware<em>VCloud</em>API<em>Extension</em>VlanPoolType | VMware<em>VCloud</em>API<em>Extension</em>FencePoolType $vmwNetPool</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_PortGroupPoolType.html"><abbr title="VMware_VCloud_API_Extension_PortGroupPoolType">VMware_VCloud_API_Extension_PortGroupPoolType</abbr></a></td>
+            <td>| VMware<em>VCloud</em>API<em>Extension</em>VlanPoolType | VMware<em>VCloud</em>API<em>Extension</em>FencePoolType</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registerVimServer">
+        <div class="location">at line 363</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a>
+    <strong>registerVimServer</strong>(<a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Register a Vim Server and a vShield manager.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_RegisterVimServerParamsType.html"><abbr title="VMware_VCloud_API_Extension_RegisterVimServerParamsType">VMware_VCloud_API_Extension_RegisterVimServerParamsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unregisterVimServer">
+        <div class="location">at line 382</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>unregisterVimServer</strong>(<a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a> $vimServerRef, boolean $disable = true)</code>
+    </h3>
+    <div class="details">
+        <p>Unregister Vim Server and vShield manager.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+                <td>$vimServerRef</td>
+                <td>Reference to the vim server to be unregistered</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$disable</td>
+                <td>Indicates whether disable the vim server first.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSystemSettings">
+        <div class="location">at line 411</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a>
+    <strong>getSystemSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the system settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateSystemSettings">
+        <div class="location">at line 424</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a>
+    <strong>updateSystemSettings</strong>(<a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the system settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_SystemSettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemSettingsType">VMware_VCloud_API_Extension_SystemSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAmqpSettings">
+        <div class="location">at line 437</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a>
+    <strong>getAmqpSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the AMQP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAmqpSettings">
+        <div class="location">at line 450</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a>
+    <strong>updateAmqpSettings</strong>(<a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the AMQP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetAmqpCertificate">
+        <div class="location">at line 462</div>
+        <code>            public            
+    <strong>resetAmqpCertificate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets AMQP certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetAmqpTruststore">
+        <div class="location">at line 473</div>
+        <code>            public            
+    <strong>resetAmqpTruststore</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets AMQP truststore.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAmqpCertificate">
+        <div class="location">at line 485</div>
+        <code>            public            <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+    <strong>updateAmqpCertificate</strong>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates AMQP certificate.</p>
+        <p>AMQP certificate and trust store are mutually exclusive. Overrides AMQP trust store, if update is successful.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAmqpTruststore">
+        <div class="location">at line 498</div>
+        <code>            public            <a href="VMware_VCloud_API_TrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_TrustStoreUploadSocketType">VMware_VCloud_API_TrustStoreUploadSocketType</abbr></a>
+    <strong>updateAmqpTruststore</strong>(<a href="VMware_VCloud_API_TrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_TrustStoreUpdateParamsType">VMware_VCloud_API_TrustStoreUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates AMQP trust store.</p>
+        <p>AMQP certificate and trust store are mutually exclusive. Overrides AMQP certificate, if update is successful.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_TrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_TrustStoreUpdateParamsType">VMware_VCloud_API_TrustStoreUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_TrustStoreUploadSocketType">VMware_VCloud_API_TrustStoreUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_testAmqpConnection">
+        <div class="location">at line 511</div>
+        <code>            public            boolean
+    <strong>testAmqpConnection</strong>(<a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Tests the AMQP connection.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AmqpSettingsType.html"><abbr title="VMware_VCloud_API_Extension_AmqpSettingsType">VMware_VCloud_API_Extension_AmqpSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBlockingTaskSettings">
+        <div class="location">at line 525</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a>
+    <strong>getBlockingTaskSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns global blocking task settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateBlockingTaskSettings">
+        <div class="location">at line 538</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a>
+    <strong>updateBlockingTaskSettings</strong>(<a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates global blocking task settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_BlockingTaskSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BlockingTaskSettingsType">VMware_VCloud_API_Extension_BlockingTaskSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEnabledBlockingTaskOperations">
+        <div class="location">at line 552</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a>
+    <strong>getEnabledBlockingTaskOperations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets blocking task operations which are enabled.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateEnabledBlockingTaskOperations">
+        <div class="location">at line 565</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a>
+    <strong>updateEnabledBlockingTaskOperations</strong>(<a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a> $list)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the blocking task operations which are enabled.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a></td>
+                <td>$list</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskOperationListType.html"><abbr title="VMware_VCloud_API_TaskOperationListType">VMware_VCloud_API_TaskOperationListType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getBrandingSettings">
+        <div class="location">at line 579</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a>
+    <strong>getBrandingSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the product branding settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateBrandingSettings">
+        <div class="location">at line 592</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a>
+    <strong>updateBrandingSettings</strong>(<a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the product branding settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_BrandingSettingsType.html"><abbr title="VMware_VCloud_API_Extension_BrandingSettingsType">VMware_VCloud_API_Extension_BrandingSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEmailSettings">
+        <div class="location">at line 605</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a>
+    <strong>getEmailSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the email related settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateEmailSettings">
+        <div class="location">at line 618</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a>
+    <strong>updateEmailSettings</strong>(<a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates email related settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_EmailSettingsType.html"><abbr title="VMware_VCloud_API_Extension_EmailSettingsType">VMware_VCloud_API_Extension_EmailSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGeneralSettings">
+        <div class="location">at line 631</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a>
+    <strong>getGeneralSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the general settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateGeneralSettings">
+        <div class="location">at line 644</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a>
+    <strong>updateGeneralSettings</strong>(<a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the general settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_GeneralSettingsType.html"><abbr title="VMware_VCloud_API_Extension_GeneralSettingsType">VMware_VCloud_API_Extension_GeneralSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetVcTrustsore">
+        <div class="location">at line 656</div>
+        <code>            public            
+    <strong>resetVcTrustsore</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets vCenter trust store.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateVcTrustsore">
+        <div class="location">at line 669</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType">VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType</abbr></a>
+    <strong>updateVcTrustsore</strong>(<a href="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType">VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates vCenter trust store.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType">VMware_VCloud_API_Extension_VcTrustStoreUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType">VMware_VCloud_API_Extension_VcTrustStoreUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLdapSettings">
+        <div class="location">at line 683</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a>
+    <strong>getLdapSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the LDAP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapSettings">
+        <div class="location">at line 697</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a>
+    <strong>updateLdapSettings</strong>(<a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the LDAP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_LdapSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LdapSettingsType">VMware_VCloud_API_Extension_LdapSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapCertificate">
+        <div class="location">at line 709</div>
+        <code>            public            
+    <strong>resetLdapCertificate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets system LDAP SSL certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapKeyStore">
+        <div class="location">at line 720</div>
+        <code>            public            
+    <strong>resetLdapKeyStore</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets system LDAP keystore.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapSspiKeytab">
+        <div class="location">at line 731</div>
+        <code>            public            
+    <strong>resetLdapSspiKeytab</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets system LDAP SSPI key tab.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapCertificate">
+        <div class="location">at line 744</div>
+        <code>            public            <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+    <strong>updateLdapCertificate</strong>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates system LDAP SSL certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapKeyStore">
+        <div class="location">at line 758</div>
+        <code>            public            <a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a>
+    <strong>updateLdapKeyStore</strong>(<a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates system LDAP keystore.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapSspiKeytab">
+        <div class="location">at line 772</div>
+        <code>            public            <a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a>
+    <strong>updateLdapSspiKeytab</strong>(<a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates system LDAP SSPI key tab.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLicenseSettings">
+        <div class="location">at line 785</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a>
+    <strong>getLicenseSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the license settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLicenseSettings">
+        <div class="location">at line 798</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a>
+    <strong>updateLicenseSettings</strong>(<a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the license settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_LicenseType.html"><abbr title="VMware_VCloud_API_Extension_LicenseType">VMware_VCloud_API_Extension_LicenseType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNotificationsSettings">
+        <div class="location">at line 811</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+    <strong>getNotificationsSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the notifications settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateNotificationsSettings">
+        <div class="location">at line 824</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+    <strong>updateNotificationsSettings</strong>(<a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the notifications settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNotificationEnabled">
+        <div class="location">at line 837</div>
+        <code>            public            boolean
+    <strong>isNotificationEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Checks non-blocking extensions is enabled or not.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enableNotification">
+        <div class="location">at line 849</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+    <strong>enableNotification</strong>($enable = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enables non-blocking extensions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$enable</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disableNotification">
+        <div class="location">at line 862</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a>
+    <strong>disableNotification</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disables non-blocking extensions.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_NotificationsSettingsType.html"><abbr title="VMware_VCloud_API_Extension_NotificationsSettingsType">VMware_VCloud_API_Extension_NotificationsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPasswordPolicySettings">
+        <div class="location">at line 873</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a>
+    <strong>getPasswordPolicySettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the password policy settings at the system level.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatePasswordPolicySettings">
+        <div class="location">at line 886</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a>
+    <strong>updatePasswordPolicySettings</strong>(<a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the system password policy settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType">VMware_VCloud_API_Extension_SystemPasswordPolicySettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getKerberosSettings">
+        <div class="location">at line 900</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a>
+    <strong>getKerberosSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the kerberos settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateKerberosSettings">
+        <div class="location">at line 913</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a>
+    <strong>updateKerberosSettings</strong>(<a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the system kerberos settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_KerberosSettingsType.html"><abbr title="VMware_VCloud_API_Extension_KerberosSettingsType">VMware_VCloud_API_Extension_KerberosSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLookUpServiceSettings">
+        <div class="location">at line 926</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_LookupServiceSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceSettingsType">VMware_VCloud_API_Extension_LookupServiceSettingsType</abbr></a>
+    <strong>getLookUpServiceSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the lookupService settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_LookupServiceSettingsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceSettingsType">VMware_VCloud_API_Extension_LookupServiceSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLookUpServiceSettings">
+        <div class="location">at line 940</div>
+        <code>            public            <abbr title="VMware_VCloud_API_Extension_TaskType">VMware_VCloud_API_Extension_TaskType</abbr>
+    <strong>updateLookUpServiceSettings</strong>(<a href="VMware_VCloud_API_Extension_LookupServiceParamsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceParamsType">VMware_VCloud_API_Extension_LookupServiceParamsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Register / unregister Lookup Service to / from vCD.</p>
+        <p>In LookupServiceParamsType 1. If LookupServiceUrl is set and not empty, the action is for register lookup service. 2. If LookupServiceUrl is unset or empty, the action is for unregister lookup service.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_LookupServiceParamsType.html"><abbr title="VMware_VCloud_API_Extension_LookupServiceParamsType">VMware_VCloud_API_Extension_LookupServiceParamsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="VMware_VCloud_API_Extension_TaskType">VMware_VCloud_API_Extension_TaskType</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCatalogSettings">
+        <div class="location">at line 954</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a>
+    <strong>getCatalogSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve vCloud Director catalog setting details.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateCatalogSettings">
+        <div class="location">at line 968</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a>
+    <strong>updateCatalogSettings</strong>(<a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Update catalog settings details.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_CatalogSettingsType.html"><abbr title="VMware_VCloud_API_Extension_CatalogSettingsType">VMware_VCloud_API_Extension_CatalogSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStrandedItems">
+        <div class="location">at line 981</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_StrandedItemType.html"><abbr title="VMware_VCloud_API_Extension_StrandedItemType">VMware_VCloud_API_Extension_StrandedItemType</abbr></a>
+    <strong>getStrandedItems</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the representation of a strandedItem.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_StrandedItemType.html"><abbr title="VMware_VCloud_API_Extension_StrandedItemType">VMware_VCloud_API_Extension_StrandedItemType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearUnusedRights">
+        <div class="location">at line 993</div>
+        <code>            public            null
+    <strong>clearUnusedRights</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears all the rights that are not associated with a role or acl rule and which extension service is already deleted.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearUnusedLocalizationBundles">
+        <div class="location">at line 1005</div>
+        <code>            public            null
+    <strong>clearUnusedLocalizationBundles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Cleanup for unused external localization resources.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAuthorized">
+        <div class="location">at line 1017</div>
+        <code>            public            boolean
+    <strong>isAuthorized</strong>(<a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Checks user authorization for all services with enabled authorization, URL and request verb.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_AuthorizationCheckParamsType.html"><abbr title="VMware_VCloud_API_Extension_AuthorizationCheckParamsType">VMware_VCloud_API_Extension_AuthorizationCheckParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initiatesLocalizationBundles">
+        <div class="location">at line 1032</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_BundleUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadSocketType">VMware_VCloud_API_Extension_BundleUploadSocketType</abbr></a>
+    <strong>initiatesLocalizationBundles</strong>(<a href="VMware_VCloud_API_Extension_BundleUploadParamsType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadParamsType">VMware_VCloud_API_Extension_BundleUploadParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Initiates localization bundle upload.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_BundleUploadParamsType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadParamsType">VMware_VCloud_API_Extension_BundleUploadParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_BundleUploadSocketType.html"><abbr title="VMware_VCloud_API_Extension_BundleUploadSocketType">VMware_VCloud_API_Extension_BundleUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getQueryExtensionServices">
+        <div class="location">at line 1046</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getQueryExtensionServices</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve extension services query.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

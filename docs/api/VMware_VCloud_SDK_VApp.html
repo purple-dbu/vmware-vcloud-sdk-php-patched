@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_VApp | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_VApp</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_VApp</strong>        extends <a href="VMware_VCloud_SDK_VApp_Abstract.html"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deploy">deploy</a>(<a href="VMware_VCloud_API_DeployVAppParamsType.html"><abbr title="VMware_VCloud_API_DeployVAppParamsType">VMware_VCloud_API_DeployVAppParamsType</abbr></a> $params)
+                    <p>Deploy the vApp or VM.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_deploy"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_undeploy">undeploy</a>(<a href="VMware_VCloud_API_UndeployVAppParamsType.html"><abbr title="VMware_VCloud_API_UndeployVAppParamsType">VMware_VCloud_API_UndeployVAppParamsType</abbr></a> $params)
+                    <p>Undeploy the vApp or VM.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_undeploy"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>()
+                    <p>Delete the vApp or VM.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_delete"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_powerOn">powerOn</a>()
+                    <p>Power on the VM or all Vms contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_powerOn"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_powerOff">powerOff</a>()
+                    <p>Power off the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_powerOff"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reset">reset</a>()
+                    <p>Reset the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_reset"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reboot">reboot</a>()
+                    <p>Reboot the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_reboot"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_suspend">suspend</a>()
+                    <p>Suspend the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_suspend"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_discardSuspendedState">discardSuspendedState</a>()
+                    <p>Discard suspended state of the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_discardSuspendedState"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_shutdown">shutdown</a>()
+                    <p>Shutdown the VM or all VMs contained in the vApp.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_shutdown"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getMetadata">getMetadata</a>(string $key = null, string $domain = null)
+                    <p>Get metadata associated with the vApp/VM or metadata associated with the vApp/VM for the specified key in the specified domain.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_getMetadata"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_mergeMetadata">mergeMetadata</a>(<a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a> $meta)
+                    <p>Merges the metadata for the vApp or VM with the information provided.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_mergeMetadata"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setMetadataByKey">setMetadataByKey</a>(string $key, <a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a> $value, string $domain = null)
+                    <p>Sets the metadata for the particular key in the specified domain for the vApp or VM to the value provided.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_setMetadataByKey"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteMetadataByKey">deleteMetadataByKey</a>(string $key, string $domain = null)
+                    <p>Deletes the metadata for the particular key in the specified domain for the vApp or VM.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_VApp_Abstract.html#method_deleteMetadataByKey"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVAppRef">getVAppRef</a>()
+                    <p>Get a reference to a VMware vCloud vApp entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVApp">getVApp</a>()
+                    <p>Get a VMware vCloud vApp entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of this vApp from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getVdcRef">getVdcRef</a>()
+                    <p>Get the link to the vDC to which this vApp belongs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getVdc">getVdc</a>()
+                    <p>Get the vDC to which this vApp belongs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modify">modify</a>(string $name = null, string $description = null)
+                    <p>Modify name and/or description of this vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_recompose">recompose</a>(<a href="VMware_VCloud_API_RecomposeVAppParamsType.html"><abbr title="VMware_VCloud_API_RecomposeVAppParamsType">VMware_VCloud_API_RecomposeVAppParamsType</abbr></a> $params)
+                    <p>Recompose a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getContainedVAppRefs">getContainedVAppRefs</a>(string $name = null)
+                    <p>Get references to contained vApps or contained vApps with given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getContainedVmRefs">getContainedVmRefs</a>(string $name = null)
+                    <p>Get references to contained VMs or contained VMs with given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getContainedVApps">getContainedVApps</a>(string $name = null)
+                    <p>Get contained vApps.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getContainedVms">getContainedVms</a>(string $name = null)
+                    <p>Get contained VMs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNetworkConfigSettings">getNetworkConfigSettings</a>()
+                    <p>Get network configuration settings of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyNetworkConfigSettings">modifyNetworkConfigSettings</a>(<a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a> $netConfig)
+                    <p>Modify network configuration settings of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLeaseSettings">getLeaseSettings</a>()
+                    <p>Get the lease settings of this vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyLeaseSettings">modifyLeaseSettings</a>(<a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a> $leaseSettings)
+                    <p>Modify the lease settings of this vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OVF_StartupSection_Type.html"><abbr title="VMware_VCloud_API_OVF_StartupSection_Type">VMware_VCloud_API_OVF_StartupSection_Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getStartupSettings">getStartupSettings</a>()
+                    <p>Get startup section of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyStartupSettings">modifyStartupSettings</a>(<abbr title="VMware_VCloud_API_StartupSection_Type">VMware_VCloud_API_StartupSection_Type</abbr> $startupSection)
+                    <p>Modify the startup settings of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OVF_NetworkSection_Type.html"><abbr title="VMware_VCloud_API_OVF_NetworkSection_Type">VMware_VCloud_API_OVF_NetworkSection_Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNetworkSettings">getNetworkSettings</a>()
+                    <p>Get the network settings of this vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getControlAccess">getControlAccess</a>()
+                    <p>Get the control access of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyControlAccess">modifyControlAccess</a>(<a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a> $controlAccess)
+                    <p>Modify the control access of the vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getStatus">getStatus</a>()
+                    <p>Get the status of this vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOwner">getOwner</a>()
+                    <p>Get vApp owner.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_changeOwner">changeOwner</a>(<a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a> $owner)
+                    <p>Change vApp owner.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_enterMaintenanceMode">enterMaintenanceMode</a>()
+                    <p>VApp enters into maintenance mode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_exitMaintenanceMode">exitMaintenanceMode</a>()
+                    <p>VApp exits maintenance mode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_resetVAppNetwork">resetVAppNetwork</a>()
+                    <p>Resets vApp network.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OVF_EnvelopeType.html"><abbr title="VMware_VCloud_API_OVF_EnvelopeType">VMware_VCloud_API_OVF_EnvelopeType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOVFDescriptor">getOVFDescriptor</a>()
+                    <p>Retrieve the OVF descriptor of a vApp directly.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_getOVFDescriptorAsString">getOVFDescriptorAsString</a>()
+                    <p>Retrieve the OVF descriptor of a vApp directly as string.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getVmUUIDs">getVmUUIDs</a>()
+                    <p>Retrieve VM BIOS UUID as described in the OVF Virtual System.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_SnapshotSectionType.html"><abbr title="VMware_VCloud_API_SnapshotSectionType">VMware_VCloud_API_SnapshotSectionType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSnapshotSection">getSnapshotSection</a>()
+                    <p>Retrieve SnapshotSection element for a vApp or VM.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createSnapshot">createSnapshot</a>(<a href="VMware_VCloud_API_CreateSnapshotParamsType.html"><abbr title="VMware_VCloud_API_CreateSnapshotParamsType">VMware_VCloud_API_CreateSnapshotParamsType</abbr></a> $params)
+                    <p>Creates new snapshot of a virtual machine or of all the virtual machines in a vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_disableNestedHypervisor">disableNestedHypervisor</a>()
+                    <p>Hide hardware-assisted CPU virtualization from guest OS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enableNestedHypervisor">enableNestedHypervisor</a>()
+                    <p>Expose hardware-assisted CPU virtualization to guest OS.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeAllSnapshots">removeAllSnapshots</a>()
+                    <p>Removes all user created snapshots for a vApp or virtual machine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_revertToCurrentSnapshot">revertToCurrentSnapshot</a>()
+                    <p>Reverts a vApp or virtual machine to the current snapshot, if any.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_disableDownload">disableDownload</a>()
+                    <p>Disable a vApp for downloading.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enableDownload">enableDownload</a>(boolean $wait = true)
+                    <p>Enable a vApp for downloading.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_downloadOVFFile">downloadOVFFile</a>(string $destDir = &#039;.&#039;)
+                    <p>Download OVF package.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_downloadVapp">downloadVapp</a>(string $destDir = &#039;.&#039;)
+                    <p>Download the vApp as an ovf package.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_downloadLosslessOVFFile">downloadLosslessOVFFile</a>(string $destDir = &#039;.&#039;)
+                    <p>Download lossless vApp OVF.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadedFileNames">getUploadedFileNames</a>(<a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a> $vApp)
+                    <p>Get file information after uploading vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadFileNames">getUploadFileNames</a>(<a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a> $vApp)
+                    <p>Get file information before uploading vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|null
+                </td>
+                <td class="last">
+                    <a href="#method_getUploadOVFDescriptorUrl">getUploadOVFDescriptorUrl</a>($files)
+                    <p>Get upload URL of an OVF descriptor file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_uploadOVFDescriptor">uploadOVFDescriptor</a>(string $url, string $filename)
+                    <p>Upload OVF descriptor file.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_UploadFile">UploadFile</a>(array $files, string $ovfDescriptorPath)
+                    <p>Upload the vApp related files.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deploy">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_deploy"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 12</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>deploy</strong>(<a href="VMware_VCloud_API_DeployVAppParamsType.html"><abbr title="VMware_VCloud_API_DeployVAppParamsType">VMware_VCloud_API_DeployVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Deploy the vApp or VM.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_DeployVAppParamsType.html"><abbr title="VMware_VCloud_API_DeployVAppParamsType">VMware_VCloud_API_DeployVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_undeploy">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_undeploy"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 26</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>undeploy</strong>(<a href="VMware_VCloud_API_UndeployVAppParamsType.html"><abbr title="VMware_VCloud_API_UndeployVAppParamsType">VMware_VCloud_API_UndeployVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Undeploy the vApp or VM.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_UndeployVAppParamsType.html"><abbr title="VMware_VCloud_API_UndeployVAppParamsType">VMware_VCloud_API_UndeployVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_delete"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 40</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>delete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete the vApp or VM.</p>
+        <p>The vApp or VM has to be powered off and
+undeployed before it can be deleted.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_powerOn">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_powerOn"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 53</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>powerOn</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Power on the VM or all Vms contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_powerOff">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_powerOff"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 64</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>powerOff</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Power off the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reset">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_reset"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 75</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reset the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reboot">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_reboot"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 86</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>reboot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reboot the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suspend">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_suspend"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 97</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>suspend</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Suspend the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_discardSuspendedState">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_discardSuspendedState"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 108</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>discardSuspendedState</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Discard suspended state of the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_shutdown">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_shutdown"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 120</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>shutdown</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Shutdown the VM or all VMs contained in the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMetadata">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_getMetadata"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 135</div>
+        <code>            public            <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null
+    <strong>getMetadata</strong>(string $key = null, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get metadata associated with the vApp/VM or metadata associated with the vApp/VM for the specified key in the specified domain.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|<a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_mergeMetadata">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_mergeMetadata"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 147</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>mergeMetadata</strong>(<a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a> $meta)</code>
+    </h3>
+    <div class="details">
+        <p>Merges the metadata for the vApp or VM with the information provided.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a></td>
+                <td>$meta</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMetadataByKey">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_setMetadataByKey"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 166</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>setMetadataByKey</strong>(string $key, <a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a> $value, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the metadata for the particular key in the specified domain for the vApp or VM to the value provided.</p>
+        <p>Note: This will replace any existing
+metadata information.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteMetadataByKey">
+        <div class="location">in <a href="VMware_VCloud_SDK_VApp_Abstract.html#method_deleteMetadataByKey"><abbr title="VMware_VCloud_SDK_VApp_Abstract">VMware_VCloud_SDK_VApp_Abstract</abbr></a> at line 183</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>deleteMetadataByKey</strong>(string $key, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the metadata for the particular key in the specified domain for the vApp or VM.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVAppRef">
+        <div class="location">at line 10</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getVAppRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a VMware vCloud vApp entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVApp">
+        <div class="location">at line 21</div>
+        <code>            public            <a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a>
+    <strong>getVApp</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud vApp entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 32</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of this vApp from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdcRef">
+        <div class="location">at line 43</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getVdcRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the link to the vDC to which this vApp belongs.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVdc">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a>|null
+    <strong>getVdc</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the vDC to which this vApp belongs.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VdcType.html"><abbr title="VMware_VCloud_API_VdcType">VMware_VCloud_API_VdcType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modify">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>modify</strong>(string $name = null, string $description = null)</code>
+    </h3>
+    <div class="details">
+        <p>Modify name and/or description of this vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>New name of the vApp</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td>New description of the vApp</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_recompose">
+        <div class="location">at line 88</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>recompose</strong>(<a href="VMware_VCloud_API_RecomposeVAppParamsType.html"><abbr title="VMware_VCloud_API_RecomposeVAppParamsType">VMware_VCloud_API_RecomposeVAppParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Recompose a vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_RecomposeVAppParamsType.html"><abbr title="VMware_VCloud_API_RecomposeVAppParamsType">VMware_VCloud_API_RecomposeVAppParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainedVAppRefs">
+        <div class="location">at line 103</div>
+        <code>            public            array
+    <strong>getContainedVAppRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to contained vApps or contained vApps with given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp. If null, returns all contained vApps.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainedVmRefs">
+        <div class="location">at line 127</div>
+        <code>            public            array
+    <strong>getContainedVmRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to contained VMs or contained VMs with given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VM. If null, returns all contained VMs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainedVApps">
+        <div class="location">at line 153</div>
+        <code>            public            array
+    <strong>getContainedVApps</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get contained vApps.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vApp. If null, returns all contained vApps.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_VAppType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainedVms">
+        <div class="location">at line 182</div>
+        <code>            public            array
+    <strong>getContainedVms</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get contained VMs.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the VM. If null, returns all contained VMs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_VmType object array.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNetworkConfigSettings">
+        <div class="location">at line 210</div>
+        <code>            public            <a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a>
+    <strong>getNetworkConfigSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get network configuration settings of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyNetworkConfigSettings">
+        <div class="location">at line 223</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>modifyNetworkConfigSettings</strong>(<a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a> $netConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Modify network configuration settings of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_NetworkConfigSectionType.html"><abbr title="VMware_VCloud_API_NetworkConfigSectionType">VMware_VCloud_API_NetworkConfigSectionType</abbr></a></td>
+                <td>$netConfig</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLeaseSettings">
+        <div class="location">at line 236</div>
+        <code>            public            <a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a>
+    <strong>getLeaseSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the lease settings of this vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyLeaseSettings">
+        <div class="location">at line 249</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>modifyLeaseSettings</strong>(<a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a> $leaseSettings)</code>
+    </h3>
+    <div class="details">
+        <p>Modify the lease settings of this vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_LeaseSettingsSectionType.html"><abbr title="VMware_VCloud_API_LeaseSettingsSectionType">VMware_VCloud_API_LeaseSettingsSectionType</abbr></a></td>
+                <td>$leaseSettings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStartupSettings">
+        <div class="location">at line 262</div>
+        <code>            public            <a href="VMware_VCloud_API_OVF_StartupSection_Type.html"><abbr title="VMware_VCloud_API_OVF_StartupSection_Type">VMware_VCloud_API_OVF_StartupSection_Type</abbr></a>
+    <strong>getStartupSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get startup section of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OVF_StartupSection_Type.html"><abbr title="VMware_VCloud_API_OVF_StartupSection_Type">VMware_VCloud_API_OVF_StartupSection_Type</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyStartupSettings">
+        <div class="location">at line 275</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>modifyStartupSettings</strong>(<abbr title="VMware_VCloud_API_StartupSection_Type">VMware_VCloud_API_StartupSection_Type</abbr> $startupSection)</code>
+    </h3>
+    <div class="details">
+        <p>Modify the startup settings of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="VMware_VCloud_API_StartupSection_Type">VMware_VCloud_API_StartupSection_Type</abbr></td>
+                <td>$startupSection</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNetworkSettings">
+        <div class="location">at line 288</div>
+        <code>            public            <a href="VMware_VCloud_API_OVF_NetworkSection_Type.html"><abbr title="VMware_VCloud_API_OVF_NetworkSection_Type">VMware_VCloud_API_OVF_NetworkSection_Type</abbr></a>
+    <strong>getNetworkSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the network settings of this vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OVF_NetworkSection_Type.html"><abbr title="VMware_VCloud_API_OVF_NetworkSection_Type">VMware_VCloud_API_OVF_NetworkSection_Type</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getControlAccess">
+        <div class="location">at line 300</div>
+        <code>            public            <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+    <strong>getControlAccess</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the control access of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyControlAccess">
+        <div class="location">at line 313</div>
+        <code>            public            <a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a>
+    <strong>modifyControlAccess</strong>(<a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a> $controlAccess)</code>
+    </h3>
+    <div class="details">
+        <p>Modify the control access of the vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+                <td>$controlAccess</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ControlAccessParamsType.html"><abbr title="VMware_VCloud_API_ControlAccessParamsType">VMware_VCloud_API_ControlAccessParamsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStatus">
+        <div class="location">at line 341</div>
+        <code>            public            int
+    <strong>getStatus</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the status of this vApp.</p>
+        <p>The following are the possible vApp status:
+<ul>
+   <li> -1 -- could not be created
+   <li>  0 -- unresolved
+   <li>  1 -- resolved
+   <li>  3 -- suspended
+   <li>  4 -- powered on
+   <li>  5 -- waiting for user input
+   <li>  6 -- in an unknown state
+   <li>  7 -- in an unrecognized state
+   <li>  8 -- powered off
+   <li>  9 -- in an inconsistent state
+   <li> 10 -- VMs in the vApp are in mixed states
+</ul></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>vApp status</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOwner">
+        <div class="location">at line 353</div>
+        <code>            public            <a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a>
+    <strong>getOwner</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vApp owner.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_changeOwner">
+        <div class="location">at line 366</div>
+        <code>            public            null
+    <strong>changeOwner</strong>(<a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a> $owner)</code>
+    </h3>
+    <div class="details">
+        <p>Change vApp owner.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OwnerType.html"><abbr title="VMware_VCloud_API_OwnerType">VMware_VCloud_API_OwnerType</abbr></a></td>
+                <td>$owner</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enterMaintenanceMode">
+        <div class="location">at line 379</div>
+        <code>            public            null
+    <strong>enterMaintenanceMode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>VApp enters into maintenance mode.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exitMaintenanceMode">
+        <div class="location">at line 391</div>
+        <code>            public            null
+    <strong>exitMaintenanceMode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>VApp exits maintenance mode.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetVAppNetwork">
+        <div class="location">at line 403</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null
+    <strong>resetVAppNetwork</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets vApp network.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOVFDescriptor">
+        <div class="location">at line 431</div>
+        <code>            public            <a href="VMware_VCloud_API_OVF_EnvelopeType.html"><abbr title="VMware_VCloud_API_OVF_EnvelopeType">VMware_VCloud_API_OVF_EnvelopeType</abbr></a>
+    <strong>getOVFDescriptor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve the OVF descriptor of a vApp directly.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OVF_EnvelopeType.html"><abbr title="VMware_VCloud_API_OVF_EnvelopeType">VMware_VCloud_API_OVF_EnvelopeType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOVFDescriptorAsString">
+        <div class="location">at line 444</div>
+        <code>            public            String
+    <strong>getOVFDescriptorAsString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve the OVF descriptor of a vApp directly as string.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVmUUIDs">
+        <div class="location">at line 457</div>
+        <code>            public            array
+    <strong>getVmUUIDs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve VM BIOS UUID as described in the OVF Virtual System.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VM BIOS UUIDs</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSnapshotSection">
+        <div class="location">at line 489</div>
+        <code>            public            <a href="VMware_VCloud_API_SnapshotSectionType.html"><abbr title="VMware_VCloud_API_SnapshotSectionType">VMware_VCloud_API_SnapshotSectionType</abbr></a>
+    <strong>getSnapshotSection</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve SnapshotSection element for a vApp or VM.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_SnapshotSectionType.html"><abbr title="VMware_VCloud_API_SnapshotSectionType">VMware_VCloud_API_SnapshotSectionType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createSnapshot">
+        <div class="location">at line 504</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>createSnapshot</strong>(<a href="VMware_VCloud_API_CreateSnapshotParamsType.html"><abbr title="VMware_VCloud_API_CreateSnapshotParamsType">VMware_VCloud_API_CreateSnapshotParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Creates new snapshot of a virtual machine or of all the virtual machines in a vApp.</p>
+        <p>Prior to creation of the new </p>
+
+<p>snapshots, any existing user created snapshots associated with the virtual machines are removed.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CreateSnapshotParamsType.html"><abbr title="VMware_VCloud_API_CreateSnapshotParamsType">VMware_VCloud_API_CreateSnapshotParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disableNestedHypervisor">
+        <div class="location">at line 518</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>disableNestedHypervisor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Hide hardware-assisted CPU virtualization from guest OS.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enableNestedHypervisor">
+        <div class="location">at line 530</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>enableNestedHypervisor</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Expose hardware-assisted CPU virtualization to guest OS.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAllSnapshots">
+        <div class="location">at line 542</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>removeAllSnapshots</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Removes all user created snapshots for a vApp or virtual machine.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_revertToCurrentSnapshot">
+        <div class="location">at line 554</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>revertToCurrentSnapshot</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reverts a vApp or virtual machine to the current snapshot, if any.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disableDownload">
+        <div class="location">at line 566</div>
+        <code>            public            
+    <strong>disableDownload</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disable a vApp for downloading.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enableDownload">
+        <div class="location">at line 580</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>enableDownload</strong>(boolean $wait = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enable a vApp for downloading.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$wait</td>
+                <td>To wait till finish, set to true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_downloadOVFFile">
+        <div class="location">at line 641</div>
+        <code>            public            null
+    <strong>downloadOVFFile</strong>(string $destDir = &#039;.&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Download OVF package.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$destDir</td>
+                <td>Directory where to save the downloaded file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_downloadVapp">
+        <div class="location">at line 677</div>
+        <code>            public            null
+    <strong>downloadVapp</strong>(string $destDir = &#039;.&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Download the vApp as an ovf package.</p>
+        <p>The ovf file and its vmdk
+contents are downloaded to the specified location. Before downloading
+make sure the vapp is enabled for download.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$destDir</td>
+                <td>Directory where to save the downloaded file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>Vapp#enableDownload()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_downloadLosslessOVFFile">
+        <div class="location">at line 729</div>
+        <code>            public            null
+    <strong>downloadLosslessOVFFile</strong>(string $destDir = &#039;.&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Download lossless vApp OVF.</p>
+        <p>Lossless download mode generates ovf without loosing any of its configurations.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$destDir</td>
+                <td>Directory where to save the downloaded file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadedFileNames">
+        <div class="location">at line 805</div>
+        <code>            public            array
+    <strong>getUploadedFileNames</strong>(<a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a> $vApp)</code>
+    </h3>
+    <div class="details">
+        <p>Get file information after uploading vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+                <td>$vApp</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_FileType object array</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadFileNames">
+        <div class="location">at line 834</div>
+        <code>            public            array
+    <strong>getUploadFileNames</strong>(<a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a> $vApp)</code>
+    </h3>
+    <div class="details">
+        <p>Get file information before uploading vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_VAppType.html"><abbr title="VMware_VCloud_API_VAppType">VMware_VCloud_API_VAppType</abbr></a></td>
+                <td>$vApp</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_FileType object array</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUploadOVFDescriptorUrl">
+        <div class="location">at line 863</div>
+        <code>            public            string|null
+    <strong>getUploadOVFDescriptorUrl</strong>($files)</code>
+    </h3>
+    <div class="details">
+        <p>Get upload URL of an OVF descriptor file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$files</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>OVF descriptor file URL or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uploadOVFDescriptor">
+        <div class="location">at line 882</div>
+        <code>            public            null
+    <strong>uploadOVFDescriptor</strong>(string $url, string $filename)</code>
+    </h3>
+    <div class="details">
+        <p>Upload OVF descriptor file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>HTTP request URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_UploadFile">
+        <div class="location">at line 895</div>
+        <code>            public            
+    <strong>UploadFile</strong>(array $files, string $ovfDescriptorPath)</code>
+    </h3>
+    <div class="details">
+        <p>Upload the vApp related files.</p>
+        <p>This can be vmdk or a manifest.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td>VMware<em>VCloud</em>API_FileType object array  $files</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ovfDescriptorPath</td>
+                <td>Path to the OVF descriptor</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
