@@ -109,5 +109,5 @@ $(DOC): dependencies library
 	touch "$(DOC)"
 
 publish:
-	git add docs && git commit -m "Updated API documentation"
-	git subtree push --prefix docs origin gh-pages
+	git add "$(DOC)" && git commit -m "Updated API documentation"
+	git subtree push --prefix "$(DOC)" origin gh-pages
