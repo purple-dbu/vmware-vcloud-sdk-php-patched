@@ -4,7 +4,7 @@ include tests/config.mk
 REPORT = echo -e "\\n> SUCCESS\\n" && exit 0 || (echo -e "\\n> FAILURE\\n" && exit 1)
 PARAMETERS = -h $(VCLOUD_HOST) -o $(VCLOUD_ORGANIZATION) -u $(VCLOUD_USERNAME) -p $(VCLOUD_PASSWORD) -a $(VCLOUD_API_VERSION)
 
-DOC := docs
+DOC := docs/api
 SRC = vendor/vmware/vcloud-sdk/library/
 OUT = library/
 PATCH = scripts/patches/*.patch
@@ -23,6 +23,7 @@ dependencies: vendor
 
 vendor: composer.phar composer.json
 	[ -e composer.lock ] && php -d memory_limit=-1 composer.phar update || php -d memory_limit=-1 composer.phar install
+	cd vendor/sami/sami && curl -s https://github.com/fabpot/Sami/pull/47.patch | patch -p1
 	touch vendor
 
 composer.phar:
@@ -101,15 +102,11 @@ doc: $(DOC)
 	# │ Documentation is up-to-date │
 	# └─────────────────────────────┘
 
-$(DOC): dependencies src
+$(DOC): dependencies library
 	[ ! -d "$(DOC)" ] || rm -Rf "$(DOC)"
 	mkdir -p "$(DOC)"
-	vendor/bin/phpdoc.php \
-		--directory src/ \
-		--target "$(DOC)" \
-		--title "vCloud PHP SDK Helpers" \
-		--template responsive-twig
-	touch docs
+	vendor/bin/sami.php update sami.php
+	touch "$(DOC)"
 
 publish:
 	git add docs && git commit -m "Updated API documentation"
