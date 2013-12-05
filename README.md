@@ -56,7 +56,8 @@ If you are not familiar with _Composer_, please read the
 Usage
 -----
 
-See [official VMware documentation](http://www.vmware.com/support/pubs/vcd_pubs.html)
+See **[API documentation](http://amercier.github.io/vmware-vcloud-sdk-php-patched/)**
+or [official VMware documentation](http://www.vmware.com/support/pubs/vcd_pubs.html)
 
 
 Versioning
