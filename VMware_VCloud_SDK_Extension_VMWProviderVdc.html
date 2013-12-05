@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Extension_VMWProviderVdc | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Extension_VMWProviderVdc</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Extension_VMWProviderVdc</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWProviderVdcRef">getVMWProviderVdcRef</a>()
+                    <p>Get a reference to the provider vDC entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVMWProviderVdc">getVMWProviderVdc</a>()
+                    <p>Get the provider vDC data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of the provider vDC from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getNetworkPoolRefs">getNetworkPoolRefs</a>(string $name = null)
+                    <p>Get references of network pool settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getExternalNetworkRefs">getExternalNetworkRefs</a>()
+                    <p>Get references to VMware external network.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getNetworkPools">getNetworkPools</a>(string $name = null)
+                    <p>Get network pool settings objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getResourcePools">getResourcePools</a>()
+                    <p>Retrieve a list of provider vDC resource pools.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getResourcePoolRefs">getResourcePoolRefs</a>()
+                    <p>Retrieve a list of provider vDC resource pool references.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateResourcePools">updateResourcePools</a>(<a href="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType">VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType</abbr></a> $params)
+                    <p>Update backing resource pools for provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modify">modify</a>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a> $providerVdc)
+                    <p>Modify a provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_enable">enable</a>(boolean $enable = true)
+                    <p>Enable this provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_disable">disable</a>()
+                    <p>Disable this VMware provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEnabled">isEnabled</a>()
+                    <p>Check the provide vDC is enabled or not.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>()
+                    <p>Delete a VMware provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_merge">merge</a>(<a href="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType.html"><abbr title="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType">VMware_VCloud_API_Extension_ProviderVdcMergeParamsType</abbr></a> $params)
+                    <p>Merge provider vDCs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_migrateVms">migrateVms</a>(<a href="VMware_VCloud_API_Extension_MigrateParamsType.html"><abbr title="VMware_VCloud_API_Extension_MigrateParamsType">VMware_VCloud_API_Extension_MigrateParamsType</abbr></a> $params)
+                    <p>Migrate a VM to a different resource pool.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAvailableStorageProfiles">getAvailableStorageProfiles</a>()
+                    <p>Retrieve a list of storage profiles that can be added to the specified provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateStorageProfiles">updateStorageProfiles</a>(<a href="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType">VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType</abbr></a> $params)
+                    <p>Update storage profiles belonging to a provider vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getStorageProfileRefs">getStorageProfileRefs</a>($name = null)
+                    <p>Get references of provider vDC storage profiles.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getStorageProfiles">getStorageProfiles</a>($name = null)
+                    <p>Get provider vDC storage profiles.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWProviderVdcRef">
+        <div class="location">at line 11</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getVMWProviderVdcRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to the provider vDC entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVMWProviderVdc">
+        <div class="location">at line 23</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+    <strong>getVMWProviderVdc</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the provider vDC data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 34</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of the provider vDC from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNetworkPoolRefs">
+        <div class="location">at line 46</div>
+        <code>            public            array
+    <strong>getNetworkPoolRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references of network pool settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the network pool to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExternalNetworkRefs">
+        <div class="location">at line 58</div>
+        <code>            public            array
+    <strong>getExternalNetworkRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get references to VMware external network.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNetworkPools">
+        <div class="location">at line 72</div>
+        <code>            public            array
+    <strong>getNetworkPools</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get network pool settings objects.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the network pool to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>FencePoolType | VMware<em>VCloud</em>API<em>Extension</em>PortGroupPoolType | VMware<em>VCloud</em>API<em>Extension</em>VlanPoolType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourcePools">
+        <div class="location">at line 98</div>
+        <code>            public            array|null
+    <strong>getResourcePools</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve a list of provider vDC resource pools.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VMWProviderVdcResourcePoolType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getResourcePoolRefs">
+        <div class="location">at line 110</div>
+        <code>            public            array
+    <strong>getResourcePoolRefs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve a list of provider vDC resource pool references.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateResourcePools">
+        <div class="location">at line 133</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>updateResourcePools</strong>(<a href="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType">VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Update backing resource pools for provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType">VMware_VCloud_API_Extension_UpdateResourcePoolSetParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modify">
+        <div class="location">at line 148</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a>
+    <strong>modify</strong>(<a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a> $providerVdc)</code>
+    </h3>
+    <div class="details">
+        <p>Modify a provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+                <td>$providerVdc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWProviderVdcType.html"><abbr title="VMware_VCloud_API_Extension_VMWProviderVdcType">VMware_VCloud_API_Extension_VMWProviderVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enable">
+        <div class="location">at line 162</div>
+        <code>            public            null
+    <strong>enable</strong>(boolean $enable = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enable this provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$enable</td>
+                <td>To enable, set to true; to disable, set to false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disable">
+        <div class="location">at line 182</div>
+        <code>            public            null
+    <strong>disable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disable this VMware provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEnabled">
+        <div class="location">at line 193</div>
+        <code>            public            boolean
+    <strong>isEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check the provide vDC is enabled or not.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 204</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>delete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete a VMware provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_merge">
+        <div class="location">at line 218</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>merge</strong>(<a href="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType.html"><abbr title="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType">VMware_VCloud_API_Extension_ProviderVdcMergeParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Merge provider vDCs.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType.html"><abbr title="VMware_VCloud_API_Extension_ProviderVdcMergeParamsType">VMware_VCloud_API_Extension_ProviderVdcMergeParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_migrateVms">
+        <div class="location">at line 233</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>migrateVms</strong>(<a href="VMware_VCloud_API_Extension_MigrateParamsType.html"><abbr title="VMware_VCloud_API_Extension_MigrateParamsType">VMware_VCloud_API_Extension_MigrateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Migrate a VM to a different resource pool.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_MigrateParamsType.html"><abbr title="VMware_VCloud_API_Extension_MigrateParamsType">VMware_VCloud_API_Extension_MigrateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAvailableStorageProfiles">
+        <div class="location">at line 247</div>
+        <code>            public            <a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a>
+    <strong>getAvailableStorageProfiles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve a list of storage profiles that can be added to the specified provider vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_Extension_VMWStorageProfilesType.html"><abbr title="VMware_VCloud_API_Extension_VMWStorageProfilesType">VMware_VCloud_API_Extension_VMWStorageProfilesType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateStorageProfiles">
+        <div class="location">at line 262</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>updateStorageProfiles</strong>(<a href="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType">VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Update storage profiles belonging to a provider vDC.</p>
+        <p>The request
+parameters specify storage profiles to add or remove.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType.html"><abbr title="VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType">VMware_VCloud_API_Extension_UpdateProviderVdcStorageProfilesParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStorageProfileRefs">
+        <div class="location">at line 277</div>
+        <code>            public            array|null
+    <strong>getStorageProfileRefs</strong>($name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references of provider vDC storage profiles.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>ReferenceType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStorageProfiles">
+        <div class="location">at line 291</div>
+        <code>            public            array|null
+    <strong>getStorageProfiles</strong>($name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get provider vDC storage profiles.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API<em>Extension</em>VMWProviderVdcStorageProfileType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

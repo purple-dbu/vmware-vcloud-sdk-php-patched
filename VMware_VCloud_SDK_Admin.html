@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Admin | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Admin</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Admin</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($svc)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_VCloudType.html"><abbr title="VMware_VCloud_API_VCloudType">VMware_VCloud_API_VCloudType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVCloud">getVCloud</a>()
+                    <p>Get a VMware vCloud admin entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getAddRoleRef">getAddRoleRef</a>()
+                    <p>Get a link for adding a role operation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getAddOrgRef">getAddOrgRef</a>()
+                    <p>Get a link for adding an organization operation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminOrgRefs">getAdminOrgRefs</a>(string $name = null)
+                    <p>Get references to admin organization entities.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminOrgs">getAdminOrgs</a>(string $name = null)
+                    <p>Get all admin organization or admin organization with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getProviderVdcRefs">getProviderVdcRefs</a>(string $name = null)
+                    <p>Get references to all provider vDCs or provider vDC with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getProviderVdcs">getProviderVdcs</a>(string $name = null)
+                    <p>Get all provider vDCs or provider vDC with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRightRefs">getRightRefs</a>(string $name = null)
+                    <p>Get references to all right entities or right entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRights">getRights</a>(string $name = null)
+                    <p>Get all right entities or right entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRoleRefs">getRoleRefs</a>(string $name = null)
+                    <p>Get references to all role entities or role entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRoles">getRoles</a>(string $name = null)
+                    <p>Get all role entities or role entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getExternalNetworkRefs">getExternalNetworkRefs</a>(string $name = null)
+                    <p>Get references to all external network entities or external network entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getExternalNetworks">getExternalNetworks</a>(string $name = null)
+                    <p>Get all external network entities or external network entity with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_createOrganization">createOrganization</a>(<a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a> $adminOrg)
+                    <p>Create an organization entity in vCloud.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRole">createRole</a>(<a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a> $role)
+                    <p>Create a role in vCloud.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getSystemOrgRef">getSystemOrgRef</a>()
+                    <p>Get a link to the system organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getSystemOrg">getSystemOrg</a>()
+                    <p>Get a system organization data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGroupQuery">getGroupQuery</a>()
+                    <p>Retrieves a list of groups for organization the org admin belongs to by using REST API general QueryHandler; If filter is provided it will be applied to the corresponding result set.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 7</div>
+        <code>            public            
+    <strong>__construct</strong>($svc)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$svc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVCloud">
+        <div class="location">at line 18</div>
+        <code>            public            <a href="VMware_VCloud_API_VCloudType.html"><abbr title="VMware_VCloud_API_VCloudType">VMware_VCloud_API_VCloudType</abbr></a>
+    <strong>getVCloud</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud admin entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_VCloudType.html"><abbr title="VMware_VCloud_API_VCloudType">VMware_VCloud_API_VCloudType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddRoleRef">
+        <div class="location">at line 29</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getAddRoleRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a link for adding a role operation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAddOrgRef">
+        <div class="location">at line 41</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getAddOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a link for adding an organization operation.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminOrgRefs">
+        <div class="location">at line 55</div>
+        <code>            public            array
+    <strong>getAdminOrgRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to admin organization entities.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the admin organization to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_OrganizationReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminOrgs">
+        <div class="location">at line 70</div>
+        <code>            public            array
+    <strong>getAdminOrgs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all admin organization or admin organization with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the admin organization to get. If null, returns all.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_AdminOrgType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProviderVdcRefs">
+        <div class="location">at line 83</div>
+        <code>            public            array
+    <strong>getProviderVdcRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all provider vDCs or provider vDC with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the provider vDC. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getProviderVdcs">
+        <div class="location">at line 97</div>
+        <code>            public            array
+    <strong>getProviderVdcs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all provider vDCs or provider vDC with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the provider vDC. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ProviderVdcType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRightRefs">
+        <div class="location">at line 110</div>
+        <code>            public            array
+    <strong>getRightRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all right entities or right entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the right. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRights">
+        <div class="location">at line 123</div>
+        <code>            public            array
+    <strong>getRights</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all right entities or right entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the right. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_RightType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoleRefs">
+        <div class="location">at line 136</div>
+        <code>            public            array
+    <strong>getRoleRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all role entities or role entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the role. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoles">
+        <div class="location">at line 149</div>
+        <code>            public            array
+    <strong>getRoles</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all role entities or role entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the role. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_RoleType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExternalNetworkRefs">
+        <div class="location">at line 163</div>
+        <code>            public            array
+    <strong>getExternalNetworkRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references to all external network entities or external network entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the external network. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExternalNetworks">
+        <div class="location">at line 177</div>
+        <code>            public            array
+    <strong>getExternalNetworks</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get all external network entities or external network entity with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the external network. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ExternalNetworkType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createOrganization">
+        <div class="location">at line 190</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null
+    <strong>createOrganization</strong>(<a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a> $adminOrg)</code>
+    </h3>
+    <div class="details">
+        <p>Create an organization entity in vCloud.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a></td>
+                <td>$adminOrg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createRole">
+        <div class="location">at line 204</div>
+        <code>            public            <a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a>
+    <strong>createRole</strong>(<a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a> $role)</code>
+    </h3>
+    <div class="details">
+        <p>Create a role in vCloud.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a></td>
+                <td>$role</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_RoleType.html"><abbr title="VMware_VCloud_API_RoleType">VMware_VCloud_API_RoleType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSystemOrgRef">
+        <div class="location">at line 217</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getSystemOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a link to the system organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSystemOrg">
+        <div class="location">at line 229</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null
+    <strong>getSystemOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a system organization data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroupQuery">
+        <div class="location">at line 241</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getGroupQuery</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves a list of groups for organization the org admin belongs to by using REST API general QueryHandler; If filter is provided it will be applied to the corresponding result set.</p>
+        <p>Format determines the elements representation - references or records. Default format is references.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

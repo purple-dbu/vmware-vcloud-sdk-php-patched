@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Helper | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Helper</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_Helper</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed|null
+                </td>
+                <td class="last">
+                    <a href="#method_getObjByXml">getObjByXml</a>(string $xml, string $return = null)
+                    <p>Parse XML form of a vCloud entity to a VMware vCloud data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getObjsByName">getObjsByName</a>(array $objs, string $name = null)
+                    <p>Return subset of input objects with the given name.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createReferenceTypeObj">createReferenceTypeObj</a>(string $url, string $tagName = null, string $type = null, string $name = null)
+                    <p>Construct a VMware<em>VCloud</em>API_ReferenceType data object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_getUuidByUrl">getUuidByUrl</a>(string $url)
+                    <p>Get the UUID of a vCloud entity by parsing its URL.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_getUrlByEntityId">getUrlByEntityId</a>(<a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a> $service, string $eid)
+                    <p>Get a resource URL from its vCloud entity ID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_getMetadataKeys">getMetadataKeys</a>(mixed $obj)
+                    <p>Returns all the metadata keys.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getContainedLinks">getContainedLinks</a>(string $ctype, string $rel, mixed $obj, string $method = &#039;getLink&#039;)
+                    <p>Get subset links of a VMware vCloud data object, filtered by 'type' and/or 'rel' attributes.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getObjByXml">
+        <div class="location">at line 12</div>
+        <code>        static    public            mixed|null
+    <strong>getObjByXml</strong>(string $xml, string $return = null)</code>
+    </h3>
+    <div class="details">
+        <p>Parse XML form of a vCloud entity to a VMware vCloud data object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>An XML string, representing a vCloud entity</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$return</td>
+                <td>Class name of the output object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed|null</td>
+            <td>A VMware vCloud data object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjsByName">
+        <div class="location">at line 33</div>
+        <code>        static    public            array
+    <strong>getObjsByName</strong>(array $objs, string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Return subset of input objects with the given name.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$objs</td>
+                <td>A set of VMware vCloud data objects, which should have 'name' attribute.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Object(s) with specified name will be returned. If $name is null, returns all data objects.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array of objects with the given name. Returns an empty array if object with specified name is not found.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createReferenceTypeObj">
+        <div class="location">at line 60</div>
+        <code>        static    public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>createReferenceTypeObj</strong>(string $url, string $tagName = null, string $type = null, string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Construct a VMware<em>VCloud</em>API_ReferenceType data object.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL used as href attribute</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tagName</td>
+                <td>Tag name used as the XML element tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Content-type of the vCloud resource entity</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the entity, used as name attribute</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUuidByUrl">
+        <div class="location">at line 88</div>
+        <code>        static    public            string|null
+    <strong>getUuidByUrl</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Get the UUID of a vCloud entity by parsing its URL.</p>
+        <p>It assumes the end
+of the URL given to the function is or contains the UUID.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>vCloud entity URL.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUrlByEntityId">
+        <div class="location">at line 107</div>
+        <code>        static    public            string|null
+    <strong>getUrlByEntityId</strong>(<a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a> $service, string $eid)</code>
+    </h3>
+    <div class="details">
+        <p>Get a resource URL from its vCloud entity ID.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Service.html"><abbr title="VMware_VCloud_SDK_Service">VMware_VCloud_SDK_Service</abbr></a></td>
+                <td>$service</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$eid</td>
+                <td>vCloud entity ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMetadataKeys">
+        <div class="location">at line 127</div>
+        <code>        static    public            array
+    <strong>getMetadataKeys</strong>(mixed $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all the metadata keys.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$obj</td>
+                <td>A VMware VCloud SDK object which has getMetadata() method defined.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContainedLinks">
+        <div class="location">at line 159</div>
+        <code>        static    public            array|null
+    <strong>getContainedLinks</strong>(string $ctype, string $rel, mixed $obj, string $method = &#039;getLink&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get subset links of a VMware vCloud data object, filtered by 'type' and/or 'rel' attributes.</p>
+        <p>If a link with specified filter (using $ctype or
+$rel or both) does not exist, this means the desired opertion is not
+allowed on that resource entity.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$ctype</td>
+                <td>The 'type' attribute of an XML element to filter</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rel</td>
+                <td>The 'rel' attribute of an XML element to filter</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$obj</td>
+                <td>A VMware vCloud container data object which has link element</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Name of the getter method</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>VMware<em>VCloud</em>API_LinkType object array or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

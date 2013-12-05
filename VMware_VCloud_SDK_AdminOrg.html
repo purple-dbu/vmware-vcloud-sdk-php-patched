@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_AdminOrg | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_AdminOrg</h1>
+                    <p>    class
+    <strong>VMware_VCloud_SDK_AdminOrg</strong>        extends <a href="VMware_VCloud_SDK_Abstract.html"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEntityId">getEntityId</a>()
+                    <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+                </td>
+                <td><small>from&nbsp;<a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminOrgRef">getAdminOrgRef</a>()
+                    <p>Get a reference to a VMware vCloud admin organization entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminOrg">getAdminOrg</a>()
+                    <p>Get a VMware vCloud admin organization entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getId">getId</a>()
+                    <p>Constructs vCloud ID of this organization from its UUID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgRef">getOrgRef</a>()
+                    <p>Get a link to a VMware vCloud organization entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrg">getOrg</a>()
+                    <p>Get a VMware vCloud organization entity.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modify">modify</a>(<a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a> $adminOrg)
+                    <p>Modify a VMware vCloud admin organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEnabled">isEnabled</a>()
+                    <p>Check whether the organization is enabled.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_enable">enable</a>(boolean $enable = true)
+                    <p>Enable the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_disable">disable</a>()
+                    <p>Disable the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>()
+                    <p>Delete the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createAdminVdc">createAdminVdc</a>(<a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a> $adminVdc)
+                    <p>Allocate a vDC to the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createAdminOrgVdc">createAdminOrgVdc</a>(<a href="VMware_VCloud_API_CreateVdcParamsType.html"><abbr title="VMware_VCloud_API_CreateVdcParamsType">VMware_VCloud_API_CreateVdcParamsType</abbr></a> $params)
+                    <p>Create an organization vDC.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createCatalog">createCatalog</a>(<a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a> $catalog)
+                    <p>Create a catalog.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createUser">createUser</a>(<a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a> $user)
+                    <p>Create or import a user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_importGroup">importGroup</a>(<a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a> $group)
+                    <p>Import a group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addOrgNetwork">addOrgNetwork</a>(<a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a> $orgNetwork)
+                    <p>Add a network in an organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUserRefs">getUserRefs</a>(string $name = null)
+                    <p>Get reference(s) for all users or named user in this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getUsers">getUsers</a>(string $name = null)
+                    <p>Get users.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroupRefs">getGroupRefs</a>(string $name = null)
+                    <p>Get reference(s) for all groups or named group in this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroups">getGroups</a>(string $name = null)
+                    <p>Get groups.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminCatalogRefs">getAdminCatalogRefs</a>(string $name = null)
+                    <p>Get references for all catalogs or named catalog in this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminCatalogs">getAdminCatalogs</a>(string $name = null)
+                    <p>Get catalogs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminVdcRefs">getAdminVdcRefs</a>(string $name = null)
+                    <p>Get references for all vDCs or named vDC in this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminVdcs">getAdminVdcs</a>(string $name = null)
+                    <p>Get vDCs.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminNetworkRefs">getAdminNetworkRefs</a>(string $name = null)
+                    <p>Get reference(s) for all organization networks or organization networks with the given name in administrative representation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAdminNetworks">getAdminNetworks</a>(string $name = null)
+                    <p>Get organization networks entities or organization networks with the given name in administrative representation.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgSettings">getOrgSettings</a>()
+                    <p>Gets organizational settings for this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgSettings">updateOrgSettings</a>(<a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a> $settings)
+                    <p>Updates organization settings for this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgEmailSettings">getOrgEmailSettings</a>()
+                    <p>Gets email settings of this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgEmailSettings">updateOrgEmailSettings</a>(<a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a> $settings)
+                    <p>Updates organization email settings for this organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgFederationSettings">getOrgFederationSettings</a>()
+                    <p>Retrieve other organization settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgFederationSettings">updateOrgFederationSettings</a>(<a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a> $settings)
+                    <p>Update other organization settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgPasswordPolicySettings">getOrgPasswordPolicySettings</a>()
+                    <p>Retrieves the password policy settings for the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgPasswordPolicySettings">updateOrgPasswordPolicySettings</a>(<a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a> $settings)
+                    <p>Updates the organization password policy settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgVAppLeaseSettings">getOrgVAppLeaseSettings</a>()
+                    <p>Gets organization vApp lease settings on the level of vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgVAppLeaseSettings">updateOrgVAppLeaseSettings</a>(<a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a> $settings)
+                    <p>Updates organization vApp lease settings on the level of vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgVAppTemplateLeaseSettings">getOrgVAppTemplateLeaseSettings</a>()
+                    <p>Gets organization vApp template lease settings on the level of vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgVAppTemplateLeaseSettings">updateOrgVAppTemplateLeaseSettings</a>(<a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a> $settings)
+                    <p>Updates organization vApp template lease settings on the level of vApp.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgGeneralSettings">getOrgGeneralSettings</a>()
+                    <p>Gets organization general settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgGeneralSettings">updateOrgGeneralSettings</a>(<a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a> $settings)
+                    <p>Updates organization general settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOrgLdapSettings">getOrgLdapSettings</a>()
+                    <p>Gets organization LDAP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateOrgLdapSettings">updateOrgLdapSettings</a>(<a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a> $settings)
+                    <p>Updates organization LDAP settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapCertificate">resetLdapCertificate</a>()
+                    <p>Resets organization LDAP SSL certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapKeyStore">resetLdapKeyStore</a>()
+                    <p>Resets organization LDAP keystore.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_resetLdapSspiKeytab">resetLdapSspiKeytab</a>()
+                    <p>Resets organization LDAP keytab.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapCertificate">updateLdapCertificate</a>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)
+                    <p>Updates organization LDAP SSL certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapKeyStore">updateLdapKeyStore</a>(<a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a> $params)
+                    <p>Updates organization LDAP keystore.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLdapSspiKeytab">updateLdapSspiKeytab</a>(<a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a> $params)
+                    <p>Updates organization LDAP SSPI keytab.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|
+                </td>
+                <td class="last">
+                    <a href="#method_getMetadata">getMetadata</a>(string $key = null, string $domain = null)
+                    <p>Get metadata associated with the organization or metadata associated with the organization for the specified key in the specified domain.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_mergeMetadata">mergeMetadata</a>(<a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a> $meta)
+                    <p>Merges the metadata for the organization with the information provided.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setMetadataByKey">setMetadataByKey</a>(string $key, <a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a> $value, string $domain = null)
+                    <p>Sets the metadata for the particular key in the specified domain for the organization to the value provided.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteMetadataByKey">deleteMetadataByKey</a>($key, $domain = null)
+                    <p>Deletes the metadata for the particular key in the specified domain for the organization.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Org.html"><abbr title="VMware_VCloud_SDK_Org">VMware_VCloud_SDK_Org</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getSdkOrg">getSdkOrg</a>()
+                    <p>Return an alternate SDK orgznization object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_postExtEvent">postExtEvent</a>(<a href="VMware_VCloud_API_EventType.html"><abbr title="VMware_VCloud_API_EventType">VMware_VCloud_API_EventType</abbr></a> $event)
+                    <p>Posts external event to the system.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getGuestPersonalizationSettings">getGuestPersonalizationSettings</a>()
+                    <p>Retrieve organization defaults for guest personalization settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyGuestPersonalizationSettings">modifyGuestPersonalizationSettings</a>(<a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a> $settings)
+                    <p>Modify organization defaults for guest personalization settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getOperationLimitsSettings">getOperationLimitsSettings</a>()
+                    <p>Retrieve organization operation limits settings.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_modifyOperationLimitsSettings">modifyOperationLimitsSettings</a>(<a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a> $settings)
+                    <p>Modify organization operation limits settings.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getEntityId">
+        <div class="location">in <a href="VMware_VCloud_SDK_Abstract.html#method_getEntityId"><abbr title="VMware_VCloud_SDK_Abstract">VMware_VCloud_SDK_Abstract</abbr></a> at line 85</div>
+        <code>            public            string
+    <strong>getEntityId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get vCloud ID of the vCloud resource entity from its data object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminOrgRef">
+        <div class="location">at line 10</div>
+        <code>            public            <a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a>
+    <strong>getAdminOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a VMware vCloud admin organization entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_ReferenceType.html"><abbr title="VMware_VCloud_API_ReferenceType">VMware_VCloud_API_ReferenceType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminOrg">
+        <div class="location">at line 22</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>
+    <strong>getAdminOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud admin organization entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getId">
+        <div class="location">at line 33</div>
+        <code>            public            string
+    <strong>getId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Constructs vCloud ID of this organization from its UUID.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgRef">
+        <div class="location">at line 44</div>
+        <code>            public            <a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null
+    <strong>getOrgRef</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a link to a VMware vCloud organization entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_LinkType.html"><abbr title="VMware_VCloud_API_LinkType">VMware_VCloud_API_LinkType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrg">
+        <div class="location">at line 56</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null
+    <strong>getOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get a VMware vCloud organization entity.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgType.html"><abbr title="VMware_VCloud_API_OrgType">VMware_VCloud_API_OrgType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modify">
+        <div class="location">at line 69</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a>
+    <strong>modify</strong>(<a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a> $adminOrg)</code>
+    </h3>
+    <div class="details">
+        <p>Modify a VMware vCloud admin organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a></td>
+                <td>$adminOrg</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminOrgType.html"><abbr title="VMware_VCloud_API_AdminOrgType">VMware_VCloud_API_AdminOrgType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEnabled">
+        <div class="location">at line 81</div>
+        <code>            public            boolean
+    <strong>isEnabled</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check whether the organization is enabled.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enable">
+        <div class="location">at line 93</div>
+        <code>            public            null
+    <strong>enable</strong>(boolean $enable = true)</code>
+    </h3>
+    <div class="details">
+        <p>Enable the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$enable</td>
+                <td>To enable, set to true; to disable, set to false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disable">
+        <div class="location">at line 113</div>
+        <code>            public            null
+    <strong>disable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Disable the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 124</div>
+        <code>            public            null
+    <strong>delete</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createAdminVdc">
+        <div class="location">at line 139</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a>
+    <strong>createAdminVdc</strong>(<a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a> $adminVdc)</code>
+    </h3>
+    <div class="details">
+        <p>Allocate a vDC to the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a></td>
+                <td>$adminVdc</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createAdminOrgVdc">
+        <div class="location">at line 153</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a>
+    <strong>createAdminOrgVdc</strong>(<a href="VMware_VCloud_API_CreateVdcParamsType.html"><abbr title="VMware_VCloud_API_CreateVdcParamsType">VMware_VCloud_API_CreateVdcParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create an organization vDC.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CreateVdcParamsType.html"><abbr title="VMware_VCloud_API_CreateVdcParamsType">VMware_VCloud_API_CreateVdcParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminVdcType.html"><abbr title="VMware_VCloud_API_AdminVdcType">VMware_VCloud_API_AdminVdcType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createCatalog">
+        <div class="location">at line 167</div>
+        <code>            public            <a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a>
+    <strong>createCatalog</strong>(<a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a> $catalog)</code>
+    </h3>
+    <div class="details">
+        <p>Create a catalog.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a></td>
+                <td>$catalog</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_AdminCatalogType.html"><abbr title="VMware_VCloud_API_AdminCatalogType">VMware_VCloud_API_AdminCatalogType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createUser">
+        <div class="location">at line 181</div>
+        <code>            public            <a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a>
+    <strong>createUser</strong>(<a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Create or import a user.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a></td>
+                <td>$user</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_UserType.html"><abbr title="VMware_VCloud_API_UserType">VMware_VCloud_API_UserType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_importGroup">
+        <div class="location">at line 195</div>
+        <code>            public            <a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a>
+    <strong>importGroup</strong>(<a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a> $group)</code>
+    </h3>
+    <div class="details">
+        <p>Import a group.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a></td>
+                <td>$group</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_GroupType.html"><abbr title="VMware_VCloud_API_GroupType">VMware_VCloud_API_GroupType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addOrgNetwork">
+        <div class="location">at line 210</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a>
+    <strong>addOrgNetwork</strong>(<a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a> $orgNetwork)</code>
+    </h3>
+    <div class="details">
+        <p>Add a network in an organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a></td>
+                <td>$orgNetwork</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgNetworkType.html"><abbr title="VMware_VCloud_API_OrgNetworkType">VMware_VCloud_API_OrgNetworkType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUserRefs">
+        <div class="location">at line 224</div>
+        <code>            public            array
+    <strong>getUserRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get reference(s) for all users or named user in this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the user to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUsers">
+        <div class="location">at line 237</div>
+        <code>            public            array
+    <strong>getUsers</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get users.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the user to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_UserType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroupRefs">
+        <div class="location">at line 250</div>
+        <code>            public            array
+    <strong>getGroupRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get reference(s) for all groups or named group in this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the group. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroups">
+        <div class="location">at line 263</div>
+        <code>            public            array
+    <strong>getGroups</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get groups.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the group. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_GroupType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminCatalogRefs">
+        <div class="location">at line 276</div>
+        <code>            public            array
+    <strong>getAdminCatalogRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references for all catalogs or named catalog in this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the catalog. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminCatalogs">
+        <div class="location">at line 289</div>
+        <code>            public            array
+    <strong>getAdminCatalogs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get catalogs.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the catalog to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_AdminCatalogType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminVdcRefs">
+        <div class="location">at line 308</div>
+        <code>            public            array
+    <strong>getAdminVdcRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get references for all vDCs or named vDC in this organization.</p>
+        <p>For System/Cloud Administrators, this method returns Admin Vdc references
+which can be used in
+{@link AdminVdc#getAdminVdcRef()}
+For Organization/Tenant Administrators/Users this method returns Vdc
+references which can be used in
+{@link Vdc#getVdcRef()}</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vDC. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminVdcs">
+        <div class="location">at line 327</div>
+        <code>            public            array
+    <strong>getAdminVdcs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get vDCs.</p>
+        <p>For System/Cloud Administrators, this method returns Admin Vdc references
+which can be used in
+{@link AdminVdc#getAdminVdcRef()}
+For Organization/Tenant Administrators/Users this method returns Vdc
+references which can be used in
+{@link Vdc#getVdcRef()}</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the vDC to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_AdminVdcType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminNetworkRefs">
+        <div class="location">at line 343</div>
+        <code>            public            array
+    <strong>getAdminNetworkRefs</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get reference(s) for all organization networks or organization networks with the given name in administrative representation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the organization network to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_ReferenceType object array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAdminNetworks">
+        <div class="location">at line 360</div>
+        <code>            public            array
+    <strong>getAdminNetworks</strong>(string $name = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get organization networks entities or organization networks with the given name in administrative representation.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the organization network to get. If null, returns all</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>VMware<em>VCloud</em>API_OrgNetworkType object array for API 1.5</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgSettings">
+        <div class="location">at line 372</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a>
+    <strong>getOrgSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets organizational settings for this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgSettings">
+        <div class="location">at line 385</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a>
+    <strong>updateOrgSettings</strong>(<a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization settings for this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgSettingsType.html"><abbr title="VMware_VCloud_API_OrgSettingsType">VMware_VCloud_API_OrgSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgEmailSettings">
+        <div class="location">at line 398</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a>
+    <strong>getOrgEmailSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets email settings of this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgEmailSettings">
+        <div class="location">at line 411</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a>
+    <strong>updateOrgEmailSettings</strong>(<a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization email settings for this organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgEmailSettingsType.html"><abbr title="VMware_VCloud_API_OrgEmailSettingsType">VMware_VCloud_API_OrgEmailSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgFederationSettings">
+        <div class="location">at line 425</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a>
+    <strong>getOrgFederationSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve other organization settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgFederationSettings">
+        <div class="location">at line 439</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a>
+    <strong>updateOrgFederationSettings</strong>(<a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Update other organization settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgFederationSettingsType.html"><abbr title="VMware_VCloud_API_OrgFederationSettingsType">VMware_VCloud_API_OrgFederationSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgPasswordPolicySettings">
+        <div class="location">at line 452</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a>
+    <strong>getOrgPasswordPolicySettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieves the password policy settings for the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgPasswordPolicySettings">
+        <div class="location">at line 465</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a>
+    <strong>updateOrgPasswordPolicySettings</strong>(<a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the organization password policy settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgPasswordPolicySettingsType.html"><abbr title="VMware_VCloud_API_OrgPasswordPolicySettingsType">VMware_VCloud_API_OrgPasswordPolicySettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgVAppLeaseSettings">
+        <div class="location">at line 479</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a>
+    <strong>getOrgVAppLeaseSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets organization vApp lease settings on the level of vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgVAppLeaseSettings">
+        <div class="location">at line 492</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a>
+    <strong>updateOrgVAppLeaseSettings</strong>(<a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization vApp lease settings on the level of vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgLeaseSettingsType">VMware_VCloud_API_OrgLeaseSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgVAppTemplateLeaseSettings">
+        <div class="location">at line 505</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a>
+    <strong>getOrgVAppTemplateLeaseSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets organization vApp template lease settings on the level of vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgVAppTemplateLeaseSettings">
+        <div class="location">at line 518</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a>
+    <strong>updateOrgVAppTemplateLeaseSettings</strong>(<a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization vApp template lease settings on the level of vApp.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType.html"><abbr title="VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType">VMware_VCloud_API_OrgVAppTemplateLeaseSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgGeneralSettings">
+        <div class="location">at line 532</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a>
+    <strong>getOrgGeneralSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets organization general settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgGeneralSettings">
+        <div class="location">at line 545</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a>
+    <strong>updateOrgGeneralSettings</strong>(<a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization general settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgGeneralSettingsType.html"><abbr title="VMware_VCloud_API_OrgGeneralSettingsType">VMware_VCloud_API_OrgGeneralSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrgLdapSettings">
+        <div class="location">at line 559</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a>
+    <strong>getOrgLdapSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets organization LDAP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateOrgLdapSettings">
+        <div class="location">at line 573</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a>
+    <strong>updateOrgLdapSettings</strong>(<a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization LDAP settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgLdapSettingsType.html"><abbr title="VMware_VCloud_API_OrgLdapSettingsType">VMware_VCloud_API_OrgLdapSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapCertificate">
+        <div class="location">at line 585</div>
+        <code>            public            
+    <strong>resetLdapCertificate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets organization LDAP SSL certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapKeyStore">
+        <div class="location">at line 596</div>
+        <code>            public            
+    <strong>resetLdapKeyStore</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets organization LDAP keystore.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_resetLdapSspiKeytab">
+        <div class="location">at line 607</div>
+        <code>            public            
+    <strong>resetLdapSspiKeytab</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Resets organization LDAP keytab.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapCertificate">
+        <div class="location">at line 619</div>
+        <code>            public            <a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a>
+    <strong>updateLdapCertificate</strong>(<a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization LDAP SSL certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_CertificateUpdateParamsType.html"><abbr title="VMware_VCloud_API_CertificateUpdateParamsType">VMware_VCloud_API_CertificateUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_CertificateUploadSocketType.html"><abbr title="VMware_VCloud_API_CertificateUploadSocketType">VMware_VCloud_API_CertificateUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapKeyStore">
+        <div class="location">at line 632</div>
+        <code>            public            <a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a>
+    <strong>updateLdapKeyStore</strong>(<a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization LDAP keystore.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_KeystoreUpdateParamsType.html"><abbr title="VMware_VCloud_API_KeystoreUpdateParamsType">VMware_VCloud_API_KeystoreUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_KeystoreUploadSocketType.html"><abbr title="VMware_VCloud_API_KeystoreUploadSocketType">VMware_VCloud_API_KeystoreUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLdapSspiKeytab">
+        <div class="location">at line 645</div>
+        <code>            public            <a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a>
+    <strong>updateLdapSspiKeytab</strong>(<a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a> $params)</code>
+    </h3>
+    <div class="details">
+        <p>Updates organization LDAP SSPI keytab.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_SspiKeytabUpdateParamsType.html"><abbr title="VMware_VCloud_API_SspiKeytabUpdateParamsType">VMware_VCloud_API_SspiKeytabUpdateParamsType</abbr></a></td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_SspiKeytabUploadSocketType.html"><abbr title="VMware_VCloud_API_SspiKeytabUploadSocketType">VMware_VCloud_API_SspiKeytabUploadSocketType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMetadata">
+        <div class="location">at line 664</div>
+        <code>            public            <a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|
+    <strong>getMetadata</strong>(string $key = null, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get metadata associated with the organization or metadata associated with the organization for the specified key in the specified domain.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a>|</td>
+            <td>VMware<em>VCloud</em>API_MetadataValueType|null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_mergeMetadata">
+        <div class="location">at line 676</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>mergeMetadata</strong>(<a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a> $meta)</code>
+    </h3>
+    <div class="details">
+        <p>Merges the metadata for the organization with the information provided.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MetadataType.html"><abbr title="VMware_VCloud_API_MetadataType">VMware_VCloud_API_MetadataType</abbr></a></td>
+                <td>$meta</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMetadataByKey">
+        <div class="location">at line 695</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>setMetadataByKey</strong>(string $key, <a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a> $value, string $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the metadata for the particular key in the specified domain for the organization to the value provided.</p>
+        <p>Note: This will replace any existing
+metadata information.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="VMware_VCloud_API_MetadataValueType.html"><abbr title="VMware_VCloud_API_MetadataValueType">VMware_VCloud_API_MetadataValueType</abbr></a></td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteMetadataByKey">
+        <div class="location">at line 711</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>
+    <strong>deleteMetadataByKey</strong>($key, $domain = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the metadata for the particular key in the specified domain for the organization.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSdkOrg">
+        <div class="location">at line 723</div>
+        <code>            public            <a href="VMware_VCloud_SDK_Org.html"><abbr title="VMware_VCloud_SDK_Org">VMware_VCloud_SDK_Org</abbr></a>|null
+    <strong>getSdkOrg</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return an alternate SDK orgznization object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Org.html"><abbr title="VMware_VCloud_SDK_Org">VMware_VCloud_SDK_Org</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postExtEvent">
+        <div class="location">at line 736</div>
+        <code>            public            null
+    <strong>postExtEvent</strong>(<a href="VMware_VCloud_API_EventType.html"><abbr title="VMware_VCloud_API_EventType">VMware_VCloud_API_EventType</abbr></a> $event)</code>
+    </h3>
+    <div class="details">
+        <p>Posts external event to the system.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_EventType.html"><abbr title="VMware_VCloud_API_EventType">VMware_VCloud_API_EventType</abbr></a></td>
+                <td>$event</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGuestPersonalizationSettings">
+        <div class="location">at line 749</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a>
+    <strong>getGuestPersonalizationSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve organization defaults for guest personalization settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyGuestPersonalizationSettings">
+        <div class="location">at line 763</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a>
+    <strong>modifyGuestPersonalizationSettings</strong>(<a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Modify organization defaults for guest personalization settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgGuestPersonalizationSettingsType.html"><abbr title="VMware_VCloud_API_OrgGuestPersonalizationSettingsType">VMware_VCloud_API_OrgGuestPersonalizationSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOperationLimitsSettings">
+        <div class="location">at line 777</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a>
+    <strong>getOperationLimitsSettings</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Retrieve organization operation limits settings.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modifyOperationLimitsSettings">
+        <div class="location">at line 790</div>
+        <code>            public            <a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a>
+    <strong>modifyOperationLimitsSettings</strong>(<a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a> $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Modify organization operation limits settings.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a></td>
+                <td>$settings</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_OrgOperationLimitsSettingsType.html"><abbr title="VMware_VCloud_API_OrgOperationLimitsSettingsType">VMware_VCloud_API_OrgOperationLimitsSettingsType</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

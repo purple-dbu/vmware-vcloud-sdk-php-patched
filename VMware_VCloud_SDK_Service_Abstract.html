@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>VMware_VCloud_SDK_Service_Abstract | </title>
+                    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+            <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+                            </head>
+        <body id="class">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                        <li><a href="index.html" target="_top">Frames</a></li>
+    <li><a href="#" target="_top">No Frames</a></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="type">Class</div>
+    <h1><a href=".html"></a>VMware_VCloud_SDK_Service_Abstract</h1>
+                    <p>abstract     class
+    <strong>VMware_VCloud_SDK_Service_Abstract</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a> $httpClient)
+                    <p>Set the HTTP client object to use for retrieving the feeds.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+                    <p>Gets the HTTP client object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_getToken">getToken</a>()
+                    <p>Gets the vcloud token</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setToken">setToken</a>(string $vcloudToken)
+                    <p>Sets the vcloud token</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $url, string $type = &#039;&#039;, boolean $reObj = true, string $return = null)
+                    <p>Sets HTTP configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $url, int $expect = null, string $type = null, mixed $data = null, string $return = null, string $auth = null)
+                    <p>Send an HTTP POST request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $url, int $expect = null, string $type = null, mixed $data = null)
+                    <p>Send an HTTP PUT request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $url, int $expect = null)
+                    <p>Send an HTTP DELETE request.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_refetch">refetch</a>(mixed $obj)
+                    <p>Refetch the given VMware vCloud data object from vCloud.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_download">download</a>(string $url, string $dest, string $type = &#039;application/octet-stream&#039;)
+                    <p>Download a file and dump to specified location.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null
+                </td>
+                <td class="last">
+                    <a href="#method_upload">upload</a>(string $url, string $file, string $type = &#039;application/octet-stream&#039;, <abbr title="function">function</abbr> $onProgress = false)
+                    <p>Upload a file.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setHttpClient">
+        <div class="location">at line 17</div>
+        <code>final            public            null
+    <strong>setHttpClient</strong>(<a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a> $httpClient)</code>
+    </h3>
+    <div class="details">
+        <p>Set the HTTP client object to use for retrieving the feeds.</p>
+        <p>If null,
+use the default client, the VMware<em>VCloud</em>SDK<em>Http</em>Client object.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a></td>
+                <td>$httpClient</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHttpClient">
+        <div class="location">at line 28</div>
+        <code>final            public            <a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a>
+    <strong>getHttpClient</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the HTTP client object.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_SDK_Http_Client.html"><abbr title="VMware_VCloud_SDK_Http_Client">VMware_VCloud_SDK_Http_Client</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getToken">
+        <div class="location">at line 75</div>
+        <code>final            public            String
+    <strong>getToken</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the vcloud token</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setToken">
+        <div class="location">at line 87</div>
+        <code>final            public            
+    <strong>setToken</strong>(string $vcloudToken)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the vcloud token</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$vcloudToken</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 104</div>
+        <code>            public            mixed
+    <strong>get</strong>(string $url, string $type = &#039;&#039;, boolean $reObj = true, string $return = null)</code>
+    </h3>
+    <div class="details">
+        <p>Sets HTTP configuration</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>The HTTP request Content-type</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$reObj</td>
+                <td>Indicates whether return a vCloud data object (true) or response body (false)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$return</td>
+                <td>Expected response data type name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>VMware vCloud data object or response body</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">at line 134</div>
+        <code>            public            mixed
+    <strong>post</strong>(string $url, int $expect = null, string $type = null, mixed $data = null, string $return = null, string $auth = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP POST request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expect</td>
+                <td>Expected HTTP status code on a successful request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>HTTP request Content-Type</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>A vCloud data object which has export() method defined, or an XML data which will be used as an HTTP request body</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$return</td>
+                <td>Expected response data type name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$auth</td>
+                <td>Authorization token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>A VMware vCloud data object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">at line 177</div>
+        <code>            public            mixed
+    <strong>put</strong>(string $url, int $expect = null, string $type = null, mixed $data = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP PUT request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expect</td>
+                <td>Expected HTTP status code on a successful request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>HTTP request Content-Type</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>A VMware vCloud data object, which has export() method defined, or an XML data which will be used as HTTP request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>A VMware vCloud data object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 210</div>
+        <code>            public            <a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null
+    <strong>delete</strong>(string $url, int $expect = null)</code>
+    </h3>
+    <div class="details">
+        <p>Send an HTTP DELETE request.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to send an HTTP request</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expect</td>
+                <td>Expected HTTP status code on a successful request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="VMware_VCloud_API_TaskType.html"><abbr title="VMware_VCloud_API_TaskType">VMware_VCloud_API_TaskType</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_refetch">
+        <div class="location">at line 231</div>
+        <code>            public            mixed
+    <strong>refetch</strong>(mixed $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Refetch the given VMware vCloud data object from vCloud.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$obj</td>
+                <td>A VMware vCloud data object to be refeched. The data object should have an href attribute.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>A VMware vCloud data object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_download">
+        <div class="location">at line 252</div>
+        <code>            public            null
+    <strong>download</strong>(string $url, string $dest, string $type = &#039;application/octet-stream&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Download a file and dump to specified location.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Source of the file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dest</td>
+                <td>Destination of the file to write to</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>HTTP request Content-Type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_upload">
+        <div class="location">at line 269</div>
+        <code>            public            null
+    <strong>upload</strong>(string $url, string $file, string $type = &#039;application/octet-stream&#039;, <abbr title="function">function</abbr> $onProgress = false)</code>
+    </h3>
+    <div class="details">
+        <p>Upload a file.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Target to upload the file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>Full path of a file to be uploaded</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>HTTP request Content-Type</td>
+            </tr>
+                    <tr>
+                <td><abbr title="function">function</abbr></td>
+                <td>$onProgress</td>
+                <td>@yconan</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="VMware_VCloud_SDK_Exception.html"><abbr title="VMware_VCloud_SDK_Exception">VMware_VCloud_SDK_Exception</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+                        <hr>
+    <footer>
+        <p>Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.</p>
+    </footer>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
