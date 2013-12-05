@@ -1,0 +1,5 @@
+VCLOUD_HOST := vcloud-director
+VCLOUD_ORGANIZATION := testing
+VCLOUD_USERNAME := orgadmin
+VCLOUD_PASSWORD := ********
+VCLOUD_API_VERSION := 5.5

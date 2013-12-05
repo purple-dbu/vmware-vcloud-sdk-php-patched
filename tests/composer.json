@@ -6,11 +6,18 @@
   },
   "repositories": [
     {
+      "name": "local",
+      "type": "git",
+      "url": "../../vmware-vcloud-sdk-php-patched",
+      "branches-path": false,
+      "tags-path": false
+    },
+    {
       "type": "pear",
       "url": "http://pear.php.net"
     }
   ],
-  "licence": "CC-BY-3.0",
+  "licence": "MIT",
   "require": {
     "vmware/vcloud-sdk-patched": "dev-master",
     "pear-pear/HTTP_Request2": "*"
