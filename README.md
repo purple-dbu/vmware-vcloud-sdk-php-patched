@@ -41,7 +41,7 @@ _vmware/vcloud-sdk-patched_ is available through [Composer](http://getcomposer.o
     }
   ],
   "require": {
-    "vmware/vcloud-sdk-patched": "550.0.0",
+    "vmware/vcloud-sdk-patched": "550.3.0",
     "pear-pear/HTTP_Request2": "*"
   }
 ```
