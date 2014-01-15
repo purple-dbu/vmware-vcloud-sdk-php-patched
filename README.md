@@ -60,6 +60,46 @@ See **[API documentation](http://amercier.github.io/vmware-vcloud-sdk-php-patche
 or [official VMware documentation](http://www.vmware.com/support/pubs/vcd_pubs.html)
 
 
+### Include Composer autoloaded
+
+```php
+// On top of your script
+require_once 'path/to/.../vendor/autoload.php';
+```
+
+### Login
+
+```php
+// $hostname = ...
+// $username = ...
+// $organization = ...
+// $password = ...
+// $apiVersion = ...
+try {
+    $service = \VMware_VCloud_SDK_Service::getService();
+    $service->login(
+        $hostname,
+        array(
+            'username' => $username . '@' . $organization,
+            'password' => $password,
+        ),
+        array(
+            'proxy_host' => null,
+            'proxy_port' => null,
+            'proxy_user' => null,
+            'proxy_password' => null,
+            'ssl_verify_peer' => false,
+            'ssl_verify_host' => false,
+            'ssl_cafile'  => null,
+        ),
+        $apiVersion
+    );
+} catch (\VMware_VCloud_SDK_Exception $e) {
+    throw new \Exception('Login failed');
+}
+```
+
+
 Versioning
 ----------
 
