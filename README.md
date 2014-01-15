@@ -36,8 +36,8 @@ _vmware/vcloud-sdk-patched_ is available through [Composer](http://getcomposer.o
 ```json
   "repositories": [
     {
-        "type": "pear",
-        "url": "http://pear.php.net"
+      "type": "pear",
+      "url": "http://pear.php.net"
     }
   ],
   "require": {
