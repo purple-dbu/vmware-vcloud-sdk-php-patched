@@ -449,9 +449,9 @@ $vdcStorageProfileRef, $catalogRef)
      * @param VMware_VCloud_API_MediaType $mediaType
      * @param function $onProgress @yconan
      * @return VMware_VCloud_API_MediaType
-     * @access protected
+     * @access public
      */
-    protected function uploadMedia($filename, $imageType, $mediaType, $onProgress = false)
+    public function uploadMedia($filename, $imageType, $mediaType, $onProgress = false)
     {
         $mediaType->set_imageType($imageType);
         $mediaUpInfo = $this->sendUploadMediaRequest($mediaType);
