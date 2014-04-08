@@ -209,7 +209,7 @@ class VMware_VCloud_SDK_Vdc extends VMware_VCloud_SDK_Abstract
      */
     public function uploadOVFAsVAppTemplate($name, $ovfDescriptorPath, $description=null, $manifestRequired=null, 
 
-$vdcStorageProfileRef, $catalogRef)
+$vdcStorageProfileRef, $catalogRef, $onProgress = false)
     {
         //Check if the resource name is already existing in the catalog.
         $catalog= $this->checkCatalogForDuplicates($catalogRef, $name);
@@ -245,6 +245,8 @@ $vdcStorageProfileRef, $catalogRef)
 
         //step 4: get upload URL for each virtual disk and upload the disk file
         $files = $this->getUploadFiles($vAppTemp2);
+        $totalSize = 0;
+        $uploads = array();
         foreach ($files as $file)
         {
             $refs = $file->getLink();
@@ -252,9 +254,21 @@ $vdcStorageProfileRef, $catalogRef)
             $name = $file->get_name();
             $diskPath = null;
             // $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, '/')+1);
-            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, DIRECTORY_SEPARATOR)+1); // @amercier #7
-            $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
-            $this->svc->upload($diskUrl, $diskPath);
+            $ovfFileName = substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, DIRECTORY_SEPARATOR)+1); // @amercier #7
+            $diskPath = str_replace($ovfFileName, $name, $ovfDescriptorPath);
+            $diskSize = filesize($diskPath);
+            $totalSize += $diskSize;
+            $uploads[] = array($diskUrl, $diskPath, $diskSize);
+        }
+        $totalDone = 0;
+        foreach ($uploads as $upload) {
+            $diskUrl = $upload[0];
+            $diskPath = $upload[1];
+            $diskSize = $upload[2];
+            $this->svc->upload($diskUrl, $diskPath, 'application/octet-stream', function($done) use ($onProgress, $totalSize) {
+                $onProgress($done, $totalSize);
+            });
+            $totalDone += $diskSize;
         }
         $this->addResourceToCatalog($vAppTemp2, $catalog);
         return $vAppTemp2->get_href();
