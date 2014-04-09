@@ -266,7 +266,9 @@ $vdcStorageProfileRef, $catalogRef, $onProgress = false)
             $diskPath = $upload[1];
             $diskSize = $upload[2];
             $this->svc->upload($diskUrl, $diskPath, 'application/octet-stream', function($done) use ($onProgress, $totalSize) {
-                $onProgress($done, $totalSize);
+                if ($onProgress) {
+                    $onProgress($totalDone + $done, $totalSize);
+                }
             });
             $totalDone += $diskSize;
         }
