@@ -265,11 +265,16 @@ $vdcStorageProfileRef, $catalogRef, $onProgress = false)
             $diskUrl = $upload[0];
             $diskPath = $upload[1];
             $diskSize = $upload[2];
-            $this->svc->upload($diskUrl, $diskPath, 'application/octet-stream', function($done) use ($onProgress, $totalSize) {
-                if ($onProgress) {
-                    $onProgress($totalDone + $done, $totalSize);
+            $this->svc->upload(
+                $diskUrl,
+                $diskPath,
+                'application/octet-stream',
+                function($done) use ($onProgress, $totalSize, $totalDone) {
+                    if ($onProgress) {
+                        $onProgress($totalDone + $done, $totalSize);
+                    }
                 }
-            });
+            );
             $totalDone += $diskSize;
         }
         $this->addResourceToCatalog($vAppTemp2, $catalog);
