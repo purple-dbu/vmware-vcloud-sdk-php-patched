@@ -1,5 +1,5 @@
 Copyright 2013 Alexandre Mercier and other contributors
-https://github.com/amercier
+https://github.com/purple-dbu
 
 [Creative Commons - Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/)
 

@@ -10,7 +10,7 @@
     "sdk",
     "patched"
   ],
-  "homepage": "https://github.com/amercier/vmware-vcloud-sdk-php-patched",
+  "homepage": "https://github.com/purple-dbu/vmware-vcloud-sdk-php-patched",
   "license": "CC-BY-3.0",
   "suggest": {
     "pear-pear/HTTP_Request2": "Requires HTTP_Request2 from pear's repository http://pear.php.net if it is not installed system-wise"
