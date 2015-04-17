@@ -294,7 +294,7 @@ class VMware_VCloud_SDK_Http_Client implements
 
                     $headers['Content-Range'] = 'bytes ' . $transferred . '-' . ($transferred + $contentLength) . '/' . $total;
                     $headers['Content-Length'] = $contentLength;
-                    $this->putAndCheck($url, $headers, $data);
+                    $this->putAndCheck($url, $headers, $data, 0, 5, $file);
                     $transferred += $contentLength;
                     if ($onProgress) {
                         $onProgress($transferred);
@@ -314,9 +314,10 @@ class VMware_VCloud_SDK_Http_Client implements
      * @param array  $headers    HTTP request headers
      * @param string $data 
      * @param integer $attemptNumber number of attempt to send data
-     * @param integer $sendAttemps maximum attempts following a HTTP 416
+     * @param integer $sendAttempts maximum attempts following a HTTP 416
+     * @param string $file Full path of the file (for logging).
      */
-    public function putAndCheck($url, $headers, $data, $attemptNumber = 0, $sendAttempts = 5) {
+    public function putAndCheck($url, $headers, $data, $attemptNumber = 0, $sendAttempts = 5, $file = "") {
         $response = $this->put($url, $headers, $data);
         if ( $response->getStatus() === 416 && $attemptNumber <= $sendAttempts) {
             //echo "An HTTP 416 occured retry sending last chunk. attempt $attemptNumber\n";
