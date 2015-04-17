@@ -206,9 +206,7 @@ class VMware_VCloud_SDK_Catalog extends VMware_VCloud_SDK_Abstract
             $refs = $file->getLink();
             $diskUrl = $refs[0]->get_href();
             $name = $file->get_name();
-            $diskPath = null;
-            $ovfFileName=substr($ovfDescriptorPath, strrpos($ovfDescriptorPath, DIRECTORY_SEPARATOR)+1);
-            $diskPath=str_replace($ovfFileName, $name, $ovfDescriptorPath);
+            $diskPath = dirname($ovfDescriptorPath) . DIRECTORY_SEPARATOR . $name;
             $this->svc->upload($diskUrl, $diskPath);
         }
         return $vAppTemp2;
