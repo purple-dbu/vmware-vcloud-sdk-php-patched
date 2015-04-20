@@ -174,7 +174,7 @@ class VMware_VCloud_SDK_Catalog extends VMware_VCloud_SDK_Abstract
     public function uploadOVFAsVAppTemplate($name, $ovfDescriptorPath, $description=null, $manifestRequired=null, $vdcStorageProfileRef)
     {
         //Check if the resource name is already existing in the catalog.
-        $this->checkCatalogForDuplicates($this, $name);
+        $this->checkCatalogForTemplateDuplicates($this, $name);
 
         //step 1: initial the upload by sending a upload vApp template request
         $vAppTemplate = $this->createVappTemplateRequest($name, $description, $manifestRequired, $vdcStorageProfileRef);
@@ -211,21 +211,53 @@ class VMware_VCloud_SDK_Catalog extends VMware_VCloud_SDK_Abstract
         }
         return $vAppTemp2;
     }
+	
+    /**
+     * Check if the template is already existing in the catalog.
+     * @param VMware_VCloud_SDK_Catalog object  $catalog
+     * @param string $resourceName Name of the vApp template.
+     */
+	public function checkCatalogForTemplateDuplicates($catalog, $resourceName)
+	{
+		return $this->checkCatalogForDuplicates(
+			$catalog,
+			$resourceName,
+			VMware_VCloud_SDK_Constants::VAPP_TEMPLATE_CONTENT_TYPE
+		);
+	}
+	
+    /**
+     * Check if the media is already existing in the catalog.
+     * @param VMware_VCloud_SDK_Catalog object  $catalog
+     * @param string $resourceName Name of the media.
+     */
+	public function checkCatalogForMediaDuplicates($catalog, $resourceName)
+	{
+		return $this->checkCatalogForDuplicates(
+			$catalog,
+			$resourceName,
+			VMware_VCloud_SDK_Constants::MEDIA_CONTENT_TYPE
+		);
+		
+	}
 
     /**
      * Check if the resource name is already existing in the catalog.
      * @param VMware_VCloud_SDK_Catalog object  $catalog
      * @param string $resourceName Name of the vApp template to be created.
+     * @param string $type Type of resource. If empty, type of resource will not be checked.
      * @since API Version 5.5.0
      * @since SDK Version 5.5.0
      */
-    public function checkCatalogForDuplicates($catalog, $resourceName)
+    public function checkCatalogForDuplicates($catalog, $resourceName, $type = "")
     {
         $CatalogItems=$catalog->getCatalogItems();
         foreach ($CatalogItems as $CatalogItem)
         {
-            if($CatalogItem->get_name() == $resourceName)
-            {
+            if (
+				$CatalogItem->get_name() == $resourceName
+				&& (!$type || $CatalogItem->getEntity()->get_type() == $type)
+			) {
                 throw new VMware_VCloud_SDK_Exception (
                           "Duplicate Resource Name Found: $resourceName\n");
             }
