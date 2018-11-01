@@ -1,5 +1,5 @@
 {
-  "name": "vmware/vcloud-sdk-patched",
+  "name": "singlehopllc/vcloud-sdk-patched",
   "description": "VMware vCloud SDK for PHP - patched version",
   "type": "library",
   "keywords": [
@@ -10,7 +10,7 @@
     "sdk",
     "patched"
   ],
-  "homepage": "https://github.com/purple-dbu/vmware-vcloud-sdk-php-patched",
+  "homepage": "https://github.com/singlehopllc/vmware-vcloud-sdk-php-patched",
   "license": "CC-BY-3.0",
   "suggest": {
     "pear-pear/HTTP_Request2": "Requires HTTP_Request2 from pear's repository http://pear.php.net if it is not installed system-wise"
