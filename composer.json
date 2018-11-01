@@ -1,5 +1,5 @@
 {
-  "name": "singlehopllc/vcloud-sdk-patched",
+  "name": "singlehopllc/vmware-vcloud-sdk-php-patched",
   "description": "VMware vCloud SDK for PHP - patched version",
   "type": "library",
   "keywords": [
