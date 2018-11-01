@@ -532,6 +532,32 @@ class VMware_VCloud_SDK_Vm extends VMware_VCloud_SDK_VApp_Abstract
     }
 
     /**
+     * @return \VMware_VCloud_API_ProductSectionListType
+     * @since Version 1.5.0
+     */
+    public function getProductSections()
+    {
+        $url = $this->url . '/productSections';
+        $list = $this->svc->get($url);
+        return $list;
+    }
+
+    /**
+     * Modify the installed software information of the VM.
+     *
+     * @param  VMware_VCloud_API_ProductSectionListType
+     * @return VMware_VCloud_API_TaskType
+     * @since  Version 1.5.0
+     */
+    public function modifyProductSections($list)
+    {
+        $url = $this->url . '/productSections';
+        $type = VMware_VCloud_SDK_Constants::PRODUCT_SECTIONS_CONTENT_TYPE;
+
+        return $this->svc->put($url, 202, $type, $list);
+    }
+
+    /**
      * Consolidates the VM.
      *
      * @return VMware_VCloud_API_TaskType
