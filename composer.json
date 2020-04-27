@@ -1,6 +1,6 @@
 {
   "name": "vmware/vcloud-sdk-patched",
-  "description": "VMware vCloud SDK for PHP - patched version",
+  "description": "VMware vCloud SDK for PHP - patched version (Forked from Purple-DBU)",
   "type": "library",
   "keywords": [
     "vmware",
@@ -10,11 +10,8 @@
     "sdk",
     "patched"
   ],
-  "homepage": "https://github.com/purple-dbu/vmware-vcloud-sdk-php-patched",
+  "homepage": "https://github.com/Pulsant/vmware-vcloud-sdk-php-patched",
   "license": "CC-BY-3.0",
-  "suggest": {
-    "pear-pear/HTTP_Request2": "Requires HTTP_Request2 from pear's repository http://pear.php.net if it is not installed system-wise"
-  },
   "autoload": {
     "psr-0": {
       "VMware_": "library/"
@@ -30,10 +27,10 @@
     }
   ],
   "require": {
-    "php": ">=5.3.2"
+    "php": ">=7.3"
   },
   "require-dev": {
-    "pear-pear/HTTP_Request2": "2.1.*",
+    "pear-pear/HTTP_Request2": "2.3.*",
     "sami/sami": "1.3.0",
     "vmware/vcloud-sdk": "5.5.0"
   }

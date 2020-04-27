@@ -119,6 +119,9 @@ class VMware_VCloud_SDK_Network extends VMware_VCloud_SDK_Abstract
     {
         $url = $this->url . '/allocatedAddresses';
         $addrArr = $this->svc->get($url);
-        return (0 == sizeof($addrArr)) ? null : $addrArr->getIpAddress();
+        if ((is_array($addrArr) || $addrArr instanceof Countable) && sizeof($addrArr) > 0) {
+            return $addrArr->getIpAddress();
+        }
+        return null;
     }
 }
